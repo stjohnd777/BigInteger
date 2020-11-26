@@ -6,3 +6,35 @@
 
 #IncludeRegexTransform: 
 
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+string
+-
+sstream
+-
+array
+-
+vector
+-
+deque
+-
+algorithm
+-
+limits
+-
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
+map
+-
+thread
+-
+mutex
+-
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp
+iostream
+-
+bigint/BigInteger.h
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+./bigint/fibonocci.hpp
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
+
