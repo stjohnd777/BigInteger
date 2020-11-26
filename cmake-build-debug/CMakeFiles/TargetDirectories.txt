@@ -1,0 +1,13 @@
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles/cmke_bigint.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/CMakeFiles/rebuild_cache.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/CMakeFiles/edit_cache.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/CMakeFiles/bigint.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/CreateCopyAssignmentTest.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/MultTest.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/DivTest.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/SubTest.dir
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/AddTest.dir

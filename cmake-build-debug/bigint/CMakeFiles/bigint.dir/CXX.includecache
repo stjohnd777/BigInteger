@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.cpp
+BigInteger.h
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+string
+-
+iostream
+-
+sstream
+-
+vector
+-
+deque
+-
+algorithm
+-
+stdexcept
+-
+exception
+-
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+string
+-
+sstream
+-
+array
+-
+vector
+-
+deque
+-
+algorithm
+-
+limits
+-
+

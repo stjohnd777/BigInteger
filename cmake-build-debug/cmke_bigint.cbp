@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cmke_bigint"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\bigint\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cmke_bigint">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/cmke_bigint" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 cmke_bigint"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cmke_bigint/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/cmke_bigint" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 cmke_bigint/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bigint">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/libbigint.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/overman/dev/flint-2.6.3"/>
+					<Add directory="/Users/overman/dev/flint-2.6.3/build"/>
+					<Add directory="/Users/overman/dev/flint-2.6.3/build/lib"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 bigint"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bigint/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/libbigint.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/overman/dev/flint-2.6.3"/>
+					<Add directory="/Users/overman/dev/flint-2.6.3/build"/>
+					<Add directory="/Users/overman/dev/flint-2.6.3/build/lib"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 bigint/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CreateCopyAssignmentTest">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CreateCopyAssignmentTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 CreateCopyAssignmentTest"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CreateCopyAssignmentTest/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CreateCopyAssignmentTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 CreateCopyAssignmentTest/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MultTest">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/MultTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 MultTest"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MultTest/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/MultTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 MultTest/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DivTest">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/DivTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 DivTest"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DivTest/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/DivTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 DivTest/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SubTest">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/SubTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 SubTest"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SubTest/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/SubTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 SubTest/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AddTest">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/AddTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 AddTest"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AddTest/fast">
+				<Option output="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/AddTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 AddTest/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.cpp">
+			<Option target="bigint"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h">
+			<Option target="bigint"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/factorial.hpp">
+			<Option target="bigint"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp">
+			<Option target="bigint"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp">
+			<Option target="cmke_bigint"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/AddTest.cpp">
+			<Option target="AddTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/DivTest.cpp">
+			<Option target="CreateCopyAssignmentTest"/>
+			<Option target="DivTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/MultTest.cpp">
+			<Option target="MultTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/SubTest.cpp">
+			<Option target="SubTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/catch.hpp">
+			<Option target="CreateCopyAssignmentTest"/>
+			<Option target="MultTest"/>
+			<Option target="DivTest"/>
+			<Option target="SubTest"/>
+			<Option target="AddTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\bigint\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
