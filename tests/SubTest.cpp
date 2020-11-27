@@ -10,6 +10,46 @@ using namespace std;
 
 #include "../bigint/BigInteger.h"
 
+
+TEST_CASE( "a is less than b", "[a<b]" ) {
+    BigInteger a(1000);
+    BigInteger b(2000);
+    REQUIRE(   (a < b)  );
+    REQUIRE( ! (b < a)  );
+
+    a = BigInteger(1000);
+    b = BigInteger(1001);
+    REQUIRE(   (a < b) );
+    REQUIRE( ! (b < a) );
+
+    a = BigInteger(100);
+    b = BigInteger(1001);
+    REQUIRE(   (a < b) );
+    REQUIRE( ! (b < a) );
+
+
+    a = BigInteger("99999999990999999999");
+    b = BigInteger("99999999999999999999");
+    REQUIRE(   (a < b) );
+    REQUIRE( ! (b < a) );
+
+    a = BigInteger("98999999999999999999");
+    b = BigInteger("99999999999999999999");
+    REQUIRE(   (a < b) );
+    REQUIRE( ! (b < a) );
+
+
+}
+
+
+TEST_CASE( "negative", "[should be negative]" ) {
+    BigInteger a(1000);
+    BigInteger b(2000);
+    auto c = a -b;
+    REQUIRE( a ==0);
+}
+
+
 TEST_CASE( "countdown", "[cd]" ) {
     BigInteger a(1000);
     for ( int i=1 ; i <=1000 ; i ++){

@@ -150,6 +150,9 @@ public:
     /// long != BigInteger
     friend bool operator!= (const long ,const BigInteger&) ;
 
+
+    friend std::string to_string (const BigInteger& val);
+
     ~BigInteger() ;
 
 private:

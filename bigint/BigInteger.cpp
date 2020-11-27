@@ -164,28 +164,30 @@ BigInteger BigInteger::operator++(int i) {
     return plusi;
 }
 
-bool BigInteger::operator<(const BigInteger &rhs) const {
+bool BigInteger::operator<(const BigInteger &lhs) const {
 
-    bool ret = true;
-    if (this->digits.size() < rhs.digits.size()) {
+    auto rhs = *this;
+
+    if ( rhs.digits.size() < lhs.digits.size()) {
         return true;
     }
-    if (this->digits.size() > rhs.digits.size()) {
+    if ( rhs.digits.size() > lhs.digits.size()) {
         return false;
     }
-    unsigned short int index = rhs.digits.size() - 1;
 
-    for_each(rbegin(rhs.digits), rend(rhs.digits),
-             [&](unsigned short int r) {
+    auto index = lhs.digits.size() - 1;
 
-                 auto l = this->digits[index];
-                 if (l > r) {
-                     ret = false; // TODO break
-                 }
-                 index--;
-             });
+    auto it = rhs.digits.rbegin();
 
-    return ret;
+    for (;it!=rend(rhs.digits);it++){
+        auto dr = *it;
+        auto dl = lhs.digits[index];
+        if ( dr > dl ) {
+            return false;
+        }
+        index--;
+    }
+    return true;
 }
 
 bool BigInteger::operator < (const std::string& rhs) const {
@@ -407,4 +409,9 @@ bool operator!= (const std::string& lhs,const BigInteger& rhs){
 
 bool operator!= (const long lhs ,const BigInteger& rhs )  {
      return  ! ( lhs == rhs.toLongIfPossible() ) ;
+}
+
+
+std::string to_string (const BigInteger& val) {
+    return val.toString();
 }

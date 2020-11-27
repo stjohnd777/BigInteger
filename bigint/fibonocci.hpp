@@ -50,14 +50,14 @@ T fibonocci(T number ) {
 //         }
 //     }
 
-    //std::cout << "fibonocci(" <<number << ")" << std::endl;
-
     static std::mutex mtx;
     static std::unique_lock<std::mutex> lock (mtx,std::defer_lock);
 
-    if(cache.contains(number.toString())){
+
+    if (cache.contains(number.toString())) {
         return cache[number.toString()];
     }
+
     auto ans =  (number <= 2 ) ? 1 : fibonocci<T>(number-1) + fibonocci(number - 2) ;
 
     try {
@@ -67,6 +67,32 @@ T fibonocci(T number ) {
     }catch (...) {
         lock.unlock();
 
+    }
+    return ans;
+}
+
+
+template <class T>
+T Fibonocci(T number ) {
+
+    static std::map<std::string,T> cache;
+
+    static std::mutex mtx;
+    static std::unique_lock<std::mutex> lock (mtx,std::defer_lock);
+
+    if (cache.contains(std::to_string(number))) {
+        return cache[std::to_string(number)];
+    }
+    T ans = (number <= 2 ) ? 1 : Fibonocci(number - 1) + Fibonocci(number - 2) ;
+    if ( ans < 0) {
+        throw std::runtime_error("overflow");
+    }
+    try {
+        lock.lock();
+        cache[std::to_string(number)] = ans;
+        lock.unlock();
+    }catch (...) {
+        lock.unlock();
     }
     return ans;
 }
