@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/StringUtils.cpp
+StringUtils.h
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/StringUtils.h
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/StringUtils.h
+iostream
+-
+string
+-
+vector
+-
+

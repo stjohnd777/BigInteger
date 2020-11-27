@@ -242,6 +242,42 @@ libBigInteger_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigi
 //Value Computed by CMake
 libBigInteger_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint
 
+//Value Computed by CMake
+lib_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+
+//Value Computed by CMake
+lib_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+
+//Value Computed by CMake
+lib__BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+
+//Value Computed by CMake
+lib__SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+
+//Value Computed by CMake
+lib_ds_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+
+//Value Computed by CMake
+lib_ds_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+
+//Value Computed by CMake
+lib_dsj_stringutils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+
+//Value Computed by CMake
+lib_dsj_stringutils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+
+//Value Computed by CMake
+libdsj_stringutils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+
+//Value Computed by CMake
+libdsj_stringutils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+
+//Value Computed by CMake
+libdsjstringutils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+
+//Value Computed by CMake
+libdsjstringutils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+
 
 ########################
 # INTERNAL cache entries
@@ -345,7 +381,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

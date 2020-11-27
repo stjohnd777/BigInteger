@@ -3,5 +3,9 @@
 
 CMakeFiles/cmke_bigint.dir/main.cpp.o: ../bigint/BigInteger.h
 CMakeFiles/cmke_bigint.dir/main.cpp.o: ../bigint/fibonocci.hpp
+CMakeFiles/cmke_bigint.dir/main.cpp.o: ../dsj_string/StringUtils.hpp
 CMakeFiles/cmke_bigint.dir/main.cpp.o: ../main.cpp
+
+CMakeFiles/cmke_bigint.dir/random/random.cpp.o: ../random/random.cpp
+CMakeFiles/cmke_bigint.dir/random/random.cpp.o: ../random/random.h
 

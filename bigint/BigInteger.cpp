@@ -200,6 +200,31 @@ bool BigInteger::operator < (const long rhs) const {
     return ( *this < BigInteger(rhs) );
 };
 
+
+
+bool BigInteger::operator<=(const BigInteger &rhs) const {
+    if ( *this == rhs){
+        return true;
+    }else {
+        return  *this < rhs;
+    }
+}
+
+bool BigInteger::operator <= (const std::string& rhs) const {
+    return ( *this <= BigInteger(rhs));
+};
+
+bool operator <= (const std::string& lhs, const BigInteger& rhs) {
+    return ( BigInteger(lhs) <= rhs);
+}
+
+bool BigInteger::operator <= (const long rhs) const {
+    return ( *this <= BigInteger(rhs) );
+};
+
+
+
+
 BigInteger operator*(const long other, const BigInteger& rhs) {
     return ( BigInteger(other) < BigInteger(rhs) );
 }
@@ -228,10 +253,6 @@ BigInteger BigInteger::operator*(const BigInteger &other) {
 BigInteger BigInteger::operator*(const long other) {
     return (*this * BigInteger(other));
 }
-
-//BigInteger operator*(const long other, const BigInteger& rhs) {
-//    return ( BigInteger(other) * rhs);
-//}
 
 BigInteger BigInteger::operator*(const std::string &other) {
     return (*this * BigInteger(other));

@@ -5,10 +5,15 @@
 
 using namespace std;
 
+#include "bigint/fibonocci.hpp"
+
 int main() {
 
+    cout << LONG_MAX << endl;
+    for ( int n = 0; n <= 2000 ; n++) {
+        BigInteger fib = fibonocci<BigInteger>(n);
+        cout << n << " : " << fib << endl;
+    }
 
-
-    cout << "done " << endl;
     return 0;
 }

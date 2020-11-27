@@ -74,12 +74,14 @@ CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-buil
 
 # The main recursive "all" target.
 all: CMakeFiles/cmke_bigint.dir/all
+all: dsj_string/all
 all: bigint/all
 all: tests/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: dsj_string/preinstall
 preinstall: bigint/preinstall
 preinstall: tests/preinstall
 
@@ -87,6 +89,7 @@ preinstall: tests/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/cmke_bigint.dir/clean
+clean: dsj_string/clean
 clean: bigint/clean
 clean: tests/clean
 
@@ -109,6 +112,24 @@ bigint/preinstall:
 bigint/clean: bigint/CMakeFiles/bigint.dir/clean
 
 .PHONY : bigint/clean
+
+#=============================================================================
+# Directory level rules for directory dsj_string
+
+# Recursive "all" directory target.
+dsj_string/all: dsj_string/CMakeFiles/dsj_string.dir/all
+
+.PHONY : dsj_string/all
+
+# Recursive "preinstall" directory target.
+dsj_string/preinstall:
+
+.PHONY : dsj_string/preinstall
+
+# Recursive "clean" directory target.
+dsj_string/clean: dsj_string/CMakeFiles/dsj_string.dir/clean
+
+.PHONY : dsj_string/clean
 
 #=============================================================================
 # Directory level rules for directory tests
@@ -140,15 +161,16 @@ tests/clean: tests/CMakeFiles/AddTest.dir/clean
 # Target rules for target CMakeFiles/cmke_bigint.dir
 
 # All Build rule for target.
+CMakeFiles/cmke_bigint.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 CMakeFiles/cmke_bigint.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target cmke_bigint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=13,14,15 "Built target cmke_bigint"
 .PHONY : CMakeFiles/cmke_bigint.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cmke_bigint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cmke_bigint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/cmke_bigint.dir/rule
@@ -164,10 +186,37 @@ CMakeFiles/cmke_bigint.dir/clean:
 .PHONY : CMakeFiles/cmke_bigint.dir/clean
 
 #=============================================================================
+# Target rules for target dsj_string/CMakeFiles/dsj_string.dir
+
+# All Build rule for target.
+dsj_string/CMakeFiles/dsj_string.dir/all:
+	$(MAKE) $(MAKESILENT) -f dsj_string/CMakeFiles/dsj_string.dir/build.make dsj_string/CMakeFiles/dsj_string.dir/depend
+	$(MAKE) $(MAKESILENT) -f dsj_string/CMakeFiles/dsj_string.dir/build.make dsj_string/CMakeFiles/dsj_string.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target dsj_string"
+.PHONY : dsj_string/CMakeFiles/dsj_string.dir/all
+
+# Build rule for subdir invocation for target.
+dsj_string/CMakeFiles/dsj_string.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsj_string/CMakeFiles/dsj_string.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
+.PHONY : dsj_string/CMakeFiles/dsj_string.dir/rule
+
+# Convenience name for target.
+dsj_string: dsj_string/CMakeFiles/dsj_string.dir/rule
+
+.PHONY : dsj_string
+
+# clean rule for target.
+dsj_string/CMakeFiles/dsj_string.dir/clean:
+	$(MAKE) $(MAKESILENT) -f dsj_string/CMakeFiles/dsj_string.dir/build.make dsj_string/CMakeFiles/dsj_string.dir/clean
+.PHONY : dsj_string/CMakeFiles/dsj_string.dir/clean
+
+#=============================================================================
 # Target rules for target bigint/CMakeFiles/bigint.dir
 
 # All Build rule for target.
-bigint/CMakeFiles/bigint.dir/all:
+bigint/CMakeFiles/bigint.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 	$(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/depend
 	$(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target bigint"
@@ -175,7 +224,7 @@ bigint/CMakeFiles/bigint.dir/all:
 
 # Build rule for subdir invocation for target.
 bigint/CMakeFiles/bigint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/CMakeFiles/bigint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : bigint/CMakeFiles/bigint.dir/rule
@@ -194,6 +243,7 @@ bigint/CMakeFiles/bigint.dir/clean:
 # Target rules for target tests/CMakeFiles/CreateCopyAssignmentTest.dir
 
 # All Build rule for target.
+tests/CMakeFiles/CreateCopyAssignmentTest.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 tests/CMakeFiles/CreateCopyAssignmentTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/build
@@ -202,7 +252,7 @@ tests/CMakeFiles/CreateCopyAssignmentTest.dir/all: bigint/CMakeFiles/bigint.dir/
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/CreateCopyAssignmentTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/CreateCopyAssignmentTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/CreateCopyAssignmentTest.dir/rule
@@ -221,6 +271,7 @@ tests/CMakeFiles/CreateCopyAssignmentTest.dir/clean:
 # Target rules for target tests/CMakeFiles/MultTest.dir
 
 # All Build rule for target.
+tests/CMakeFiles/MultTest.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 tests/CMakeFiles/MultTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
@@ -229,7 +280,7 @@ tests/CMakeFiles/MultTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/MultTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/MultTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/MultTest.dir/rule
@@ -248,6 +299,7 @@ tests/CMakeFiles/MultTest.dir/clean:
 # Target rules for target tests/CMakeFiles/DivTest.dir
 
 # All Build rule for target.
+tests/CMakeFiles/DivTest.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 tests/CMakeFiles/DivTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/build
@@ -256,7 +308,7 @@ tests/CMakeFiles/DivTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/DivTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/DivTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/DivTest.dir/rule
@@ -275,6 +327,7 @@ tests/CMakeFiles/DivTest.dir/clean:
 # Target rules for target tests/CMakeFiles/SubTest.dir
 
 # All Build rule for target.
+tests/CMakeFiles/SubTest.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 tests/CMakeFiles/SubTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/build
@@ -283,7 +336,7 @@ tests/CMakeFiles/SubTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/SubTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/SubTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/SubTest.dir/rule
@@ -302,6 +355,7 @@ tests/CMakeFiles/SubTest.dir/clean:
 # Target rules for target tests/CMakeFiles/AddTest.dir
 
 # All Build rule for target.
+tests/CMakeFiles/AddTest.dir/all: dsj_string/CMakeFiles/dsj_string.dir/all
 tests/CMakeFiles/AddTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/build
@@ -310,7 +364,7 @@ tests/CMakeFiles/AddTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/AddTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/AddTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/AddTest.dir/rule

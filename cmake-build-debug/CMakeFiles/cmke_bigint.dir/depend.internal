@@ -4,4 +4,8 @@
 CMakeFiles/cmke_bigint.dir/main.cpp.o
  /Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
  /Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
+ /Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/StringUtils.hpp
  /Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp
+CMakeFiles/cmke_bigint.dir/random/random.cpp.o
+ /Users/overman/CLionProjects/cmke-good/cmke-bigint/random/random.cpp
+ /Users/overman/CLionProjects/cmke-good/cmke-bigint/random/random.h

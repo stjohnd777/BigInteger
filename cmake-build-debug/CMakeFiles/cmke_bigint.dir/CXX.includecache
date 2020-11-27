@@ -29,6 +29,22 @@ thread
 -
 mutex
 -
+string
+-
+fstream
+-
+../dsj_string/StringUtils.hpp
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/StringUtils.hpp
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/StringUtils.hpp
+iostream
+-
+string
+-
+vector
+-
+functional
+-
 
 /Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp
 iostream
@@ -36,5 +52,7 @@ iostream
 bigint/BigInteger.h
 /Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
 ./bigint/fibonocci.hpp
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
+bigint/fibonocci.hpp
 /Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
 

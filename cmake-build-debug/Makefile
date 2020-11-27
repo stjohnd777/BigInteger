@@ -144,6 +144,19 @@ cmke_bigint/fast:
 .PHONY : cmke_bigint/fast
 
 #=============================================================================
+# Target rules for targets named dsj_string
+
+# Build rule for target.
+dsj_string: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsj_string
+.PHONY : dsj_string
+
+# fast build rule for target.
+dsj_string/fast:
+	$(MAKE) $(MAKESILENT) -f dsj_string/CMakeFiles/dsj_string.dir/build.make dsj_string/CMakeFiles/dsj_string.dir/build
+.PHONY : dsj_string/fast
+
+#=============================================================================
 # Target rules for targets named bigint
 
 # Build rule for target.
@@ -248,6 +261,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+random/random.o: random/random.cpp.o
+
+.PHONY : random/random.o
+
+# target to build an object file
+random/random.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/random/random.cpp.o
+.PHONY : random/random.cpp.o
+
+random/random.i: random/random.cpp.i
+
+.PHONY : random/random.i
+
+# target to preprocess a source file
+random/random.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/random/random.cpp.i
+.PHONY : random/random.cpp.i
+
+random/random.s: random/random.cpp.s
+
+.PHONY : random/random.s
+
+# target to generate assembly for a file
+random/random.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/random/random.cpp.s
+.PHONY : random/random.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -263,9 +303,13 @@ help:
 	@echo "... SubTest"
 	@echo "... bigint"
 	@echo "... cmke_bigint"
+	@echo "... dsj_string"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... random/random.o"
+	@echo "... random/random.i"
+	@echo "... random/random.s"
 .PHONY : help
 
 

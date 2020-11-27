@@ -34,6 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/cmake_install.cmake")
 endif()
 

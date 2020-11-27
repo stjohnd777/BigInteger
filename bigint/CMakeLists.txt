@@ -15,3 +15,5 @@ add_library(
         bigint
         BigInteger.h
         BigInteger.cpp fibonocci.hpp factorial.hpp)
+
+target_link_libraries(bigint PRIVATE dsj_string)

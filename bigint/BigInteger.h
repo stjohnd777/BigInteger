@@ -107,6 +107,11 @@ public:
     friend bool operator < (const std::string& lhs, const BigInteger& rhs) ;
     bool operator < (const long rhs) const;
 
+    bool operator <= (const BigInteger& rhs) const;
+    bool operator <= (const std::string& rhs) const;
+    friend bool operator <= (const std::string& lhs, const BigInteger& rhs) ;
+    bool operator <= (const long rhs) const;
+
     /// multiplication
     BigInteger operator*(const BigInteger &other) ;
     BigInteger operator*(const long other) ;
