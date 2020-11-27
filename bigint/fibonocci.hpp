@@ -34,54 +34,44 @@ std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int l
     return map;
 }
 
-
-/// The Rule is fibonocci (n) = fibonocci(n−1) + fibonocci(n−2)
-template <class T>
-T fibonocci(T number ) {
-
-     static std::map<std::string,T> cache;
-
-//     if ( cache.size() == 0){
-//         std::map<std::string,std::string> dataMap = InitFibonocciCache("../data/fib.txt",   999);
-//         for ( auto pair : dataMap){
-//             T a(pair.first);
-//             T b(pair.second);
-//             cache[a] = b;
-//         }
-//     }
-
-    static std::mutex mtx;
-    static std::unique_lock<std::mutex> lock (mtx,std::defer_lock);
-
-
-    if (cache.contains(number.toString())) {
-        return cache[number.toString()];
-    }
-
-    auto ans =  (number <= 2 ) ? 1 : fibonocci<T>(number-1) + fibonocci(number - 2) ;
-
-    try {
-        lock.lock();
-        cache[number.toString()] = ans;
-        lock.unlock();
-    }catch (...) {
-        lock.unlock();
-
-    }
-    return ans;
-}
+//
+///// The Rule is fibonocci (n) = fibonocci(n−1) + fibonocci(n−2)
+//template <class T>
+//T fibonocci(T number ) {
+//
+//    static std::map<std::string,T> cache;
+//    static std::mutex mtx;
+//    static std::unique_lock<std::mutex> lock (mtx,std::defer_lock);
+//
+//
+//    if (cache.contains(number.toString())) {
+//        return cache[number.toString()];
+//    }
+//
+//    auto ans =  (number <= 2 ) ? 1 : fibonocci<T>(number-1) + fibonocci(number - 2) ;
+//
+//    try {
+//        lock.lock();
+//        cache[number.toString()] = ans;
+//        lock.unlock();
+//    }catch (...) {
+//        lock.unlock();
+//
+//    }
+//    return ans;
+//}
 
 
 template <class T>
 T Fibonocci(T number ) {
 
-    static std::map<std::string,T> cache;
+    static std::map<T,T> cache;
 
     static std::mutex mtx;
     static std::unique_lock<std::mutex> lock (mtx,std::defer_lock);
 
-    if (cache.contains(std::to_string(number))) {
-        return cache[std::to_string(number)];
+    if (cache.contains(number)) {
+        return cache[ number];
     }
     T ans = (number <= 2 ) ? 1 : Fibonocci(number - 1) + Fibonocci(number - 2) ;
     if ( ans < 0) {
@@ -89,7 +79,7 @@ T Fibonocci(T number ) {
     }
     try {
         lock.lock();
-        cache[std::to_string(number)] = ans;
+        cache[ number] = ans;
         lock.unlock();
     }catch (...) {
         lock.unlock();

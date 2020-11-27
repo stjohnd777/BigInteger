@@ -27,6 +27,12 @@ catch.hpp
 /Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/catch.hpp
 iostream
 -
+algorithm
+-
+random
+-
+chrono
+-
 ../bigint/BigInteger.h
 /Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
 

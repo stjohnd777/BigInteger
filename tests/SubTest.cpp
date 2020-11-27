@@ -5,6 +5,9 @@
 #define CATCH_CONFIG_MAIN // provides main(); this line is required in only one .cpp file
 #include "catch.hpp"
 #include <iostream>
+#include <algorithm>
+#include <random>       // std::default_random_engine
+#include <chrono>       // std::chrono::system_clock
 
 using namespace std;
 
@@ -38,7 +41,45 @@ TEST_CASE( "a is less than b", "[a<b]" ) {
     REQUIRE(   (a < b) );
     REQUIRE( ! (b < a) );
 
+}
 
+TEST_CASE( "sort", "[does it sort]" ) {
+
+    std::vector<BigInteger> ints;
+    for ( int i=0; i< 1000 ; i++){
+        ints.push_back(BigInteger(i));
+    }
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    shuffle (ints.begin(), ints.end(), std::default_random_engine(seed));
+
+    for ( int i=0; i< 1000 ; i++){
+       cout << ints[i] << endl;
+    }
+
+//    std::sort(ints.begin(), ints.end(),[](BigInteger i,BigInteger j) {
+//        return  i.toString() < j.toString() ;
+//    });
+
+    std::sort(ints.begin(), ints.end(),[](BigInteger i,BigInteger j) {
+        std::string si = i.toString();
+        std::string sj = j.toString();
+        if ( si.length() > sj.length()){
+            int zeros = si.length() - sj.length();
+            std::string s(zeros, '0');
+            sj = s + sj;
+        } else if (si.length() < sj.length()) {
+            int zeros = sj.length() - si.length();
+            std::string s(zeros, '0');
+            si = s + si;
+        }
+        return  si < sj  ;
+    });
+
+    //std::sort(ints.begin(), ints.end());
+    for ( int i=0; i< 1000 ; i++){
+        cout << ints[i] << endl;
+        REQUIRE( ints[i].toLongIfPossible() == i);
+    }
 }
 
 

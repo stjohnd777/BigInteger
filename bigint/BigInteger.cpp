@@ -167,27 +167,41 @@ BigInteger BigInteger::operator++(int i) {
 bool BigInteger::operator<(const BigInteger &lhs) const {
 
     auto rhs = *this;
-
-    if ( rhs.digits.size() < lhs.digits.size()) {
-        return true;
+    std::string si = rhs.toString();
+    std::string sj = lhs.toString();
+    if ( si.length() > sj.length()){
+        int zeros = si.length() - sj.length();
+        std::string s(zeros, '0');
+        sj = s + sj;
+    } else if (si.length() < sj.length()) {
+        int zeros = sj.length() - si.length();
+        std::string s(zeros, '0');
+        si = s + si;
     }
-    if ( rhs.digits.size() > lhs.digits.size()) {
-        return false;
-    }
+    return  si < sj  ;
 
-    auto index = lhs.digits.size() - 1;
-
-    auto it = rhs.digits.rbegin();
-
-    for (;it!=rend(rhs.digits);it++){
-        auto dr = *it;
-        auto dl = lhs.digits[index];
-        if ( dr > dl ) {
-            return false;
-        }
-        index--;
-    }
-    return true;
+//    auto rhs = *this;
+//
+//    if ( rhs.digits.size() < lhs.digits.size()) {
+//        return true;
+//    }
+//    if ( rhs.digits.size() > lhs.digits.size()) {
+//        return false;
+//    }
+//
+//    auto index = lhs.digits.size() - 1;
+//
+//    auto it = rhs.digits.rbegin();
+//
+//    for (;it!=rend(rhs.digits);it++){
+//        auto dr = *it;
+//        auto dl = lhs.digits[index];
+//        if ( dr > dl ) {
+//            return false;
+//        }
+//        index--;
+//    }
+//    return true;
 }
 
 bool BigInteger::operator < (const std::string& rhs) const {

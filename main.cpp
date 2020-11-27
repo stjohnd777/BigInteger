@@ -19,16 +19,16 @@ int main() {
     cout << to_string(llmax) << endl;
 
     for ( int n = 0; n <= 1000 ; n++) {
-        BigInteger fib = fibonocci<BigInteger>(n);
+        BigInteger fib = Fibonocci<BigInteger>(n);
         cout << n << " : " << fib.toString().length() << " : " << fib << endl;
     }
 
-//    cout << "**************************************************" << endl;
-//
-//    for ( unsigned long n = 0; n <= 1000 ; n++) {
-//        unsigned long fib = Fibonocci(n);
-//        cout << n << " : " << to_string(fib).length() << " : " << fib << endl;
-//    }
+    cout << "**************************************************" << endl;
+
+    for ( unsigned long n = 0; n <= 1000 ; n++) {
+        long fib = Fibonocci< long>(n);
+        cout << n << " : " << to_string(fib).length() << " : " << fib << endl;
+    }
 
     return 0;
 }
