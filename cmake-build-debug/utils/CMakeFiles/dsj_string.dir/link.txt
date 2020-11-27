@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libdsj_string.a  CMakeFiles/dsj_string.dir/StringUtils.cpp.o CMakeFiles/dsj_string.dir/TimeMetric.cpp.o CMakeFiles/dsj_string.dir/dsjVector.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libdsj_string.a

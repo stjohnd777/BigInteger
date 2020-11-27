@@ -5,7 +5,7 @@
 		<Option title="libBigInteger"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\dsj_string\;CMake Files\bigint\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\utils\;CMake Files\bigint\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint"/>
@@ -81,14 +81,14 @@
 		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\tests\"/>
-		</Unit>
-		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\dsj_string\"/>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\"/>
 		</Unit>
 		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\bigint\"/>
+		</Unit>
+		<Unit filename="/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -3,22 +3,47 @@
 //
 
 #define CATCH_CONFIG_MAIN // provides main(); this line is required in only one .cpp file
+#include "../bigint/BigInteger.h"
 #include "catch.hpp"
+#include <iostream>
+#include <algorithm>
+#include <random>       // std::default_random_engine
+#include <chrono>       // std::chrono::system_clock
 
-int theAnswer() { return 6*7; } // function to be tested
+using namespace std;
 
-TEST_CASE( "Equal 1", "0=0" ) {
-    REQUIRE(theAnswer() == 42);
+TEST_CASE( "EQ 83377465666", "[83377465666]" ) {
+    BigInteger a("83377465666");
+    BigInteger b("83377465666");
+
+    BigInteger c(a);
+    BigInteger d = a;
+
+    cout << a << endl;
+    REQUIRE( a == 83377465666 );
+    REQUIRE( 83377465666 == a );
+    REQUIRE( a == b );
+    REQUIRE( b  == a );
+    REQUIRE( a  == "83377465666" );
+    REQUIRE( "83377465666"  == a );
+    REQUIRE( a == c);
+    REQUIRE( a == d );
 }
 
-TEST_CASE( "Equal 2", "0!=1" ) {
-    REQUIRE(theAnswer() == 42);
-}
 
-TEST_CASE( "Equal 3", "representable=representable" ) {
-    REQUIRE(theAnswer() == 42);
-}
+TEST_CASE( "EQ 8337746566683377465666", "[8337746566683377465666]" ) {
+    BigInteger a("8337746566683377465666");
+    BigInteger b("8337746566683377465666");
 
-TEST_CASE( "Equal 4", "none-representable=non-representable" ) {
-    REQUIRE(theAnswer() == 42);
+    BigInteger c(a);
+    BigInteger d = a;
+
+    cout << a << endl;
+
+    REQUIRE( a == b );
+    REQUIRE( b  == a );
+    REQUIRE( a  == "8337746566683377465666" );
+    REQUIRE( "8337746566683377465666"  == a );
+    REQUIRE( a == c);
+    REQUIRE( a == d );
 }

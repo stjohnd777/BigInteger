@@ -131,19 +131,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/CreateCopyAssignmentTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/CreateCopyAssignmentTest.dir/rule
-.PHONY : tests/CMakeFiles/CreateCopyAssignmentTest.dir/rule
+tests/CMakeFiles/Eql.dir/rule:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/Eql.dir/rule
+.PHONY : tests/CMakeFiles/Eql.dir/rule
 
 # Convenience name for target.
-CreateCopyAssignmentTest: tests/CMakeFiles/CreateCopyAssignmentTest.dir/rule
+Eql: tests/CMakeFiles/Eql.dir/rule
 
-.PHONY : CreateCopyAssignmentTest
+.PHONY : Eql
 
 # fast build rule for target.
-CreateCopyAssignmentTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/build
-.PHONY : CreateCopyAssignmentTest/fast
+Eql/fast:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
+.PHONY : Eql/fast
+
+# Convenience name for target.
+tests/CMakeFiles/LessTest.dir/rule:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/LessTest.dir/rule
+.PHONY : tests/CMakeFiles/LessTest.dir/rule
+
+# Convenience name for target.
+LessTest: tests/CMakeFiles/LessTest.dir/rule
+
+.PHONY : LessTest
+
+# fast build rule for target.
+LessTest/fast:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
+.PHONY : LessTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/MultTest.dir/rule:
@@ -174,6 +189,21 @@ DivTest: tests/CMakeFiles/DivTest.dir/rule
 DivTest/fast:
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/build
 .PHONY : DivTest/fast
+
+# Convenience name for target.
+tests/CMakeFiles/IncTest.dir/rule:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/IncTest.dir/rule
+.PHONY : tests/CMakeFiles/IncTest.dir/rule
+
+# Convenience name for target.
+IncTest: tests/CMakeFiles/IncTest.dir/rule
+
+.PHONY : IncTest
+
+# fast build rule for target.
+IncTest/fast:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/build
+.PHONY : IncTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/SubTest.dir/rule:
@@ -238,7 +268,6 @@ DivTest.o: DivTest.cpp.o
 
 # target to build an object file
 DivTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/DivTest.cpp.o
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/DivTest.cpp.o
 .PHONY : DivTest.cpp.o
 
@@ -248,7 +277,6 @@ DivTest.i: DivTest.cpp.i
 
 # target to preprocess a source file
 DivTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/DivTest.cpp.i
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/DivTest.cpp.i
 .PHONY : DivTest.cpp.i
 
@@ -258,9 +286,89 @@ DivTest.s: DivTest.cpp.s
 
 # target to generate assembly for a file
 DivTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/DivTest.cpp.s
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/DivTest.cpp.s
 .PHONY : DivTest.cpp.s
+
+EqualTest.o: EqualTest.cpp.o
+
+.PHONY : EqualTest.o
+
+# target to build an object file
+EqualTest.cpp.o:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/EqualTest.cpp.o
+.PHONY : EqualTest.cpp.o
+
+EqualTest.i: EqualTest.cpp.i
+
+.PHONY : EqualTest.i
+
+# target to preprocess a source file
+EqualTest.cpp.i:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/EqualTest.cpp.i
+.PHONY : EqualTest.cpp.i
+
+EqualTest.s: EqualTest.cpp.s
+
+.PHONY : EqualTest.s
+
+# target to generate assembly for a file
+EqualTest.cpp.s:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/EqualTest.cpp.s
+.PHONY : EqualTest.cpp.s
+
+IncDecTest.o: IncDecTest.cpp.o
+
+.PHONY : IncDecTest.o
+
+# target to build an object file
+IncDecTest.cpp.o:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.o
+.PHONY : IncDecTest.cpp.o
+
+IncDecTest.i: IncDecTest.cpp.i
+
+.PHONY : IncDecTest.i
+
+# target to preprocess a source file
+IncDecTest.cpp.i:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.i
+.PHONY : IncDecTest.cpp.i
+
+IncDecTest.s: IncDecTest.cpp.s
+
+.PHONY : IncDecTest.s
+
+# target to generate assembly for a file
+IncDecTest.cpp.s:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.s
+.PHONY : IncDecTest.cpp.s
+
+LessThenTest.o: LessThenTest.cpp.o
+
+.PHONY : LessThenTest.o
+
+# target to build an object file
+LessThenTest.cpp.o:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/LessThenTest.cpp.o
+.PHONY : LessThenTest.cpp.o
+
+LessThenTest.i: LessThenTest.cpp.i
+
+.PHONY : LessThenTest.i
+
+# target to preprocess a source file
+LessThenTest.cpp.i:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/LessThenTest.cpp.i
+.PHONY : LessThenTest.cpp.i
+
+LessThenTest.s: LessThenTest.cpp.s
+
+.PHONY : LessThenTest.s
+
+# target to generate assembly for a file
+LessThenTest.cpp.s:
+	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/LessThenTest.cpp.s
+.PHONY : LessThenTest.cpp.s
 
 MultTest.o: MultTest.cpp.o
 
@@ -325,8 +433,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
-	@echo "... CreateCopyAssignmentTest"
 	@echo "... DivTest"
+	@echo "... Eql"
+	@echo "... IncTest"
+	@echo "... LessTest"
 	@echo "... MultTest"
 	@echo "... SubTest"
 	@echo "... AddTest.o"
@@ -335,6 +445,15 @@ help:
 	@echo "... DivTest.o"
 	@echo "... DivTest.i"
 	@echo "... DivTest.s"
+	@echo "... EqualTest.o"
+	@echo "... EqualTest.i"
+	@echo "... EqualTest.s"
+	@echo "... IncDecTest.o"
+	@echo "... IncDecTest.i"
+	@echo "... IncDecTest.s"
+	@echo "... LessThenTest.o"
+	@echo "... LessThenTest.i"
+	@echo "... LessThenTest.s"
 	@echo "... MultTest.o"
 	@echo "... MultTest.i"
 	@echo "... MultTest.s"

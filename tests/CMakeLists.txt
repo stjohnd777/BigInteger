@@ -3,14 +3,6 @@ project(big_integer_tests)
 
 set(CMAKE_CXX_STANDARD 20)
 
-#include_directories(/usr/local/include)
-#include_directories(/Users/overman/dev/flint-2.6.3)
-#include_directories(/Users/overman/dev/flint-2.6.3/build)
-#include_directories(/Users/overman/dev/flint-2.6.3/build/lib)
-#
-## add extra lib directories
-#link_directories(/usr/local/lib)
-
 add_executable(AddTest catch.hpp AddTest.cpp)
 target_link_libraries(AddTest PRIVATE bigint)
 
@@ -23,5 +15,11 @@ target_link_libraries(MultTest PRIVATE bigint)
 add_executable(DivTest catch.hpp DivTest.cpp)
 target_link_libraries(DivTest PRIVATE bigint)
 
-add_executable(CreateCopyAssignmentTest catch.hpp DivTest.cpp)
-target_link_libraries(CreateCopyAssignmentTest PRIVATE bigint)
+add_executable(LessTest catch.hpp LessThenTest.cpp)
+target_link_libraries(LessTest PRIVATE bigint)
+
+add_executable(IncTest catch.hpp IncDecTest.cpp)
+target_link_libraries(IncTest PRIVATE bigint)
+
+add_executable(Eql catch.hpp EqualTest.cpp)
+target_link_libraries(Eql PRIVATE bigint)

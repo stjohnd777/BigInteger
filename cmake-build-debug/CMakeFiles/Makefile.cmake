@@ -12,8 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
-  "../dsj_string/CMakeLists.txt"
   "../tests/CMakeLists.txt"
+  "../utils/CMakeLists.txt"
   "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCXXInformation.cmake"
   "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -51,19 +51,21 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "dsj_string/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "utils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "bigint/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cmke_bigint.dir/DependInfo.cmake"
-  "dsj_string/CMakeFiles/dsj_string.dir/DependInfo.cmake"
+  "CMakeFiles/Main.dir/DependInfo.cmake"
+  "utils/CMakeFiles/utils.dir/DependInfo.cmake"
   "bigint/CMakeFiles/bigint.dir/DependInfo.cmake"
-  "tests/CMakeFiles/CreateCopyAssignmentTest.dir/DependInfo.cmake"
+  "tests/CMakeFiles/Eql.dir/DependInfo.cmake"
+  "tests/CMakeFiles/LessTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/MultTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/DivTest.dir/DependInfo.cmake"
+  "tests/CMakeFiles/IncTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/SubTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/AddTest.dir/DependInfo.cmake"
   )

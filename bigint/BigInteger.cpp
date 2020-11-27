@@ -308,12 +308,14 @@ BigInteger BigInteger::operator-(const BigInteger &other) {
     }
 
 
-    auto rit = rbegin(result);
-    for (; rit != rend(result); ++rit) {
-        if (*rit == 0) {
-            result.pop_back();
-        } else {
-            break;
+    if (result.size() > 1 ) {
+        auto rit = rbegin(result);
+        for (; rit != rend(result); ++rit) {
+            if (*rit == 0) {
+                result.pop_back();
+            } else {
+                break;
+            }
         }
     }
 

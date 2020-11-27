@@ -9,7 +9,7 @@
 #include <string>
 #include <fstream>
 
-#include "../dsj_string/StringUtils.hpp"
+#include "../utils/StringUtils.hpp"
 
 
 std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int limit ){
@@ -36,32 +36,6 @@ std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int l
 
 //
 ///// The Rule is fibonocci (n) = fibonocci(n−1) + fibonocci(n−2)
-//template <class T>
-//T fibonocci(T number ) {
-//
-//    static std::map<std::string,T> cache;
-//    static std::mutex mtx;
-//    static std::unique_lock<std::mutex> lock (mtx,std::defer_lock);
-//
-//
-//    if (cache.contains(number.toString())) {
-//        return cache[number.toString()];
-//    }
-//
-//    auto ans =  (number <= 2 ) ? 1 : fibonocci<T>(number-1) + fibonocci(number - 2) ;
-//
-//    try {
-//        lock.lock();
-//        cache[number.toString()] = ans;
-//        lock.unlock();
-//    }catch (...) {
-//        lock.unlock();
-//
-//    }
-//    return ans;
-//}
-
-
 template <class T>
 T Fibonocci(T number ) {
 

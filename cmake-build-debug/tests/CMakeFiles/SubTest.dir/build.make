@@ -100,7 +100,7 @@ SubTest_EXTERNAL_OBJECTS =
 tests/SubTest: tests/CMakeFiles/SubTest.dir/SubTest.cpp.o
 tests/SubTest: tests/CMakeFiles/SubTest.dir/build.make
 tests/SubTest: bigint/libbigint.a
-tests/SubTest: dsj_string/libdsj_string.a
+tests/SubTest: utils/libutils.a
 tests/SubTest: tests/CMakeFiles/SubTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SubTest"
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SubTest.dir/link.txt --verbose=$(VERBOSE)

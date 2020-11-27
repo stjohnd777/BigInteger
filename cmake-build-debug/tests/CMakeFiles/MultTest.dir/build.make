@@ -100,7 +100,7 @@ MultTest_EXTERNAL_OBJECTS =
 tests/MultTest: tests/CMakeFiles/MultTest.dir/MultTest.cpp.o
 tests/MultTest: tests/CMakeFiles/MultTest.dir/build.make
 tests/MultTest: bigint/libbigint.a
-tests/MultTest: dsj_string/libdsj_string.a
+tests/MultTest: utils/libutils.a
 tests/MultTest: tests/CMakeFiles/MultTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MultTest"
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MultTest.dir/link.txt --verbose=$(VERBOSE)

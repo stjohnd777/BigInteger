@@ -14,84 +14,25 @@ using namespace std;
 #include "../bigint/BigInteger.h"
 
 
-TEST_CASE( "a is less than b", "[a<b]" ) {
+
+TEST_CASE( "negative should be 0", "[should be negative]" ) {
     BigInteger a(1000);
     BigInteger b(2000);
-    REQUIRE(   (a < b)  );
-    REQUIRE( ! (b < a)  );
-
-    a = BigInteger(1000);
-    b = BigInteger(1001);
-    REQUIRE(   (a < b) );
-    REQUIRE( ! (b < a) );
-
-    a = BigInteger(100);
-    b = BigInteger(1001);
-    REQUIRE(   (a < b) );
-    REQUIRE( ! (b < a) );
-
-
-    a = BigInteger("99999999990999999999");
-    b = BigInteger("99999999999999999999");
-    REQUIRE(   (a < b) );
-    REQUIRE( ! (b < a) );
-
-    a = BigInteger("98999999999999999999");
-    b = BigInteger("99999999999999999999");
-    REQUIRE(   (a < b) );
-    REQUIRE( ! (b < a) );
-
-}
-
-TEST_CASE( "sort", "[does it sort]" ) {
-
-    std::vector<BigInteger> ints;
-    for ( int i=0; i< 1000 ; i++){
-        ints.push_back(BigInteger(i));
-    }
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    shuffle (ints.begin(), ints.end(), std::default_random_engine(seed));
-
-    for ( int i=0; i< 1000 ; i++){
-       cout << ints[i] << endl;
-    }
-
-//    std::sort(ints.begin(), ints.end(),[](BigInteger i,BigInteger j) {
-//        return  i.toString() < j.toString() ;
-//    });
-
-    std::sort(ints.begin(), ints.end(),[](BigInteger i,BigInteger j) {
-        std::string si = i.toString();
-        std::string sj = j.toString();
-        if ( si.length() > sj.length()){
-            int zeros = si.length() - sj.length();
-            std::string s(zeros, '0');
-            sj = s + sj;
-        } else if (si.length() < sj.length()) {
-            int zeros = sj.length() - si.length();
-            std::string s(zeros, '0');
-            si = s + si;
-        }
-        return  si < sj  ;
-    });
-
-    //std::sort(ints.begin(), ints.end());
-    for ( int i=0; i< 1000 ; i++){
-        cout << ints[i] << endl;
-        REQUIRE( ints[i].toLongIfPossible() == i);
-    }
+    auto c = a - b;
+    REQUIRE( c ==0 );
 }
 
 
-TEST_CASE( "negative", "[should be negative]" ) {
+TEST_CASE( "pre increment count down small", "[from 1000]" ) {
     BigInteger a(1000);
-    BigInteger b(2000);
-    auto c = a -b;
-    REQUIRE( a ==0);
+    for ( int i=1 ; i <=1000 ; i ++){
+        --a;
+        REQUIRE( a == (1000 -i));
+        cout <<a << endl;
+    }
 }
 
-
-TEST_CASE( "countdown", "[cd]" ) {
+TEST_CASE( "post increment count down small", "[from 1000]" ) {
     BigInteger a(1000);
     for ( int i=1 ; i <=1000 ; i ++){
         a--;
@@ -100,16 +41,7 @@ TEST_CASE( "countdown", "[cd]" ) {
     }
 }
 
-TEST_CASE( "countdownpre", "[cdpre]" ) {
-    BigInteger a(1000);
-    for ( int i=1 ; i <=1000 ; i ++){
-        --a;
-        REQUIRE( a == (1000 -i));
-        cout <<a << endl;
-    }
-}
-
-TEST_CASE( "cntdownbig", "[big]" ) {
+TEST_CASE( "increment count down big", "[big]" ) {
     BigInteger a("999999999999999999999999999999999999999");
     for ( int i=1 ; i <=100 ; i ++) {
         --a;
@@ -117,20 +49,25 @@ TEST_CASE( "cntdownbig", "[big]" ) {
     }
 }
 
-TEST_CASE( "omg", "[omg2]" ) {
+TEST_CASE( "==0", "[equals]" ) {
     BigInteger a("999999999999999999999999999999999999999");
     while (! (a==0) ) {
-        a = a - "100000000000000000000000000000000000000";
+        a = a - "999999999999999999999999999999999999999";
         cout << a << endl;
     }
 }
 
-TEST_CASE( "- BigInteger 1-1", "[1-1]" ) {
+TEST_CASE( "1-1=0", "[1-1=0]" ) {
     BigInteger a(1);
     BigInteger b(1);
-    auto c = a-b;
+    auto c = a - b;
+    cout << c << endl;
     REQUIRE( c == "0" );
-    REQUIRE( c.toLongIfPossible() == 0 );
+    REQUIRE( "0" == c );
+    REQUIRE( c  == 0 );
+    REQUIRE( 0  == c );
+    REQUIRE( c  == BigInteger(0) );
+    REQUIRE( BigInteger(0) == c);
 }
 
 TEST_CASE( "decrement", "[decrement]" ) {
@@ -152,7 +89,7 @@ TEST_CASE( "decrement", "[decrement]" ) {
 }
 
 
-TEST_CASE( "- BigInteger 100-99", "[100-99]" ) {
+TEST_CASE( "100-99=1", "[100-99=1]" ) {
     BigInteger a(100);
     BigInteger b(99);
     auto c = a-b;
@@ -173,9 +110,9 @@ TEST_CASE( "- BigInteger 100-99", "[100-99]" ) {
     cout << _c << endl;
     REQUIRE( _c == "999999999999999999999999998" );
 
-    _c =  _a - BigInteger("999,999,999,999,999,999,999,999,999");
+    _c =   BigInteger("999,999,999,999,999,999,999,999,999") - "999999999999999999999999998";
     cout << _c << endl;
-    REQUIRE( _c == "0" );
+    REQUIRE( _c == "1" );
 
     _c =  _a - BigInteger("999,000,000,000,000,000,000,000,000");
     cout << _c << endl;

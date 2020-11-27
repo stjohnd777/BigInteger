@@ -100,7 +100,7 @@ CreateCopyAssignmentTest_EXTERNAL_OBJECTS =
 tests/CreateCopyAssignmentTest: tests/CMakeFiles/CreateCopyAssignmentTest.dir/DivTest.cpp.o
 tests/CreateCopyAssignmentTest: tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make
 tests/CreateCopyAssignmentTest: bigint/libbigint.a
-tests/CreateCopyAssignmentTest: dsj_string/libdsj_string.a
+tests/CreateCopyAssignmentTest: utils/libdsj_string.a
 tests/CreateCopyAssignmentTest: tests/CMakeFiles/CreateCopyAssignmentTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CreateCopyAssignmentTest"
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CreateCopyAssignmentTest.dir/link.txt --verbose=$(VERBOSE)

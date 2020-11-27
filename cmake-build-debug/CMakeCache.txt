@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=cmke_bigint
+CMAKE_PROJECT_NAME:STATIC=Main
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -221,6 +221,12 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+Main_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+
+//Value Computed by CMake
+Main_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint
+
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
@@ -273,10 +279,16 @@ libdsj_stringutils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke
 libdsj_stringutils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
 
 //Value Computed by CMake
-libdsjstringutils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/dsj_string
+libdsjstringutils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils
 
 //Value Computed by CMake
-libdsjstringutils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/dsj_string
+libdsjstringutils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils
+
+//Value Computed by CMake
+utils_BINARY_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils
+
+//Value Computed by CMake
+utils_SOURCE_DIR:STATIC=/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils
 
 
 ########################

@@ -1,17 +1,17 @@
 cmake_minimum_required(VERSION 3.17)
-project(cmke_bigint)
+project(Main)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(dsj_string)
+add_subdirectory(utils)
 add_subdirectory(bigint)
 
 add_subdirectory(tests)
 
-add_executable(cmke_bigint main.cpp random/random.cpp random/random.h)
+add_executable(Main main.cpp )
 
-target_link_libraries(cmke_bigint PRIVATE bigint)
-target_link_libraries(cmke_bigint PRIVATE dsj_string)
+target_link_libraries(Main PRIVATE bigint)
+target_link_libraries(Main PRIVATE utils)
 
 
 

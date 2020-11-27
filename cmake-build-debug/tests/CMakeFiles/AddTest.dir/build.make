@@ -100,7 +100,7 @@ AddTest_EXTERNAL_OBJECTS =
 tests/AddTest: tests/CMakeFiles/AddTest.dir/AddTest.cpp.o
 tests/AddTest: tests/CMakeFiles/AddTest.dir/build.make
 tests/AddTest: bigint/libbigint.a
-tests/AddTest: dsj_string/libdsj_string.a
+tests/AddTest: utils/libutils.a
 tests/AddTest: tests/CMakeFiles/AddTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AddTest"
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AddTest.dir/link.txt --verbose=$(VERBOSE)

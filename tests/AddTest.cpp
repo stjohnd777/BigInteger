@@ -54,6 +54,7 @@ TEST_CASE( "+ BigInteger ... ", "0" ) {
     BigInteger next = big + _1;
     REQUIRE( big < next );
     REQUIRE( next.toString() == "10000000000000000000000000000000000" );
+
     BigInteger ans ("10000000000000000000000000000000000");
     REQUIRE( ans == next);
 

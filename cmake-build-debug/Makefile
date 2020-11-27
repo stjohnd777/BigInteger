@@ -131,30 +131,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cmke_bigint
+# Target rules for targets named Main
 
 # Build rule for target.
-cmke_bigint: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmke_bigint
-.PHONY : cmke_bigint
+Main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Main
+.PHONY : Main
 
 # fast build rule for target.
-cmke_bigint/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/build
-.PHONY : cmke_bigint/fast
+Main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
+.PHONY : Main/fast
 
 #=============================================================================
-# Target rules for targets named dsj_string
+# Target rules for targets named utils
 
 # Build rule for target.
-dsj_string: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dsj_string
-.PHONY : dsj_string
+utils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils
+.PHONY : utils
 
 # fast build rule for target.
-dsj_string/fast:
-	$(MAKE) $(MAKESILENT) -f dsj_string/CMakeFiles/dsj_string.dir/build.make dsj_string/CMakeFiles/dsj_string.dir/build
-.PHONY : dsj_string/fast
+utils/fast:
+	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/build
+.PHONY : utils/fast
 
 #=============================================================================
 # Target rules for targets named bigint
@@ -170,17 +170,30 @@ bigint/fast:
 .PHONY : bigint/fast
 
 #=============================================================================
-# Target rules for targets named CreateCopyAssignmentTest
+# Target rules for targets named Eql
 
 # Build rule for target.
-CreateCopyAssignmentTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CreateCopyAssignmentTest
-.PHONY : CreateCopyAssignmentTest
+Eql: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Eql
+.PHONY : Eql
 
 # fast build rule for target.
-CreateCopyAssignmentTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CreateCopyAssignmentTest.dir/build.make tests/CMakeFiles/CreateCopyAssignmentTest.dir/build
-.PHONY : CreateCopyAssignmentTest/fast
+Eql/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
+.PHONY : Eql/fast
+
+#=============================================================================
+# Target rules for targets named LessTest
+
+# Build rule for target.
+LessTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LessTest
+.PHONY : LessTest
+
+# fast build rule for target.
+LessTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
+.PHONY : LessTest/fast
 
 #=============================================================================
 # Target rules for targets named MultTest
@@ -207,6 +220,19 @@ DivTest: cmake_check_build_system
 DivTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/build
 .PHONY : DivTest/fast
+
+#=============================================================================
+# Target rules for targets named IncTest
+
+# Build rule for target.
+IncTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IncTest
+.PHONY : IncTest
+
+# fast build rule for target.
+IncTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/build
+.PHONY : IncTest/fast
 
 #=============================================================================
 # Target rules for targets named SubTest
@@ -240,7 +266,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -249,7 +275,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -258,35 +284,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-random/random.o: random/random.cpp.o
-
-.PHONY : random/random.o
-
-# target to build an object file
-random/random.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/random/random.cpp.o
-.PHONY : random/random.cpp.o
-
-random/random.i: random/random.cpp.i
-
-.PHONY : random/random.i
-
-# target to preprocess a source file
-random/random.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/random/random.cpp.i
-.PHONY : random/random.cpp.i
-
-random/random.s: random/random.cpp.s
-
-.PHONY : random/random.s
-
-# target to generate assembly for a file
-random/random.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmke_bigint.dir/build.make CMakeFiles/cmke_bigint.dir/random/random.cpp.s
-.PHONY : random/random.cpp.s
 
 # Help Target
 help:
@@ -297,19 +296,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
-	@echo "... CreateCopyAssignmentTest"
 	@echo "... DivTest"
+	@echo "... Eql"
+	@echo "... IncTest"
+	@echo "... LessTest"
+	@echo "... Main"
 	@echo "... MultTest"
 	@echo "... SubTest"
 	@echo "... bigint"
-	@echo "... cmke_bigint"
-	@echo "... dsj_string"
+	@echo "... utils"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... random/random.o"
-	@echo "... random/random.i"
-	@echo "... random/random.s"
 .PHONY : help
 
 

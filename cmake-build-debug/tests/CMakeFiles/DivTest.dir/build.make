@@ -100,7 +100,7 @@ DivTest_EXTERNAL_OBJECTS =
 tests/DivTest: tests/CMakeFiles/DivTest.dir/DivTest.cpp.o
 tests/DivTest: tests/CMakeFiles/DivTest.dir/build.make
 tests/DivTest: bigint/libbigint.a
-tests/DivTest: dsj_string/libdsj_string.a
+tests/DivTest: utils/libutils.a
 tests/DivTest: tests/CMakeFiles/DivTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable DivTest"
 	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DivTest.dir/link.txt --verbose=$(VERBOSE)

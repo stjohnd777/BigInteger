@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsjVector.cpp
+dsj_vector.h
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsj_vector.h
+
+/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsj_vector.h
+iostream
+-
+functional
+-
+array
+-
+vector
+-
+map
+-
+algorithm
+-
+memory
+-
+random
+-
+chrono
+-
+

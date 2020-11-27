@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cmke_bigint.dir/main.cpp.o"
-  "CMakeFiles/cmke_bigint.dir/random/random.cpp.o"
   "cmke_bigint"
   "cmke_bigint.pdb"
 )
