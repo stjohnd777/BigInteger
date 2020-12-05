@@ -3,39 +3,24 @@
 //
 #pragma once
 
-#include <map>
-#include <thread>
-#include <mutex>
 #include <string>
+#include <map>
+#include <mutex>
 #include <fstream>
 
-#include "../utils/StringUtils.hpp"
+#include "gmp.h"
+#include <gmpxx.h>
+#include "BigInteger.h"
+#include "fibonocci.hpp"
+#include "../utils/easy_string.hpp"
 
-
-std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int limit ){
-
-    std::map<std::string,std::string> map;
-    std::fstream dataFile;
-    dataFile.open(path,std::ios::in);
-    if (dataFile.is_open()){
-        std::string line;
-        int index = 0;
-        while(std::getline(dataFile, line)){
-            std::vector<std::string> splits;
-            dsj::StringUtils::split(splits,line, ' ');
-            map[splits[0]] = splits[1];
-            if ( index == limit){
-                break;
-            }
-            index ++;
-        }
-        dataFile.close(); //close the file object.
-    }
-    return map;
-}
 
 //
-///// The Rule is fibonocci (n) = fibonocci(n−1) + fibonocci(n−2)
+// Created by Daniel St. John on 12/1/20.
+//
+
+std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int limit = 10000  );
+
 template <class T>
 T Fibonocci(T number ) {
 
@@ -46,6 +31,11 @@ T Fibonocci(T number ) {
 
     if (cache.contains(number)) {
         return cache[ number];
+    }
+
+    if ( number == 0){
+        cache[ number] = 0;
+        return 0;
     }
     T ans = (number <= 2 ) ? 1 : Fibonocci(number - 1) + Fibonocci(number - 2) ;
     if ( ans < 0) {
@@ -60,3 +50,5 @@ T Fibonocci(T number ) {
     }
     return ans;
 }
+
+mpz_class FibonocciGMP(mpz_class number );

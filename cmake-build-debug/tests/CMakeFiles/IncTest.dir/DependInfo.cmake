@@ -4,18 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/IncDecTest.cpp" "/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.o"
+  "/Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/IncDecTest.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/IncTest.dir/big_interger/IncDecTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/CMakeFiles/bigint.dir/DependInfo.cmake"
-  "/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake"
+  "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/DependInfo.cmake"
+  "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

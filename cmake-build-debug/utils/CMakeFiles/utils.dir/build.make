@@ -63,10 +63,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include utils/CMakeFiles/utils.dir/depend.make
@@ -77,62 +77,92 @@ include utils/CMakeFiles/utils.dir/progress.make
 # Include the compile flags for this target's objects.
 include utils/CMakeFiles/utils.dir/flags.make
 
-utils/CMakeFiles/utils.dir/StringUtils.cpp.o: utils/CMakeFiles/utils.dir/flags.make
-utils/CMakeFiles/utils.dir/StringUtils.cpp.o: ../utils/StringUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utils/CMakeFiles/utils.dir/StringUtils.cpp.o"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/StringUtils.cpp.o -c /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/StringUtils.cpp
+utils/CMakeFiles/utils.dir/easy_string.cpp.o: utils/CMakeFiles/utils.dir/flags.make
+utils/CMakeFiles/utils.dir/easy_string.cpp.o: ../utils/easy_string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utils/CMakeFiles/utils.dir/easy_string.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/easy_string.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.cpp
 
-utils/CMakeFiles/utils.dir/StringUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/StringUtils.cpp.i"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/StringUtils.cpp > CMakeFiles/utils.dir/StringUtils.cpp.i
+utils/CMakeFiles/utils.dir/easy_string.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/easy_string.cpp.i"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.cpp > CMakeFiles/utils.dir/easy_string.cpp.i
 
-utils/CMakeFiles/utils.dir/StringUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/StringUtils.cpp.s"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/StringUtils.cpp -o CMakeFiles/utils.dir/StringUtils.cpp.s
+utils/CMakeFiles/utils.dir/easy_string.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/easy_string.cpp.s"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.cpp -o CMakeFiles/utils.dir/easy_string.cpp.s
+
+utils/CMakeFiles/utils.dir/easy_vector.cpp.o: utils/CMakeFiles/utils.dir/flags.make
+utils/CMakeFiles/utils.dir/easy_vector.cpp.o: ../utils/easy_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object utils/CMakeFiles/utils.dir/easy_vector.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/easy_vector.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/utils/easy_vector.cpp
+
+utils/CMakeFiles/utils.dir/easy_vector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/easy_vector.cpp.i"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/utils/easy_vector.cpp > CMakeFiles/utils.dir/easy_vector.cpp.i
+
+utils/CMakeFiles/utils.dir/easy_vector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/easy_vector.cpp.s"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/utils/easy_vector.cpp -o CMakeFiles/utils.dir/easy_vector.cpp.s
+
+utils/CMakeFiles/utils.dir/Props.cpp.o: utils/CMakeFiles/utils.dir/flags.make
+utils/CMakeFiles/utils.dir/Props.cpp.o: ../utils/Props.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object utils/CMakeFiles/utils.dir/Props.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/Props.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/utils/Props.cpp
+
+utils/CMakeFiles/utils.dir/Props.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/Props.cpp.i"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/utils/Props.cpp > CMakeFiles/utils.dir/Props.cpp.i
+
+utils/CMakeFiles/utils.dir/Props.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/Props.cpp.s"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/utils/Props.cpp -o CMakeFiles/utils.dir/Props.cpp.s
+
+utils/CMakeFiles/utils.dir/random_string.cpp.o: utils/CMakeFiles/utils.dir/flags.make
+utils/CMakeFiles/utils.dir/random_string.cpp.o: ../utils/random_string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object utils/CMakeFiles/utils.dir/random_string.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/random_string.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/utils/random_string.cpp
+
+utils/CMakeFiles/utils.dir/random_string.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/random_string.cpp.i"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/utils/random_string.cpp > CMakeFiles/utils.dir/random_string.cpp.i
+
+utils/CMakeFiles/utils.dir/random_string.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/random_string.cpp.s"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/utils/random_string.cpp -o CMakeFiles/utils.dir/random_string.cpp.s
 
 utils/CMakeFiles/utils.dir/TimeMetric.cpp.o: utils/CMakeFiles/utils.dir/flags.make
 utils/CMakeFiles/utils.dir/TimeMetric.cpp.o: ../utils/TimeMetric.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object utils/CMakeFiles/utils.dir/TimeMetric.cpp.o"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/TimeMetric.cpp.o -c /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/TimeMetric.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object utils/CMakeFiles/utils.dir/TimeMetric.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/TimeMetric.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.cpp
 
 utils/CMakeFiles/utils.dir/TimeMetric.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/TimeMetric.cpp.i"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/TimeMetric.cpp > CMakeFiles/utils.dir/TimeMetric.cpp.i
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.cpp > CMakeFiles/utils.dir/TimeMetric.cpp.i
 
 utils/CMakeFiles/utils.dir/TimeMetric.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/TimeMetric.cpp.s"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/TimeMetric.cpp -o CMakeFiles/utils.dir/TimeMetric.cpp.s
-
-utils/CMakeFiles/utils.dir/dsjVector.cpp.o: utils/CMakeFiles/utils.dir/flags.make
-utils/CMakeFiles/utils.dir/dsjVector.cpp.o: ../utils/dsjVector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object utils/CMakeFiles/utils.dir/dsjVector.cpp.o"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utils.dir/dsjVector.cpp.o -c /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsjVector.cpp
-
-utils/CMakeFiles/utils.dir/dsjVector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utils.dir/dsjVector.cpp.i"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsjVector.cpp > CMakeFiles/utils.dir/dsjVector.cpp.i
-
-utils/CMakeFiles/utils.dir/dsjVector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utils.dir/dsjVector.cpp.s"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsjVector.cpp -o CMakeFiles/utils.dir/dsjVector.cpp.s
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.cpp -o CMakeFiles/utils.dir/TimeMetric.cpp.s
 
 # Object files for target utils
 utils_OBJECTS = \
-"CMakeFiles/utils.dir/StringUtils.cpp.o" \
-"CMakeFiles/utils.dir/TimeMetric.cpp.o" \
-"CMakeFiles/utils.dir/dsjVector.cpp.o"
+"CMakeFiles/utils.dir/easy_string.cpp.o" \
+"CMakeFiles/utils.dir/easy_vector.cpp.o" \
+"CMakeFiles/utils.dir/Props.cpp.o" \
+"CMakeFiles/utils.dir/random_string.cpp.o" \
+"CMakeFiles/utils.dir/TimeMetric.cpp.o"
 
 # External object files for target utils
 utils_EXTERNAL_OBJECTS =
 
-utils/libutils.a: utils/CMakeFiles/utils.dir/StringUtils.cpp.o
+utils/libutils.a: utils/CMakeFiles/utils.dir/easy_string.cpp.o
+utils/libutils.a: utils/CMakeFiles/utils.dir/easy_vector.cpp.o
+utils/libutils.a: utils/CMakeFiles/utils.dir/Props.cpp.o
+utils/libutils.a: utils/CMakeFiles/utils.dir/random_string.cpp.o
 utils/libutils.a: utils/CMakeFiles/utils.dir/TimeMetric.cpp.o
-utils/libutils.a: utils/CMakeFiles/utils.dir/dsjVector.cpp.o
 utils/libutils.a: utils/CMakeFiles/utils.dir/build.make
 utils/libutils.a: utils/CMakeFiles/utils.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libutils.a"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean_target.cmake
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utils.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libutils.a"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean_target.cmake
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utils.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 utils/CMakeFiles/utils.dir/build: utils/libutils.a
@@ -140,10 +170,10 @@ utils/CMakeFiles/utils.dir/build: utils/libutils.a
 .PHONY : utils/CMakeFiles/utils.dir/build
 
 utils/CMakeFiles/utils.dir/clean:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean.cmake
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean.cmake
 .PHONY : utils/CMakeFiles/utils.dir/clean
 
 utils/CMakeFiles/utils.dir/depend:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/overman/CLionProjects/cmke-good/cmke-bigint /Users/overman/CLionProjects/cmke-good/cmke-bigint/utils /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/overman/dev/github/utils-bigint-crpto /Users/overman/dev/github/utils-bigint-crpto/utils /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : utils/CMakeFiles/utils.dir/depend
 

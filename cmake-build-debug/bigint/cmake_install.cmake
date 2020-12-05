@@ -1,4 +1,4 @@
-# Install script for directory: /Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint
+# Install script for directory: /Users/overman/dev/github/utils-bigint-crpto/bigint
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

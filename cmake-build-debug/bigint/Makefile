@@ -68,10 +68,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/CMakeFiles/progress.marks
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/progress.marks
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/clean
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/preinstall
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/preinstall
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 bigint/CMakeFiles/bigint.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/CMakeFiles/bigint.dir/rule
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bigint/CMakeFiles/bigint.dir/rule
 .PHONY : bigint/CMakeFiles/bigint.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ bigint: bigint/CMakeFiles/bigint.dir/rule
 
 # fast build rule for target.
 bigint/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/build
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/build
 .PHONY : bigint/fast
 
 BigInteger.o: BigInteger.cpp.o
@@ -151,7 +151,7 @@ BigInteger.o: BigInteger.cpp.o
 
 # target to build an object file
 BigInteger.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o
 .PHONY : BigInteger.cpp.o
 
 BigInteger.i: BigInteger.cpp.i
@@ -160,7 +160,7 @@ BigInteger.i: BigInteger.cpp.i
 
 # target to preprocess a source file
 BigInteger.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/BigInteger.cpp.i
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/BigInteger.cpp.i
 .PHONY : BigInteger.cpp.i
 
 BigInteger.s: BigInteger.cpp.s
@@ -169,8 +169,62 @@ BigInteger.s: BigInteger.cpp.s
 
 # target to generate assembly for a file
 BigInteger.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/BigInteger.cpp.s
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/BigInteger.cpp.s
 .PHONY : BigInteger.cpp.s
+
+GmpBigIntWrapper.o: GmpBigIntWrapper.cpp.o
+
+.PHONY : GmpBigIntWrapper.o
+
+# target to build an object file
+GmpBigIntWrapper.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o
+.PHONY : GmpBigIntWrapper.cpp.o
+
+GmpBigIntWrapper.i: GmpBigIntWrapper.cpp.i
+
+.PHONY : GmpBigIntWrapper.i
+
+# target to preprocess a source file
+GmpBigIntWrapper.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.i
+.PHONY : GmpBigIntWrapper.cpp.i
+
+GmpBigIntWrapper.s: GmpBigIntWrapper.cpp.s
+
+.PHONY : GmpBigIntWrapper.s
+
+# target to generate assembly for a file
+GmpBigIntWrapper.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.s
+.PHONY : GmpBigIntWrapper.cpp.s
+
+fibonocci.o: fibonocci.cpp.o
+
+.PHONY : fibonocci.o
+
+# target to build an object file
+fibonocci.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o
+.PHONY : fibonocci.cpp.o
+
+fibonocci.i: fibonocci.cpp.i
+
+.PHONY : fibonocci.i
+
+# target to preprocess a source file
+fibonocci.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/fibonocci.cpp.i
+.PHONY : fibonocci.cpp.i
+
+fibonocci.s: fibonocci.cpp.s
+
+.PHONY : fibonocci.s
+
+# target to generate assembly for a file
+fibonocci.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/fibonocci.cpp.s
+.PHONY : fibonocci.cpp.s
 
 # Help Target
 help:
@@ -184,6 +238,12 @@ help:
 	@echo "... BigInteger.o"
 	@echo "... BigInteger.i"
 	@echo "... BigInteger.s"
+	@echo "... GmpBigIntWrapper.o"
+	@echo "... GmpBigIntWrapper.i"
+	@echo "... GmpBigIntWrapper.s"
+	@echo "... fibonocci.o"
+	@echo "... fibonocci.i"
+	@echo "... fibonocci.s"
 .PHONY : help
 
 
@@ -195,6 +255,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cmke-bigint.iml" filepath="$PROJECT_DIR$/.idea/cmke-bigint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../utils-bigint-crpto/.idea/cmke-bigint.iml" filepath="$PROJECT_DIR$/../utils-bigint-crpto/.idea/cmke-bigint.iml" />
     </modules>
   </component>
 </project>

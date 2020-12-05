@@ -6,53 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
-string
--
-sstream
--
-array
--
-vector
--
-deque
--
-algorithm
--
-limits
--
+/Users/overman/dev/github/utils-bigint-crpto/math/Math.cpp
+Math.h
+/Users/overman/dev/github/utils-bigint-crpto/math/Math.h
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
-map
--
-thread
--
-mutex
--
-string
--
-fstream
--
-../utils/StringUtils.hpp
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/StringUtils.hpp
-
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp
-iostream
--
-bigint/BigInteger.h
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
-./bigint/fibonocci.hpp
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
-bigint/fibonocci.hpp
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/fibonocci.hpp
-
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/StringUtils.hpp
-iostream
--
-string
--
-vector
--
-functional
--
+/Users/overman/dev/github/utils-bigint-crpto/math/Math.h
 

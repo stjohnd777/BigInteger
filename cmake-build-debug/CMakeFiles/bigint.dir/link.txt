@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libbigint.a  CMakeFiles/bigint.dir/bigint/BigInt.cpp.o CMakeFiles/bigint.dir/tests/SubTest.cpp.o CMakeFiles/bigint.dir/tests/FactorialTest.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libbigint.a

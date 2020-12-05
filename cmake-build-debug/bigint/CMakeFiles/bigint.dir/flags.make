@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include -I/Users/overman/dev/flint-2.6.3 -I/Users/overman/dev/flint-2.6.3/build -I/Users/overman/dev/flint-2.6.3/build/lib 
+CXX_INCLUDES = -I/usr/local/include 
 

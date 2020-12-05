@@ -119,6 +119,14 @@ public:
     BigInteger operator*(const std::string &other) ;
     friend BigInteger operator*(const std::string &other, const BigInteger& rhs) ;
 
+
+    /// division
+    BigInteger operator/(const BigInteger &other) ;
+    BigInteger operator/(const long other) ;
+//    friend BigInteger operator/(const long other, const BigInteger& rhs) ;
+//    BigInteger operator/(const std::string &other) ;
+//    friend BigInteger operator/(const std::string &other, const BigInteger& rhs) ;
+
     /// return the long  if possible
     long toLongIfPossible() const;
 
@@ -155,6 +163,50 @@ public:
 
     ~BigInteger() ;
 
+    unsigned short int digitAtFromRight(long i) {
+        return digits[i];
+    }
+
+    unsigned short int digitAtFromLeft(long i) {
+        auto digitsLength = length()-1;
+        return digits[digitsLength - i];
+    }
+
+    void append(unsigned short int c){
+        if ( length() ==1 && digits[0] == 0 ){
+            digits[0] = c;
+        }else {
+            digits.push_back(c);
+        }
+    }
+    void prePend(unsigned short int c){
+        digits.push_front(c);
+    }
+
+    long length() {
+        return digits.size();
+    }
+
+    BigInteger subStringBigInteger(long offset, long substringLen, bool isLeftToRight = true) {
+
+        // 1234567890 => [1,2,3,4,5,6,7,8,9,0
+        std::stringstream ss;
+        auto digitsLength = length()-1;
+        if ( isLeftToRight) {
+            for (auto i = 0; i < substringLen; i++) {
+                ss << digits[digitsLength - (offset + i)];
+            }
+            return BigInteger(ss.str());
+        }else {
+            for (auto i = 0; i < substringLen; i++) {
+                ss << digits[i];
+            }
+            std::string s = ss.str();
+            std::reverse( std::begin(s) ,std::end(s) );
+            return BigInteger(s);
+        }
+
+    }
 private:
 
     std::deque<unsigned short int> digits;

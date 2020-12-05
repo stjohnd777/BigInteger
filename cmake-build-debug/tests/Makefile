@@ -68,10 +68,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/progress.marks
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/progress.marks
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,112 +117,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/Eql.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/Eql.dir/rule
-.PHONY : tests/CMakeFiles/Eql.dir/rule
+tests/CMakeFiles/GmpTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/GmpTest.dir/rule
+.PHONY : tests/CMakeFiles/GmpTest.dir/rule
 
 # Convenience name for target.
-Eql: tests/CMakeFiles/Eql.dir/rule
+GmpTest: tests/CMakeFiles/GmpTest.dir/rule
 
-.PHONY : Eql
+.PHONY : GmpTest
 
 # fast build rule for target.
-Eql/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
-.PHONY : Eql/fast
-
-# Convenience name for target.
-tests/CMakeFiles/LessTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/LessTest.dir/rule
-.PHONY : tests/CMakeFiles/LessTest.dir/rule
-
-# Convenience name for target.
-LessTest: tests/CMakeFiles/LessTest.dir/rule
-
-.PHONY : LessTest
-
-# fast build rule for target.
-LessTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
-.PHONY : LessTest/fast
-
-# Convenience name for target.
-tests/CMakeFiles/MultTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/MultTest.dir/rule
-.PHONY : tests/CMakeFiles/MultTest.dir/rule
-
-# Convenience name for target.
-MultTest: tests/CMakeFiles/MultTest.dir/rule
-
-.PHONY : MultTest
-
-# fast build rule for target.
-MultTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
-.PHONY : MultTest/fast
-
-# Convenience name for target.
-tests/CMakeFiles/DivTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/DivTest.dir/rule
-.PHONY : tests/CMakeFiles/DivTest.dir/rule
-
-# Convenience name for target.
-DivTest: tests/CMakeFiles/DivTest.dir/rule
-
-.PHONY : DivTest
-
-# fast build rule for target.
-DivTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/build
-.PHONY : DivTest/fast
-
-# Convenience name for target.
-tests/CMakeFiles/IncTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/IncTest.dir/rule
-.PHONY : tests/CMakeFiles/IncTest.dir/rule
-
-# Convenience name for target.
-IncTest: tests/CMakeFiles/IncTest.dir/rule
-
-.PHONY : IncTest
-
-# fast build rule for target.
-IncTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/build
-.PHONY : IncTest/fast
-
-# Convenience name for target.
-tests/CMakeFiles/SubTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/SubTest.dir/rule
-.PHONY : tests/CMakeFiles/SubTest.dir/rule
-
-# Convenience name for target.
-SubTest: tests/CMakeFiles/SubTest.dir/rule
-
-.PHONY : SubTest
-
-# fast build rule for target.
-SubTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/build
-.PHONY : SubTest/fast
+GmpTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/build
+.PHONY : GmpTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/AddTest.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/AddTest.dir/rule
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/AddTest.dir/rule
 .PHONY : tests/CMakeFiles/AddTest.dir/rule
 
 # Convenience name for target.
@@ -232,197 +157,398 @@ AddTest: tests/CMakeFiles/AddTest.dir/rule
 
 # fast build rule for target.
 AddTest/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/build
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/build
 .PHONY : AddTest/fast
 
-AddTest.o: AddTest.cpp.o
+# Convenience name for target.
+tests/CMakeFiles/Eql.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/Eql.dir/rule
+.PHONY : tests/CMakeFiles/Eql.dir/rule
 
-.PHONY : AddTest.o
+# Convenience name for target.
+Eql: tests/CMakeFiles/Eql.dir/rule
 
-# target to build an object file
-AddTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/AddTest.cpp.o
-.PHONY : AddTest.cpp.o
+.PHONY : Eql
 
-AddTest.i: AddTest.cpp.i
+# fast build rule for target.
+Eql/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
+.PHONY : Eql/fast
 
-.PHONY : AddTest.i
+# Convenience name for target.
+tests/CMakeFiles/LessTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/LessTest.dir/rule
+.PHONY : tests/CMakeFiles/LessTest.dir/rule
 
-# target to preprocess a source file
-AddTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/AddTest.cpp.i
-.PHONY : AddTest.cpp.i
+# Convenience name for target.
+LessTest: tests/CMakeFiles/LessTest.dir/rule
 
-AddTest.s: AddTest.cpp.s
+.PHONY : LessTest
 
-.PHONY : AddTest.s
+# fast build rule for target.
+LessTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
+.PHONY : LessTest/fast
 
-# target to generate assembly for a file
-AddTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/AddTest.cpp.s
-.PHONY : AddTest.cpp.s
+# Convenience name for target.
+tests/CMakeFiles/FibTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/FibTest.dir/rule
+.PHONY : tests/CMakeFiles/FibTest.dir/rule
 
-DivTest.o: DivTest.cpp.o
+# Convenience name for target.
+FibTest: tests/CMakeFiles/FibTest.dir/rule
 
-.PHONY : DivTest.o
+.PHONY : FibTest
 
-# target to build an object file
-DivTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/DivTest.cpp.o
-.PHONY : DivTest.cpp.o
+# fast build rule for target.
+FibTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/build
+.PHONY : FibTest/fast
 
-DivTest.i: DivTest.cpp.i
+# Convenience name for target.
+tests/CMakeFiles/SubTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/SubTest.dir/rule
+.PHONY : tests/CMakeFiles/SubTest.dir/rule
 
-.PHONY : DivTest.i
+# Convenience name for target.
+SubTest: tests/CMakeFiles/SubTest.dir/rule
 
-# target to preprocess a source file
-DivTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/DivTest.cpp.i
-.PHONY : DivTest.cpp.i
+.PHONY : SubTest
 
-DivTest.s: DivTest.cpp.s
+# fast build rule for target.
+SubTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/build
+.PHONY : SubTest/fast
 
-.PHONY : DivTest.s
+# Convenience name for target.
+tests/CMakeFiles/MultTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/MultTest.dir/rule
+.PHONY : tests/CMakeFiles/MultTest.dir/rule
 
-# target to generate assembly for a file
-DivTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/DivTest.cpp.s
-.PHONY : DivTest.cpp.s
+# Convenience name for target.
+MultTest: tests/CMakeFiles/MultTest.dir/rule
 
-EqualTest.o: EqualTest.cpp.o
+.PHONY : MultTest
 
-.PHONY : EqualTest.o
+# fast build rule for target.
+MultTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
+.PHONY : MultTest/fast
 
-# target to build an object file
-EqualTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/EqualTest.cpp.o
-.PHONY : EqualTest.cpp.o
+# Convenience name for target.
+tests/CMakeFiles/MetricTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/MetricTest.dir/rule
+.PHONY : tests/CMakeFiles/MetricTest.dir/rule
 
-EqualTest.i: EqualTest.cpp.i
+# Convenience name for target.
+MetricTest: tests/CMakeFiles/MetricTest.dir/rule
 
-.PHONY : EqualTest.i
+.PHONY : MetricTest
 
-# target to preprocess a source file
-EqualTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/EqualTest.cpp.i
-.PHONY : EqualTest.cpp.i
+# fast build rule for target.
+MetricTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
+.PHONY : MetricTest/fast
 
-EqualTest.s: EqualTest.cpp.s
+# Convenience name for target.
+tests/CMakeFiles/DivTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/DivTest.dir/rule
+.PHONY : tests/CMakeFiles/DivTest.dir/rule
 
-.PHONY : EqualTest.s
+# Convenience name for target.
+DivTest: tests/CMakeFiles/DivTest.dir/rule
 
-# target to generate assembly for a file
-EqualTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/EqualTest.cpp.s
-.PHONY : EqualTest.cpp.s
+.PHONY : DivTest
 
-IncDecTest.o: IncDecTest.cpp.o
+# fast build rule for target.
+DivTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/build
+.PHONY : DivTest/fast
 
-.PHONY : IncDecTest.o
+# Convenience name for target.
+tests/CMakeFiles/IncTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/IncTest.dir/rule
+.PHONY : tests/CMakeFiles/IncTest.dir/rule
 
-# target to build an object file
-IncDecTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.o
-.PHONY : IncDecTest.cpp.o
+# Convenience name for target.
+IncTest: tests/CMakeFiles/IncTest.dir/rule
 
-IncDecTest.i: IncDecTest.cpp.i
+.PHONY : IncTest
 
-.PHONY : IncDecTest.i
+# fast build rule for target.
+IncTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/build
+.PHONY : IncTest/fast
 
-# target to preprocess a source file
-IncDecTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.i
-.PHONY : IncDecTest.cpp.i
+big_interger/AddTest.o: big_interger/AddTest.cpp.o
 
-IncDecTest.s: IncDecTest.cpp.s
-
-.PHONY : IncDecTest.s
-
-# target to generate assembly for a file
-IncDecTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/IncDecTest.cpp.s
-.PHONY : IncDecTest.cpp.s
-
-LessThenTest.o: LessThenTest.cpp.o
-
-.PHONY : LessThenTest.o
-
-# target to build an object file
-LessThenTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/LessThenTest.cpp.o
-.PHONY : LessThenTest.cpp.o
-
-LessThenTest.i: LessThenTest.cpp.i
-
-.PHONY : LessThenTest.i
-
-# target to preprocess a source file
-LessThenTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/LessThenTest.cpp.i
-.PHONY : LessThenTest.cpp.i
-
-LessThenTest.s: LessThenTest.cpp.s
-
-.PHONY : LessThenTest.s
-
-# target to generate assembly for a file
-LessThenTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/LessThenTest.cpp.s
-.PHONY : LessThenTest.cpp.s
-
-MultTest.o: MultTest.cpp.o
-
-.PHONY : MultTest.o
+.PHONY : big_interger/AddTest.o
 
 # target to build an object file
-MultTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/MultTest.cpp.o
-.PHONY : MultTest.cpp.o
+big_interger/AddTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/big_interger/AddTest.cpp.o
+.PHONY : big_interger/AddTest.cpp.o
 
-MultTest.i: MultTest.cpp.i
+big_interger/AddTest.i: big_interger/AddTest.cpp.i
 
-.PHONY : MultTest.i
+.PHONY : big_interger/AddTest.i
 
 # target to preprocess a source file
-MultTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/MultTest.cpp.i
-.PHONY : MultTest.cpp.i
+big_interger/AddTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/big_interger/AddTest.cpp.i
+.PHONY : big_interger/AddTest.cpp.i
 
-MultTest.s: MultTest.cpp.s
+big_interger/AddTest.s: big_interger/AddTest.cpp.s
 
-.PHONY : MultTest.s
+.PHONY : big_interger/AddTest.s
 
 # target to generate assembly for a file
-MultTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/MultTest.cpp.s
-.PHONY : MultTest.cpp.s
+big_interger/AddTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/big_interger/AddTest.cpp.s
+.PHONY : big_interger/AddTest.cpp.s
 
-SubTest.o: SubTest.cpp.o
+big_interger/DivTest.o: big_interger/DivTest.cpp.o
 
-.PHONY : SubTest.o
+.PHONY : big_interger/DivTest.o
 
 # target to build an object file
-SubTest.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/SubTest.cpp.o
-.PHONY : SubTest.cpp.o
+big_interger/DivTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o
+.PHONY : big_interger/DivTest.cpp.o
 
-SubTest.i: SubTest.cpp.i
+big_interger/DivTest.i: big_interger/DivTest.cpp.i
 
-.PHONY : SubTest.i
+.PHONY : big_interger/DivTest.i
 
 # target to preprocess a source file
-SubTest.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/SubTest.cpp.i
-.PHONY : SubTest.cpp.i
+big_interger/DivTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.i
+.PHONY : big_interger/DivTest.cpp.i
 
-SubTest.s: SubTest.cpp.s
+big_interger/DivTest.s: big_interger/DivTest.cpp.s
 
-.PHONY : SubTest.s
+.PHONY : big_interger/DivTest.s
 
 # target to generate assembly for a file
-SubTest.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/SubTest.cpp.s
-.PHONY : SubTest.cpp.s
+big_interger/DivTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.s
+.PHONY : big_interger/DivTest.cpp.s
+
+big_interger/EqualTest.o: big_interger/EqualTest.cpp.o
+
+.PHONY : big_interger/EqualTest.o
+
+# target to build an object file
+big_interger/EqualTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/big_interger/EqualTest.cpp.o
+.PHONY : big_interger/EqualTest.cpp.o
+
+big_interger/EqualTest.i: big_interger/EqualTest.cpp.i
+
+.PHONY : big_interger/EqualTest.i
+
+# target to preprocess a source file
+big_interger/EqualTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/big_interger/EqualTest.cpp.i
+.PHONY : big_interger/EqualTest.cpp.i
+
+big_interger/EqualTest.s: big_interger/EqualTest.cpp.s
+
+.PHONY : big_interger/EqualTest.s
+
+# target to generate assembly for a file
+big_interger/EqualTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/big_interger/EqualTest.cpp.s
+.PHONY : big_interger/EqualTest.cpp.s
+
+big_interger/IncDecTest.o: big_interger/IncDecTest.cpp.o
+
+.PHONY : big_interger/IncDecTest.o
+
+# target to build an object file
+big_interger/IncDecTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/big_interger/IncDecTest.cpp.o
+.PHONY : big_interger/IncDecTest.cpp.o
+
+big_interger/IncDecTest.i: big_interger/IncDecTest.cpp.i
+
+.PHONY : big_interger/IncDecTest.i
+
+# target to preprocess a source file
+big_interger/IncDecTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/big_interger/IncDecTest.cpp.i
+.PHONY : big_interger/IncDecTest.cpp.i
+
+big_interger/IncDecTest.s: big_interger/IncDecTest.cpp.s
+
+.PHONY : big_interger/IncDecTest.s
+
+# target to generate assembly for a file
+big_interger/IncDecTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/big_interger/IncDecTest.cpp.s
+.PHONY : big_interger/IncDecTest.cpp.s
+
+big_interger/LessThenTest.o: big_interger/LessThenTest.cpp.o
+
+.PHONY : big_interger/LessThenTest.o
+
+# target to build an object file
+big_interger/LessThenTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/big_interger/LessThenTest.cpp.o
+.PHONY : big_interger/LessThenTest.cpp.o
+
+big_interger/LessThenTest.i: big_interger/LessThenTest.cpp.i
+
+.PHONY : big_interger/LessThenTest.i
+
+# target to preprocess a source file
+big_interger/LessThenTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/big_interger/LessThenTest.cpp.i
+.PHONY : big_interger/LessThenTest.cpp.i
+
+big_interger/LessThenTest.s: big_interger/LessThenTest.cpp.s
+
+.PHONY : big_interger/LessThenTest.s
+
+# target to generate assembly for a file
+big_interger/LessThenTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/big_interger/LessThenTest.cpp.s
+.PHONY : big_interger/LessThenTest.cpp.s
+
+big_interger/MultTest.o: big_interger/MultTest.cpp.o
+
+.PHONY : big_interger/MultTest.o
+
+# target to build an object file
+big_interger/MultTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/big_interger/MultTest.cpp.o
+.PHONY : big_interger/MultTest.cpp.o
+
+big_interger/MultTest.i: big_interger/MultTest.cpp.i
+
+.PHONY : big_interger/MultTest.i
+
+# target to preprocess a source file
+big_interger/MultTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/big_interger/MultTest.cpp.i
+.PHONY : big_interger/MultTest.cpp.i
+
+big_interger/MultTest.s: big_interger/MultTest.cpp.s
+
+.PHONY : big_interger/MultTest.s
+
+# target to generate assembly for a file
+big_interger/MultTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/big_interger/MultTest.cpp.s
+.PHONY : big_interger/MultTest.cpp.s
+
+big_interger/SubTest.o: big_interger/SubTest.cpp.o
+
+.PHONY : big_interger/SubTest.o
+
+# target to build an object file
+big_interger/SubTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/big_interger/SubTest.cpp.o
+.PHONY : big_interger/SubTest.cpp.o
+
+big_interger/SubTest.i: big_interger/SubTest.cpp.i
+
+.PHONY : big_interger/SubTest.i
+
+# target to preprocess a source file
+big_interger/SubTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/big_interger/SubTest.cpp.i
+.PHONY : big_interger/SubTest.cpp.i
+
+big_interger/SubTest.s: big_interger/SubTest.cpp.s
+
+.PHONY : big_interger/SubTest.s
+
+# target to generate assembly for a file
+big_interger/SubTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/big_interger/SubTest.cpp.s
+.PHONY : big_interger/SubTest.cpp.s
+
+fibbonocci/FibonocciTest.o: fibbonocci/FibonocciTest.cpp.o
+
+.PHONY : fibbonocci/FibonocciTest.o
+
+# target to build an object file
+fibbonocci/FibonocciTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o
+.PHONY : fibbonocci/FibonocciTest.cpp.o
+
+fibbonocci/FibonocciTest.i: fibbonocci/FibonocciTest.cpp.i
+
+.PHONY : fibbonocci/FibonocciTest.i
+
+# target to preprocess a source file
+fibbonocci/FibonocciTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.i
+.PHONY : fibbonocci/FibonocciTest.cpp.i
+
+fibbonocci/FibonocciTest.s: fibbonocci/FibonocciTest.cpp.s
+
+.PHONY : fibbonocci/FibonocciTest.s
+
+# target to generate assembly for a file
+fibbonocci/FibonocciTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.s
+.PHONY : fibbonocci/FibonocciTest.cpp.s
+
+gmp/GmpTest.o: gmp/GmpTest.cpp.o
+
+.PHONY : gmp/GmpTest.o
+
+# target to build an object file
+gmp/GmpTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/gmp/GmpTest.cpp.o
+.PHONY : gmp/GmpTest.cpp.o
+
+gmp/GmpTest.i: gmp/GmpTest.cpp.i
+
+.PHONY : gmp/GmpTest.i
+
+# target to preprocess a source file
+gmp/GmpTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/gmp/GmpTest.cpp.i
+.PHONY : gmp/GmpTest.cpp.i
+
+gmp/GmpTest.s: gmp/GmpTest.cpp.s
+
+.PHONY : gmp/GmpTest.s
+
+# target to generate assembly for a file
+gmp/GmpTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/gmp/GmpTest.cpp.s
+.PHONY : gmp/GmpTest.cpp.s
+
+utils/MetricTest.o: utils/MetricTest.cpp.o
+
+.PHONY : utils/MetricTest.o
+
+# target to build an object file
+utils/MetricTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/utils/MetricTest.cpp.o
+.PHONY : utils/MetricTest.cpp.o
+
+utils/MetricTest.i: utils/MetricTest.cpp.i
+
+.PHONY : utils/MetricTest.i
+
+# target to preprocess a source file
+utils/MetricTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/utils/MetricTest.cpp.i
+.PHONY : utils/MetricTest.cpp.i
+
+utils/MetricTest.s: utils/MetricTest.cpp.s
+
+.PHONY : utils/MetricTest.s
+
+# target to generate assembly for a file
+utils/MetricTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/utils/MetricTest.cpp.s
+.PHONY : utils/MetricTest.cpp.s
 
 # Help Target
 help:
@@ -435,31 +561,43 @@ help:
 	@echo "... AddTest"
 	@echo "... DivTest"
 	@echo "... Eql"
+	@echo "... FibTest"
+	@echo "... GmpTest"
 	@echo "... IncTest"
 	@echo "... LessTest"
+	@echo "... MetricTest"
 	@echo "... MultTest"
 	@echo "... SubTest"
-	@echo "... AddTest.o"
-	@echo "... AddTest.i"
-	@echo "... AddTest.s"
-	@echo "... DivTest.o"
-	@echo "... DivTest.i"
-	@echo "... DivTest.s"
-	@echo "... EqualTest.o"
-	@echo "... EqualTest.i"
-	@echo "... EqualTest.s"
-	@echo "... IncDecTest.o"
-	@echo "... IncDecTest.i"
-	@echo "... IncDecTest.s"
-	@echo "... LessThenTest.o"
-	@echo "... LessThenTest.i"
-	@echo "... LessThenTest.s"
-	@echo "... MultTest.o"
-	@echo "... MultTest.i"
-	@echo "... MultTest.s"
-	@echo "... SubTest.o"
-	@echo "... SubTest.i"
-	@echo "... SubTest.s"
+	@echo "... big_interger/AddTest.o"
+	@echo "... big_interger/AddTest.i"
+	@echo "... big_interger/AddTest.s"
+	@echo "... big_interger/DivTest.o"
+	@echo "... big_interger/DivTest.i"
+	@echo "... big_interger/DivTest.s"
+	@echo "... big_interger/EqualTest.o"
+	@echo "... big_interger/EqualTest.i"
+	@echo "... big_interger/EqualTest.s"
+	@echo "... big_interger/IncDecTest.o"
+	@echo "... big_interger/IncDecTest.i"
+	@echo "... big_interger/IncDecTest.s"
+	@echo "... big_interger/LessThenTest.o"
+	@echo "... big_interger/LessThenTest.i"
+	@echo "... big_interger/LessThenTest.s"
+	@echo "... big_interger/MultTest.o"
+	@echo "... big_interger/MultTest.i"
+	@echo "... big_interger/MultTest.s"
+	@echo "... big_interger/SubTest.o"
+	@echo "... big_interger/SubTest.i"
+	@echo "... big_interger/SubTest.s"
+	@echo "... fibbonocci/FibonocciTest.o"
+	@echo "... fibbonocci/FibonocciTest.i"
+	@echo "... fibbonocci/FibonocciTest.s"
+	@echo "... gmp/GmpTest.o"
+	@echo "... gmp/GmpTest.i"
+	@echo "... gmp/GmpTest.s"
+	@echo "... utils/MetricTest.o"
+	@echo "... utils/MetricTest.i"
+	@echo "... utils/MetricTest.s"
 .PHONY : help
 
 
@@ -471,6 +609,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

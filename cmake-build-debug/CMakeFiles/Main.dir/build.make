@@ -63,10 +63,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Main.dir/depend.make
@@ -79,30 +79,75 @@ include CMakeFiles/Main.dir/flags.make
 
 CMakeFiles/Main.dir/main.cpp.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Main.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/main.cpp.o -c /Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Main.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/main.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/main.cpp
 
 CMakeFiles/Main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp > CMakeFiles/Main.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/main.cpp > CMakeFiles/Main.dir/main.cpp.i
 
 CMakeFiles/Main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/CLionProjects/cmke-good/cmke-bigint/main.cpp -o CMakeFiles/Main.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/main.cpp -o CMakeFiles/Main.dir/main.cpp.s
+
+CMakeFiles/Main.dir/mystudy/test.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/mystudy/test.cpp.o: ../mystudy/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/mystudy/test.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/mystudy/test.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/mystudy/test.cpp
+
+CMakeFiles/Main.dir/mystudy/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/mystudy/test.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/mystudy/test.cpp > CMakeFiles/Main.dir/mystudy/test.cpp.i
+
+CMakeFiles/Main.dir/mystudy/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/mystudy/test.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/mystudy/test.cpp -o CMakeFiles/Main.dir/mystudy/test.cpp.s
+
+CMakeFiles/Main.dir/mystudy/Node.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/mystudy/Node.cpp.o: ../mystudy/Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/mystudy/Node.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/mystudy/Node.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/mystudy/Node.cpp
+
+CMakeFiles/Main.dir/mystudy/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/mystudy/Node.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/mystudy/Node.cpp > CMakeFiles/Main.dir/mystudy/Node.cpp.i
+
+CMakeFiles/Main.dir/mystudy/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/mystudy/Node.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/mystudy/Node.cpp -o CMakeFiles/Main.dir/mystudy/Node.cpp.s
+
+CMakeFiles/Main.dir/math/Math.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/math/Math.cpp.o: ../math/Math.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Main.dir/math/Math.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/math/Math.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/math/Math.cpp
+
+CMakeFiles/Main.dir/math/Math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/math/Math.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/math/Math.cpp > CMakeFiles/Main.dir/math/Math.cpp.i
+
+CMakeFiles/Main.dir/math/Math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/math/Math.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/math/Math.cpp -o CMakeFiles/Main.dir/math/Math.cpp.s
 
 # Object files for target Main
 Main_OBJECTS = \
-"CMakeFiles/Main.dir/main.cpp.o"
+"CMakeFiles/Main.dir/main.cpp.o" \
+"CMakeFiles/Main.dir/mystudy/test.cpp.o" \
+"CMakeFiles/Main.dir/mystudy/Node.cpp.o" \
+"CMakeFiles/Main.dir/math/Math.cpp.o"
 
 # External object files for target Main
 Main_EXTERNAL_OBJECTS =
 
 Main: CMakeFiles/Main.dir/main.cpp.o
+Main: CMakeFiles/Main.dir/mystudy/test.cpp.o
+Main: CMakeFiles/Main.dir/mystudy/Node.cpp.o
+Main: CMakeFiles/Main.dir/math/Math.cpp.o
 Main: CMakeFiles/Main.dir/build.make
 Main: bigint/libbigint.a
 Main: utils/libutils.a
 Main: CMakeFiles/Main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -115,6 +160,6 @@ CMakeFiles/Main.dir/clean:
 .PHONY : CMakeFiles/Main.dir/clean
 
 CMakeFiles/Main.dir/depend:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/overman/CLionProjects/cmke-good/cmke-bigint /Users/overman/CLionProjects/cmke-good/cmke-bigint /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles/Main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/overman/dev/github/utils-bigint-crpto /Users/overman/dev/github/utils-bigint-crpto /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles/Main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Main.dir/depend
 

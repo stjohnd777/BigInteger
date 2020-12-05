@@ -4,21 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.cpp" "/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o"
+  "/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o"
+  "/Users/overman/dev/github/utils-bigint-crpto/bigint/GmpBigIntWrapper.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o"
+  "/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
-  "/Users/overman/dev/flint-2.6.3"
-  "/Users/overman/dev/flint-2.6.3/build"
-  "/Users/overman/dev/flint-2.6.3/build/lib"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake"
+  "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

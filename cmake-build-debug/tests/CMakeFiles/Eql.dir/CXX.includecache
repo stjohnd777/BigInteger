@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
 string
 -
 sstream
@@ -22,11 +22,11 @@ algorithm
 limits
 -
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/EqualTest.cpp
-../bigint/BigInteger.h
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
-catch.hpp
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/catch.hpp
+/Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/EqualTest.cpp
+../../bigint/BigInteger.h
+/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
+../catch.hpp
+/Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
 iostream
 -
 algorithm
@@ -36,7 +36,7 @@ random
 chrono
 -
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/catch.hpp
+/Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
 TargetConditionals.h
 -
 cstddef
@@ -414,7 +414,7 @@ string
 memory
 -
 Foundation/Foundation.h
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/Foundation/Foundation.h
+/Users/overman/dev/github/utils-bigint-crpto/tests/Foundation/Foundation.h
 limits
 -
 set

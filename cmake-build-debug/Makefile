@@ -68,10 +68,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,6 +170,32 @@ bigint/fast:
 .PHONY : bigint/fast
 
 #=============================================================================
+# Target rules for targets named GmpTest
+
+# Build rule for target.
+GmpTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GmpTest
+.PHONY : GmpTest
+
+# fast build rule for target.
+GmpTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/build
+.PHONY : GmpTest/fast
+
+#=============================================================================
+# Target rules for targets named AddTest
+
+# Build rule for target.
+AddTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AddTest
+.PHONY : AddTest
+
+# fast build rule for target.
+AddTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/build
+.PHONY : AddTest/fast
+
+#=============================================================================
 # Target rules for targets named Eql
 
 # Build rule for target.
@@ -196,6 +222,32 @@ LessTest/fast:
 .PHONY : LessTest/fast
 
 #=============================================================================
+# Target rules for targets named FibTest
+
+# Build rule for target.
+FibTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FibTest
+.PHONY : FibTest
+
+# fast build rule for target.
+FibTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/build
+.PHONY : FibTest/fast
+
+#=============================================================================
+# Target rules for targets named SubTest
+
+# Build rule for target.
+SubTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SubTest
+.PHONY : SubTest
+
+# fast build rule for target.
+SubTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/build
+.PHONY : SubTest/fast
+
+#=============================================================================
 # Target rules for targets named MultTest
 
 # Build rule for target.
@@ -207,6 +259,19 @@ MultTest: cmake_check_build_system
 MultTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
 .PHONY : MultTest/fast
+
+#=============================================================================
+# Target rules for targets named MetricTest
+
+# Build rule for target.
+MetricTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MetricTest
+.PHONY : MetricTest
+
+# fast build rule for target.
+MetricTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
+.PHONY : MetricTest/fast
 
 #=============================================================================
 # Target rules for targets named DivTest
@@ -233,32 +298,6 @@ IncTest: cmake_check_build_system
 IncTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/build
 .PHONY : IncTest/fast
-
-#=============================================================================
-# Target rules for targets named SubTest
-
-# Build rule for target.
-SubTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SubTest
-.PHONY : SubTest
-
-# fast build rule for target.
-SubTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/build
-.PHONY : SubTest/fast
-
-#=============================================================================
-# Target rules for targets named AddTest
-
-# Build rule for target.
-AddTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AddTest
-.PHONY : AddTest
-
-# fast build rule for target.
-AddTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/build
-.PHONY : AddTest/fast
 
 main.o: main.cpp.o
 
@@ -287,6 +326,87 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+math/Math.o: math/Math.cpp.o
+
+.PHONY : math/Math.o
+
+# target to build an object file
+math/Math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/math/Math.cpp.o
+.PHONY : math/Math.cpp.o
+
+math/Math.i: math/Math.cpp.i
+
+.PHONY : math/Math.i
+
+# target to preprocess a source file
+math/Math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/math/Math.cpp.i
+.PHONY : math/Math.cpp.i
+
+math/Math.s: math/Math.cpp.s
+
+.PHONY : math/Math.s
+
+# target to generate assembly for a file
+math/Math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/math/Math.cpp.s
+.PHONY : math/Math.cpp.s
+
+mystudy/Node.o: mystudy/Node.cpp.o
+
+.PHONY : mystudy/Node.o
+
+# target to build an object file
+mystudy/Node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/mystudy/Node.cpp.o
+.PHONY : mystudy/Node.cpp.o
+
+mystudy/Node.i: mystudy/Node.cpp.i
+
+.PHONY : mystudy/Node.i
+
+# target to preprocess a source file
+mystudy/Node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/mystudy/Node.cpp.i
+.PHONY : mystudy/Node.cpp.i
+
+mystudy/Node.s: mystudy/Node.cpp.s
+
+.PHONY : mystudy/Node.s
+
+# target to generate assembly for a file
+mystudy/Node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/mystudy/Node.cpp.s
+.PHONY : mystudy/Node.cpp.s
+
+mystudy/test.o: mystudy/test.cpp.o
+
+.PHONY : mystudy/test.o
+
+# target to build an object file
+mystudy/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/mystudy/test.cpp.o
+.PHONY : mystudy/test.cpp.o
+
+mystudy/test.i: mystudy/test.cpp.i
+
+.PHONY : mystudy/test.i
+
+# target to preprocess a source file
+mystudy/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/mystudy/test.cpp.i
+.PHONY : mystudy/test.cpp.i
+
+mystudy/test.s: mystudy/test.cpp.s
+
+.PHONY : mystudy/test.s
+
+# target to generate assembly for a file
+mystudy/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/mystudy/test.cpp.s
+.PHONY : mystudy/test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -298,9 +418,12 @@ help:
 	@echo "... AddTest"
 	@echo "... DivTest"
 	@echo "... Eql"
+	@echo "... FibTest"
+	@echo "... GmpTest"
 	@echo "... IncTest"
 	@echo "... LessTest"
 	@echo "... Main"
+	@echo "... MetricTest"
 	@echo "... MultTest"
 	@echo "... SubTest"
 	@echo "... bigint"
@@ -308,6 +431,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... math/Math.o"
+	@echo "... math/Math.i"
+	@echo "... math/Math.s"
+	@echo "... mystudy/Node.o"
+	@echo "... mystudy/Node.i"
+	@echo "... mystudy/Node.s"
+	@echo "... mystudy/test.o"
+	@echo "... mystudy/test.i"
+	@echo "... mystudy/test.s"
 .PHONY : help
 
 

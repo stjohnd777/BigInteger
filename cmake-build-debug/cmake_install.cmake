@@ -1,4 +1,4 @@
-# Install script for directory: /Users/overman/CLionProjects/cmke-good/cmke-bigint
+# Install script for directory: /Users/overman/dev/github/utils-bigint-crpto
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,17 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils/cmake_install.cmake")
+  include("/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/bigint/cmake_install.cmake")
+  include("/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/cmake_install.cmake")
+  include("/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Eql.dir/EqualTest.cpp.o"
+  "CMakeFiles/Eql.dir/big_interger/EqualTest.cpp.o"
   "Eql"
   "Eql.pdb"
 )

@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.cpp
+/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.cpp
 BigInteger.h
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
 string
 -
 iostream
@@ -26,7 +26,7 @@ stdexcept
 exception
 -
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/bigint/BigInteger.h
+/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
 string
 -
 sstream

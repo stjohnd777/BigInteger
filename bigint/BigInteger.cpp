@@ -55,8 +55,18 @@ BigInteger::BigInteger(std::string number, bool strict) {
 
 // use the vector where
 BigInteger::BigInteger(std::vector<unsigned short int> digits) {
+    // protect again leading zeros 000 on most significant
+    auto size = digits.size();
+    do {
+        unsigned short int c = digits[size];
+        if ( c == 0 && size > 0){
+            digits.pop_back();
+            size--;
+        }
+    } while(  digits[size] == 0 );
+
     for_each(begin(digits), end(digits), [&](unsigned short int i) {
-        digits.push_back(i);
+        this->digits.push_back(i);
     });
 }
 
@@ -158,12 +168,67 @@ BigInteger BigInteger::operator++() {
 }
 
 BigInteger BigInteger::operator++(int i) {
-    BigInteger _i(i);
+    BigInteger _i( i == 0 ? 1 : i);
     BigInteger plusi = (*this) + _i;
     this->digits = plusi.digits;
     return plusi;
 }
+/***********************************************************/
 
+BigInteger BigInteger::operator/(const BigInteger &other) {
+
+    if ( *this < other) {
+        return 0;
+    }
+    std::vector<unsigned short int> ans;
+
+    auto smaller = *this < other ? *this : other;
+    auto larger =  other < *this ? *this : other;
+
+    BigInteger topLine;
+
+    for ( int i = 0 ; i < larger.length(); i++){
+
+        unsigned short int c = larger.digitAtFromLeft(i);
+        topLine.prePend(c);
+
+        if (topLine < smaller ){
+            ans.push_back(0);
+            continue;
+        }
+
+        int multiplier = 1;
+        for (multiplier = 1 ; multiplier <= 9 ; multiplier++){
+            auto ns = smaller * multiplier;
+            if (topLine < ns) {
+                break;
+            }
+        }
+        multiplier = multiplier - 1;
+        ans.push_back(multiplier);
+
+        auto bottomLine = smaller * multiplier;
+        topLine = topLine - bottomLine;
+    }
+
+    stringstream  ss;
+    bool hasRemoveLeadingZeros = false;
+    for_each( begin(ans),end(ans),[&](unsigned short int c){
+
+        if ( c == 0 && hasRemoveLeadingZeros == false){
+            return;
+        } else {
+            hasRemoveLeadingZeros = true;
+        }
+        ss << c;
+
+    });
+    auto str = ss.str();
+    return BigInteger(str);
+}
+
+
+/***********************************************************/
 bool BigInteger::operator<(const BigInteger &lhs) const {
 
     auto rhs = *this;

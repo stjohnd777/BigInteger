@@ -6,27 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsjVector.cpp
-dsj_vector.h
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsj_vector.h
+/Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.cpp
+easy_string.hpp
+/Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.hpp
 
-/Users/overman/CLionProjects/cmke-good/cmke-bigint/utils/dsj_vector.h
+/Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.hpp
 iostream
 -
-functional
--
-array
+string
 -
 vector
 -
-map
--
-algorithm
--
-memory
--
-random
--
-chrono
+functional
 -
 

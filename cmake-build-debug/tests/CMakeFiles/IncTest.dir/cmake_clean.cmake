@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/IncTest.dir/IncDecTest.cpp.o"
+  "CMakeFiles/IncTest.dir/big_interger/IncDecTest.cpp.o"
   "IncTest"
   "IncTest.pdb"
 )

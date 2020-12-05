@@ -63,10 +63,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/DivTest.dir/depend.make
@@ -77,33 +77,33 @@ include tests/CMakeFiles/DivTest.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/DivTest.dir/flags.make
 
-tests/CMakeFiles/DivTest.dir/DivTest.cpp.o: tests/CMakeFiles/DivTest.dir/flags.make
-tests/CMakeFiles/DivTest.dir/DivTest.cpp.o: ../tests/DivTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/DivTest.dir/DivTest.cpp.o"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DivTest.dir/DivTest.cpp.o -c /Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/DivTest.cpp
+tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o: tests/CMakeFiles/DivTest.dir/flags.make
+tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o: ../tests/big_interger/DivTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/DivTest.cpp
 
-tests/CMakeFiles/DivTest.dir/DivTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DivTest.dir/DivTest.cpp.i"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/DivTest.cpp > CMakeFiles/DivTest.dir/DivTest.cpp.i
+tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.i"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/DivTest.cpp > CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.i
 
-tests/CMakeFiles/DivTest.dir/DivTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DivTest.dir/DivTest.cpp.s"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/CLionProjects/cmke-good/cmke-bigint/tests/DivTest.cpp -o CMakeFiles/DivTest.dir/DivTest.cpp.s
+tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.s"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/DivTest.cpp -o CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.s
 
 # Object files for target DivTest
 DivTest_OBJECTS = \
-"CMakeFiles/DivTest.dir/DivTest.cpp.o"
+"CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o"
 
 # External object files for target DivTest
 DivTest_EXTERNAL_OBJECTS =
 
-tests/DivTest: tests/CMakeFiles/DivTest.dir/DivTest.cpp.o
+tests/DivTest: tests/CMakeFiles/DivTest.dir/big_interger/DivTest.cpp.o
 tests/DivTest: tests/CMakeFiles/DivTest.dir/build.make
 tests/DivTest: bigint/libbigint.a
 tests/DivTest: utils/libutils.a
 tests/DivTest: tests/CMakeFiles/DivTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable DivTest"
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DivTest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable DivTest"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DivTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/DivTest.dir/build: tests/DivTest
@@ -111,10 +111,10 @@ tests/CMakeFiles/DivTest.dir/build: tests/DivTest
 .PHONY : tests/CMakeFiles/DivTest.dir/build
 
 tests/CMakeFiles/DivTest.dir/clean:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests && $(CMAKE_COMMAND) -P CMakeFiles/DivTest.dir/cmake_clean.cmake
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && $(CMAKE_COMMAND) -P CMakeFiles/DivTest.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/DivTest.dir/clean
 
 tests/CMakeFiles/DivTest.dir/depend:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/overman/CLionProjects/cmke-good/cmke-bigint /Users/overman/CLionProjects/cmke-good/cmke-bigint/tests /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/tests/CMakeFiles/DivTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/overman/dev/github/utils-bigint-crpto /Users/overman/dev/github/utils-bigint-crpto/tests /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/DivTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/DivTest.dir/depend
 

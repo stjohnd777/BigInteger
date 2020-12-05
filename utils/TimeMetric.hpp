@@ -4,12 +4,14 @@
 #include <chrono>
 
 typedef std::chrono::time_point<
-    std::chrono::system_clock,
-    std::chrono::duration<long>
-    > TP;
+        std::chrono::system_clock,
+        std::chrono::duration<long>
+> TP;
 
 using namespace std::chrono;
 
+namespace dsj {
+    namespace utils {
 /**
  * <h4>Simple Timing Utility.
  *
@@ -41,37 +43,42 @@ using namespace std::chrono;
  * Calling stop(key) when there is not start "timepoint" throw and exception.
  * Calling Average on a key that does not exit throw an exception
  */
-class TimeMetrics {
-public:
-	/**
-	 * start timer with name key and return timepoint
-	 */
-	static std::chrono::time_point<std::chrono::high_resolution_clock> Start(std::string key);
-	static std::chrono::time_point<std::chrono::high_resolution_clock> Start(std::pair<std::string,uint32_t> key);
+        class TimeMetrics {
+        public:
+            /**
+             * start timer with name key and return timepoint
+             */
+            static std::chrono::time_point<std::chrono::high_resolution_clock> Start(std::string key);
 
-	/**
-	 * end timer with key and return timepoint and internally
-	 * store duration
-	 */
-	static std::chrono::time_point<std::chrono::high_resolution_clock> Stop(std::string key);
-	static std::chrono::time_point<std::chrono::high_resolution_clock> Stop(std::pair<std::string,uint32_t> key);
+            static std::chrono::time_point<std::chrono::high_resolution_clock>
+            Start(std::pair<std::string, uint32_t> key);
 
-	/**
-	 * get average duration in seconds of the all splits
-	 * with key
-	 */
-	static double Average(std::string key);
-	//static double Average(std::string cat,std::pair<std::string,uint32_t> key);
+            /**
+             * end timer with key and return timepoint and internally
+             * store duration
+             */
+            static std::chrono::time_point<std::chrono::high_resolution_clock> Stop(std::string key);
 
-	/**
-	 * how many splits on the key
-	 */
-	static  int  GetRuns(std::string key);
+            static std::chrono::time_point<std::chrono::high_resolution_clock>
+            Stop(std::pair<std::string, uint32_t> key);
 
-	/**
-	 * get the duration on a particular run
-	 */
-	static  double  GetDuration(std::string key,int index);
+            /**
+             * get average duration in seconds of the all splits
+             * with key
+             */
+            static double Average(std::string key);
+            //static double Average(std::string cat,std::pair<std::string,uint32_t> key);
 
+            /**
+             * how many splits on the key
+             */
+            static int GetRuns(std::string key);
 
-};
+            /**
+             * get the duration on a particular run
+             */
+            static double GetDuration(std::string key, int index);
+
+        };
+    }
+}

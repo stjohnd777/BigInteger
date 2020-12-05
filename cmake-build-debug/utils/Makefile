@@ -68,10 +68,10 @@ RM = "/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint
+CMAKE_SOURCE_DIR = /Users/overman/dev/github/utils-bigint-crpto
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/utils/CMakeFiles/progress.marks
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug/CMakeFiles 0
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils/CMakeFiles/progress.marks
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/clean
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 utils/CMakeFiles/utils.dir/rule:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/utils.dir/rule
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils/CMakeFiles/utils.dir/rule
 .PHONY : utils/CMakeFiles/utils.dir/rule
 
 # Convenience name for target.
@@ -142,35 +142,35 @@ utils: utils/CMakeFiles/utils.dir/rule
 
 # fast build rule for target.
 utils/fast:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/build
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/build
 .PHONY : utils/fast
 
-StringUtils.o: StringUtils.cpp.o
+Props.o: Props.cpp.o
 
-.PHONY : StringUtils.o
+.PHONY : Props.o
 
 # target to build an object file
-StringUtils.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/StringUtils.cpp.o
-.PHONY : StringUtils.cpp.o
+Props.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/Props.cpp.o
+.PHONY : Props.cpp.o
 
-StringUtils.i: StringUtils.cpp.i
+Props.i: Props.cpp.i
 
-.PHONY : StringUtils.i
+.PHONY : Props.i
 
 # target to preprocess a source file
-StringUtils.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/StringUtils.cpp.i
-.PHONY : StringUtils.cpp.i
+Props.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/Props.cpp.i
+.PHONY : Props.cpp.i
 
-StringUtils.s: StringUtils.cpp.s
+Props.s: Props.cpp.s
 
-.PHONY : StringUtils.s
+.PHONY : Props.s
 
 # target to generate assembly for a file
-StringUtils.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/StringUtils.cpp.s
-.PHONY : StringUtils.cpp.s
+Props.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/Props.cpp.s
+.PHONY : Props.cpp.s
 
 TimeMetric.o: TimeMetric.cpp.o
 
@@ -178,7 +178,7 @@ TimeMetric.o: TimeMetric.cpp.o
 
 # target to build an object file
 TimeMetric.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/TimeMetric.cpp.o
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/TimeMetric.cpp.o
 .PHONY : TimeMetric.cpp.o
 
 TimeMetric.i: TimeMetric.cpp.i
@@ -187,7 +187,7 @@ TimeMetric.i: TimeMetric.cpp.i
 
 # target to preprocess a source file
 TimeMetric.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/TimeMetric.cpp.i
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/TimeMetric.cpp.i
 .PHONY : TimeMetric.cpp.i
 
 TimeMetric.s: TimeMetric.cpp.s
@@ -196,35 +196,89 @@ TimeMetric.s: TimeMetric.cpp.s
 
 # target to generate assembly for a file
 TimeMetric.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/TimeMetric.cpp.s
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/TimeMetric.cpp.s
 .PHONY : TimeMetric.cpp.s
 
-dsjVector.o: dsjVector.cpp.o
+easy_string.o: easy_string.cpp.o
 
-.PHONY : dsjVector.o
+.PHONY : easy_string.o
 
 # target to build an object file
-dsjVector.cpp.o:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/dsjVector.cpp.o
-.PHONY : dsjVector.cpp.o
+easy_string.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/easy_string.cpp.o
+.PHONY : easy_string.cpp.o
 
-dsjVector.i: dsjVector.cpp.i
+easy_string.i: easy_string.cpp.i
 
-.PHONY : dsjVector.i
+.PHONY : easy_string.i
 
 # target to preprocess a source file
-dsjVector.cpp.i:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/dsjVector.cpp.i
-.PHONY : dsjVector.cpp.i
+easy_string.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/easy_string.cpp.i
+.PHONY : easy_string.cpp.i
 
-dsjVector.s: dsjVector.cpp.s
+easy_string.s: easy_string.cpp.s
 
-.PHONY : dsjVector.s
+.PHONY : easy_string.s
 
 # target to generate assembly for a file
-dsjVector.cpp.s:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/dsjVector.cpp.s
-.PHONY : dsjVector.cpp.s
+easy_string.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/easy_string.cpp.s
+.PHONY : easy_string.cpp.s
+
+easy_vector.o: easy_vector.cpp.o
+
+.PHONY : easy_vector.o
+
+# target to build an object file
+easy_vector.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/easy_vector.cpp.o
+.PHONY : easy_vector.cpp.o
+
+easy_vector.i: easy_vector.cpp.i
+
+.PHONY : easy_vector.i
+
+# target to preprocess a source file
+easy_vector.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/easy_vector.cpp.i
+.PHONY : easy_vector.cpp.i
+
+easy_vector.s: easy_vector.cpp.s
+
+.PHONY : easy_vector.s
+
+# target to generate assembly for a file
+easy_vector.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/easy_vector.cpp.s
+.PHONY : easy_vector.cpp.s
+
+random_string.o: random_string.cpp.o
+
+.PHONY : random_string.o
+
+# target to build an object file
+random_string.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/random_string.cpp.o
+.PHONY : random_string.cpp.o
+
+random_string.i: random_string.cpp.i
+
+.PHONY : random_string.i
+
+# target to preprocess a source file
+random_string.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/random_string.cpp.i
+.PHONY : random_string.cpp.i
+
+random_string.s: random_string.cpp.s
+
+.PHONY : random_string.s
+
+# target to generate assembly for a file
+random_string.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/random_string.cpp.s
+.PHONY : random_string.cpp.s
 
 # Help Target
 help:
@@ -235,15 +289,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... utils"
-	@echo "... StringUtils.o"
-	@echo "... StringUtils.i"
-	@echo "... StringUtils.s"
+	@echo "... Props.o"
+	@echo "... Props.i"
+	@echo "... Props.s"
 	@echo "... TimeMetric.o"
 	@echo "... TimeMetric.i"
 	@echo "... TimeMetric.s"
-	@echo "... dsjVector.o"
-	@echo "... dsjVector.i"
-	@echo "... dsjVector.s"
+	@echo "... easy_string.o"
+	@echo "... easy_string.i"
+	@echo "... easy_string.s"
+	@echo "... easy_vector.o"
+	@echo "... easy_vector.i"
+	@echo "... easy_vector.s"
+	@echo "... random_string.o"
+	@echo "... random_string.i"
+	@echo "... random_string.s"
 .PHONY : help
 
 
@@ -255,6 +315,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/overman/CLionProjects/cmke-good/cmke-bigint/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LessTest.dir/LessThenTest.cpp.o"
+  "CMakeFiles/LessTest.dir/big_interger/LessThenTest.cpp.o"
   "LessTest"
   "LessTest.pdb"
 )
