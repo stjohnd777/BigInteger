@@ -83,6 +83,13 @@ BigInteger &BigInteger::operator=(const BigInteger &rhs) {
     return *this;
 }
 
+//BigInteger& BigInteger::operator=(const std::string& rhs ) {
+//    BigInteger RHS(rhs);
+//    *this = RHS;
+//    return *this;
+//}
+
+
 BigInteger BigInteger::operator+(const long other) {
     BigInteger _other(other);
     return *this + _other;
@@ -175,6 +182,59 @@ BigInteger BigInteger::operator++(int i) {
 }
 /***********************************************************/
 
+BigInteger BigInteger::remainder(const BigInteger &other) {
+
+    if (*this < other ) {
+        return *this ;
+    }
+    auto smaller = other;
+    auto larger =  *this ;
+
+    BigInteger remainder;
+    BigInteger topLine;
+
+    for ( int i = 0 ; i < larger.length(); i++){
+
+        unsigned short int c = larger.digitAtFromLeft(i);
+        topLine.prePend(c);
+
+        if (topLine < smaller ){
+            remainder = topLine;
+            continue;
+        }
+
+        int multiplier = 1;
+        for (multiplier = 1 ; multiplier <= 9 ; multiplier++){
+            auto ns = smaller * multiplier;
+            if (topLine < ns) {
+                break;
+            }
+        }
+        multiplier = multiplier - 1;
+        auto bottomLine = smaller * multiplier;
+        topLine = topLine - bottomLine;
+        remainder = topLine ;
+    }
+
+    remainder.stripLeadingZeros();
+
+    return remainder;
+}
+
+BigInteger BigInteger::operator%(const BigInteger &other){
+    return remainder(other);
+}
+
+BigInteger BigInteger::operator%(const long other){
+    return remainder(BigInteger(other));
+}
+
+BigInteger BigInteger::operator%(const std::string &other){
+    return remainder(BigInteger(other));
+}
+
+
+
 BigInteger BigInteger::operator/(const BigInteger &other) {
 
     if ( *this < other) {
@@ -211,6 +271,8 @@ BigInteger BigInteger::operator/(const BigInteger &other) {
         topLine = topLine - bottomLine;
     }
 
+    // TODO : stripping the prepended 0 , has to be a better way
+    // at min use utils
     stringstream  ss;
     bool hasRemoveLeadingZeros = false;
     for_each( begin(ans),end(ans),[&](unsigned short int c){
@@ -221,12 +283,27 @@ BigInteger BigInteger::operator/(const BigInteger &other) {
             hasRemoveLeadingZeros = true;
         }
         ss << c;
-
     });
+
     auto str = ss.str();
     return BigInteger(str);
 }
 
+BigInteger BigInteger::operator/(const std::string &other) {
+    return (*this) /BigInteger (other);
+}
+
+BigInteger BigInteger::operator/(const long other) {
+    return (*this) /BigInteger (other);
+}
+// friend
+BigInteger operator/(const std::string &other, const BigInteger& rhs) {
+    return BigInteger (other) / rhs ;
+}
+// friend
+BigInteger operator/(const long other, const BigInteger& rhs){
+    return BigInteger (other) / rhs ;
+}
 
 /***********************************************************/
 bool BigInteger::operator<(const BigInteger &lhs) const {
@@ -244,29 +321,6 @@ bool BigInteger::operator<(const BigInteger &lhs) const {
         si = s + si;
     }
     return  si < sj  ;
-
-//    auto rhs = *this;
-//
-//    if ( rhs.digits.size() < lhs.digits.size()) {
-//        return true;
-//    }
-//    if ( rhs.digits.size() > lhs.digits.size()) {
-//        return false;
-//    }
-//
-//    auto index = lhs.digits.size() - 1;
-//
-//    auto it = rhs.digits.rbegin();
-//
-//    for (;it!=rend(rhs.digits);it++){
-//        auto dr = *it;
-//        auto dl = lhs.digits[index];
-//        if ( dr > dl ) {
-//            return false;
-//        }
-//        index--;
-//    }
-//    return true;
 }
 
 bool BigInteger::operator < (const std::string& rhs) const {
@@ -384,8 +438,11 @@ BigInteger BigInteger::operator-(const BigInteger &other) {
         }
     }
 
-
+    if (result.size() == 0){
+        this->digits.push_back(0);
+    }
     BigInteger ans(result);
+
     return ans;
 
 }
@@ -405,7 +462,7 @@ BigInteger BigInteger::operator--() {
 }
 
 BigInteger BigInteger::operator--(int i) {
-    // TODO : understand the increment decrement operators
+    // todo : understand the increment decrement operators
     auto temp = (*this - BigInteger(1));
     this->digits = temp.digits;
     return *this;
@@ -416,19 +473,115 @@ string BigInteger::toString() const {
     // digit is v[2] and in such the natural ordering of digits is v[2]v[1]v[0]
     // inline with humans reading the number from right to left in the most
     // significant digits
+
+    if ( digits.size() == 0){
+        return "0";
+    }
+
+    //bool needsNotStripedLeadingZeros = true;
     stringstream ss;
     for_each(rbegin(digits), rend(digits), [&](unsigned short int i) {
+//        if ( needsNotStripedLeadingZeros && i == 0){
+//            return;
+//        }
+//        needsNotStripedLeadingZeros = false;
         ss << i;
     });
     return ss.str();
 }
 
 long BigInteger::toLongIfPossible() const {
+
+    if ( digits.size() == 0) {
+       return 0;
+    }
+
     try {
         return stol(toString());
     } catch (const std::invalid_argument &ia) {
         return -1;
     }
+}
+
+unsigned short int BigInteger::digitAtFromRight(long i) {
+    return digits[i];
+}
+
+unsigned short int BigInteger::digitAtFromLeft(long i) {
+    auto digitsLength = length() - 1;
+    return digits[digitsLength - i];
+}
+
+void BigInteger::append(unsigned short int c) {
+    if (length() == 1 && digits[0] == 0) {
+        digits[0] = c;
+    } else {
+        digits.push_back(c);
+    }
+}
+
+void BigInteger::prePend(unsigned short int c) {
+    digits.push_front(c);
+}
+
+long BigInteger::length() {
+    return digits.size();
+}
+
+BigInteger BigInteger::subStringBigInteger(long offset, long substringLen, bool isLeftToRight ) {
+
+    // 1234567890 => [1,2,3,4,5,6,7,8,9,0
+    std::stringstream ss;
+    auto digitsLength = length() - 1;
+    if (isLeftToRight) {
+        for (auto i = 0; i < substringLen; i++) {
+            ss << digits[digitsLength - (offset + i)];
+        }
+        return BigInteger(ss.str());
+    } else {
+        for (auto i = 0; i < substringLen; i++) {
+            ss << digits[i];
+        }
+        std::string s = ss.str();
+        std::reverse(std::begin(s), std::end(s));
+        return BigInteger(s);
+    }
+
+}
+
+std::string BigInteger::toBinary(bool pad ) {
+
+    BigInteger _0(0);
+    BigInteger _2(2);
+    BigInteger bi = *this;
+    std::stringstream ss;
+    while (_0 != bi) {
+        auto r = bi.remainder(2);
+        ss << r;
+        bi = bi / _2;
+    }
+    auto binary = ss.str();
+
+//        int delta = binary.length() % 8;
+//        if (pad) {
+//            for (int padder = 0; padder < delta; padder++) {
+//                binary.push_back('0');
+//            }
+//        }
+    reverse(begin(binary), end(binary));
+
+    if (pad) {
+        std::stringstream ssFormatted;
+        for (unsigned long i =0 ; i < binary.length();i++) {
+            bool isComma =  i % 8 == 0 & i!=0;
+            if ( isComma){
+                ssFormatted << ' ';
+            }
+            ssFormatted << binary[i];
+        }
+        binary = ssFormatted.str();
+    }
+    return binary;
 }
 
 BigInteger::~BigInteger() {}
@@ -465,7 +618,10 @@ bool operator==(const string &rhs, const BigInteger &lhs) {
 }
 
 bool operator==(const BigInteger &rhs, const long lhs) {
-    return rhs.toString() == (BigInteger(lhs)).toString();
+    auto a = rhs.toString();
+    auto b =  (BigInteger(lhs)).toString();
+    return a == b;
+    //return rhs.toString() == (BigInteger(lhs)).toString();
 }
 
 bool operator==(const long lhs, const BigInteger &rhs) {
@@ -496,3 +652,4 @@ bool operator!= (const long lhs ,const BigInteger& rhs )  {
 std::string to_string (const BigInteger& val) {
     return val.toString();
 }
+

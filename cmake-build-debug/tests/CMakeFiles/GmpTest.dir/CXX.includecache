@@ -626,13 +626,13 @@ algorithm
 cassert
 -
 
-/Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/GmpTest.cpp
+/Users/overman/dev/github/utils-bigint-crpto/tests/gmp/GmpTest.cpp
 ../catch.hpp
 /Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
 ../../bigint/fibonocci.hpp
 /Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.hpp
 gmp.h
-/Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/gmp.h
+/Users/overman/dev/github/utils-bigint-crpto/tests/gmp/gmp.h
 gmpxx.h
 -
 stdio.h

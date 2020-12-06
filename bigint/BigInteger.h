@@ -25,9 +25,9 @@ public:
      * return true.
      * @return
      */
-    bool IsRepresentable(){
+    bool IsRepresentable() {
         static BigInteger MAX_REP(LONG_MAX);
-        if ( *this < MAX_REP){
+        if (*this < MAX_REP) {
             return true;
         }
         return false;
@@ -36,7 +36,7 @@ public:
     /**
      *    what is the max primitive number on this machine
      */
-    static BigInteger MaxRepresentable(){
+    static BigInteger MaxRepresentable() {
         static BigInteger MAX_REP(LONG_MAX);
         return MAX_REP;
     }
@@ -46,12 +46,12 @@ public:
     /**
      * initialize 0
      */
-    BigInteger() ;
+    BigInteger();
 
     /**
      * initialize long
      */
-    BigInteger(long) ;
+    BigInteger(long);
 
 
     /**
@@ -64,7 +64,7 @@ public:
      * @param strict defaulted false to ignore ot numeric char otherwise
      * constructor will throw exception
      */
-    BigInteger(std::string number,bool strict = false) ;
+    BigInteger(std::string number, bool strict = false);
 
     /**
      * initialize to BigInteger vector number
@@ -73,59 +73,62 @@ public:
      */
     BigInteger(std::vector<unsigned short int> digits);
 
-    BigInteger(std::deque<unsigned short int> digits) ;
+    BigInteger(std::deque<unsigned short int> digits);
 
     // copy constructor
-    BigInteger (const BigInteger& rhs) ;
+    BigInteger(const BigInteger &rhs);
 
     // assignment operator
-    BigInteger& operator=(const BigInteger& rhs ) ;
+    BigInteger &operator=(const BigInteger &rhs);
+
+    //BigInteger& operator=(const std::string& rhs ) ;
 
 public:
 
-    /// BigInteger + BigInteger
-    BigInteger operator+(const BigInteger &other);
-    /// BigInteger + long
-    BigInteger operator+(const long other);
-    /// BigInteger + "999999999999"
-    BigInteger operator+(const std::string other);
+    BigInteger operator+(const BigInteger &other);    /// BigInteger + BigInteger
+    BigInteger operator+(const long other);    /// BigInteger + long
+    BigInteger operator+(const std::string other);    /// BigInteger + "999999999999"
 
-
-    BigInteger operator++() ;
-    BigInteger operator++(int i );
+    BigInteger operator++();
+    BigInteger operator++(int i);
 
     // sub
     BigInteger operator-(const BigInteger &other);
-    BigInteger operator-(const long other);
     BigInteger operator-(const std::string other);
-    BigInteger operator--() ;
-    BigInteger operator--(int i );
+    BigInteger operator-(const long other);
+    BigInteger operator--(int i);
+    BigInteger operator--();
 
     ///  BigInteger << BigInteger
-    bool operator < (const BigInteger& rhs) const;
-    bool operator < (const std::string& rhs) const;
-    friend bool operator < (const std::string& lhs, const BigInteger& rhs) ;
-    bool operator < (const long rhs) const;
+    bool operator<(const BigInteger &rhs) const;
+    bool operator<(const std::string &rhs) const;
+    bool operator<(const long rhs) const;
+    friend bool operator<(const std::string &lhs, const BigInteger &rhs);
 
-    bool operator <= (const BigInteger& rhs) const;
-    bool operator <= (const std::string& rhs) const;
-    friend bool operator <= (const std::string& lhs, const BigInteger& rhs) ;
-    bool operator <= (const long rhs) const;
+    bool operator<=(const BigInteger &rhs) const;
+    bool operator<=(const std::string &rhs) const;
+    bool operator<=(const long rhs) const;
+    friend bool operator<=(const std::string &lhs, const BigInteger &rhs);
 
     /// multiplication
-    BigInteger operator*(const BigInteger &other) ;
-    BigInteger operator*(const long other) ;
-    friend BigInteger operator*(const long other, const BigInteger& rhs) ;
-    BigInteger operator*(const std::string &other) ;
-    friend BigInteger operator*(const std::string &other, const BigInteger& rhs) ;
-
+    BigInteger operator*(const BigInteger &other);
+    BigInteger operator*(const long other);
+    BigInteger operator*(const std::string &other);
+    friend BigInteger operator*(const long other, const BigInteger &rhs);
+    friend BigInteger operator*(const std::string &other, const BigInteger &rhs);
 
     /// division
-    BigInteger operator/(const BigInteger &other) ;
-    BigInteger operator/(const long other) ;
-//    friend BigInteger operator/(const long other, const BigInteger& rhs) ;
-//    BigInteger operator/(const std::string &other) ;
-//    friend BigInteger operator/(const std::string &other, const BigInteger& rhs) ;
+    BigInteger operator/(const BigInteger &other);
+    BigInteger operator/(const std::string &other) ;
+    BigInteger operator/(const long other);
+    friend BigInteger operator/(const std::string &other, const BigInteger& rhs) ;
+    friend BigInteger operator/(const long other, const BigInteger& rhs) ;
+
+
+    BigInteger remainder(const BigInteger &other);
+    BigInteger operator%(const BigInteger &other);
+    BigInteger operator%(const long other);
+    BigInteger operator%(const std::string &other);
 
     /// return the long  if possible
     long toLongIfPossible() const;
@@ -134,80 +137,82 @@ public:
     friend std::ostream &operator<<(std::ostream &out, const BigInteger &c);
 
     /// java inspired toString()
-    std::string toString() const ;
+    std::string toString() const;
 
-     /// auto c = BigInterger(....) + BigInteger(...)
-    friend bool operator== (const BigInteger & lhs, const BigInteger & rhs );
+    /// auto c = BigInterger(....) + BigInteger(...)
+    friend bool operator==(const BigInteger &lhs, const BigInteger &rhs);
+
     /// auto c = BigInterger(....) +"32392739273927937293792"
-    friend bool operator== (const BigInteger & lhs, const std::string& rhs );
+    friend bool operator==(const BigInteger &lhs, const std::string &rhs);
+
     /// auto c ="32392739273927937293792" +  BigInterger(....)
-    friend bool operator== (const std::string& rhs, const BigInteger & lhs);
+    friend bool operator==(const std::string &rhs, const BigInteger &lhs);
+
     /// auto c = BigInterger(....) + 323927392739
-    friend bool operator== (const BigInteger& rhs,  const long lhs);
+    friend bool operator==(const BigInteger &rhs, const long lhs);
+
     /// auto c = 323927392739 + BigInterger(....)
-    friend bool operator== ( const long lhs, const BigInteger& rhs);
+    friend bool operator==(const long lhs, const BigInteger &rhs);
 
     /// BigInteger != BigInteger
-    friend bool operator!= (const BigInteger&,const BigInteger&);
+    friend bool operator!=(const BigInteger &, const BigInteger &);
+
     /// BigInteger != std::string
-    friend bool operator!= (const BigInteger&,const std::string&);
+    friend bool operator!=(const BigInteger &, const std::string &);
+
     /// BigInteger != long
-    friend bool operator!= (const BigInteger&,const long );
+    friend bool operator!=(const BigInteger &, const long);
+
     /// std::string != BigInteger
-    friend bool operator!= (const std::string&,const BigInteger&);
+    friend bool operator!=(const std::string &, const BigInteger &);
+
     /// long != BigInteger
-    friend bool operator!= (const long ,const BigInteger&) ;
+    friend bool operator!=(const long, const BigInteger &);
+
+    friend std::string to_string(const BigInteger &val);
+
+    unsigned short int digitAtFromRight(long i) ;
+
+    unsigned short int digitAtFromLeft(long i) ;
+
+    void append(unsigned short int c) ;
 
 
-    friend std::string to_string (const BigInteger& val);
+    void prePend(unsigned short int c);
 
-    ~BigInteger() ;
+    long length() ;
 
-    unsigned short int digitAtFromRight(long i) {
-        return digits[i];
-    }
+    BigInteger subStringBigInteger(long offset, long substringLen, bool isLeftToRight = true) ;
 
-    unsigned short int digitAtFromLeft(long i) {
-        auto digitsLength = length()-1;
-        return digits[digitsLength - i];
-    }
+    std::string toBinary(bool pad = false);
 
-    void append(unsigned short int c){
-        if ( length() ==1 && digits[0] == 0 ){
-            digits[0] = c;
-        }else {
-            digits.push_back(c);
-        }
-    }
-    void prePend(unsigned short int c){
-        digits.push_front(c);
-    }
+    ~BigInteger();
 
-    long length() {
-        return digits.size();
-    }
 
-    BigInteger subStringBigInteger(long offset, long substringLen, bool isLeftToRight = true) {
 
-        // 1234567890 => [1,2,3,4,5,6,7,8,9,0
-        std::stringstream ss;
-        auto digitsLength = length()-1;
-        if ( isLeftToRight) {
-            for (auto i = 0; i < substringLen; i++) {
-                ss << digits[digitsLength - (offset + i)];
+    void stripLeadingZeros(){
+
+        bool needsNotStripedLeadingZeros = true;
+
+//        auto it = rbegin(digits);
+//        while(needsNotStripedLeadingZeros){
+//            if ( *it == 0){
+//                it++;
+//                digits.pop_back();
+//                continue;
+//            }
+//            needsNotStripedLeadingZeros = false;
+//        }
+
+        for_each(rbegin(digits), rend(digits), [&](unsigned short int i) {
+            if ( needsNotStripedLeadingZeros && i == 0){
+                digits.pop_back();
+            }else {
+                needsNotStripedLeadingZeros = false;
             }
-            return BigInteger(ss.str());
-        }else {
-            for (auto i = 0; i < substringLen; i++) {
-                ss << digits[i];
-            }
-            std::string s = ss.str();
-            std::reverse( std::begin(s) ,std::end(s) );
-            return BigInteger(s);
-        }
-
+        });
     }
-private:
+
 
     std::deque<unsigned short int> digits;
 };
