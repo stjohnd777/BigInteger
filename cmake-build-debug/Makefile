@@ -209,6 +209,19 @@ Eql/fast:
 .PHONY : Eql/fast
 
 #=============================================================================
+# Target rules for targets named EasyStringTest
+
+# Build rule for target.
+EasyStringTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EasyStringTest
+.PHONY : EasyStringTest
+
+# fast build rule for target.
+EasyStringTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
+.PHONY : EasyStringTest/fast
+
+#=============================================================================
 # Target rules for targets named LessTest
 
 # Build rule for target.
@@ -417,6 +430,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
 	@echo "... DivTest"
+	@echo "... EasyStringTest"
 	@echo "... Eql"
 	@echo "... FibTest"
 	@echo "... GmpTest"

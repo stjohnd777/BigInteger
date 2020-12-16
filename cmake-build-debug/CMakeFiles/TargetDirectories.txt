@@ -7,15 +7,16 @@
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/rebuild_cache.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/edit_cache.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir
+/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/GmpTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/AddTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/Eql.dir
+/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/EasyStringTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/LessTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/FibTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/SubTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/MultTest.dir
-/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/MetricTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/DivTest.dir
 /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/IncTest.dir

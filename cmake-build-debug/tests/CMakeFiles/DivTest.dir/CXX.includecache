@@ -27,6 +27,8 @@ limits
 /Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
 ../../bigint/BigInteger.h
 /Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
+../../utils/TimeMetric.hpp
+/Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.hpp
 string
 -
 
@@ -612,5 +614,11 @@ ctime
 algorithm
 -
 cassert
+-
+
+/Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.hpp
+string
+-
+chrono
 -
 

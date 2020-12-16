@@ -35,6 +35,8 @@ target_link_libraries(FibTest PRIVATE utils bigint gmp gmpxx)
 add_executable(GmpTest catch.hpp gmp/GmpTest.cpp)
 target_link_libraries(GmpTest PRIVATE utils bigint gmp gmpxx )
 
-add_executable(MetricTest catch.hpp utils/MetricTest.cpp)
+add_executable(MetricTest catch.hpp utils/MetricTest.cpp  )
 target_link_libraries(MetricTest PRIVATE utils bigint gmp gmpxx )
 
+add_executable(EasyStringTest catch.hpp utils/EasyStringTest.cpp )
+target_link_libraries(EasyStringTest PRIVATE utils  )

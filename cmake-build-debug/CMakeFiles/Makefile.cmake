@@ -64,6 +64,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/CMakeFiles/GmpTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/AddTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/Eql.dir/DependInfo.cmake"
+  "tests/CMakeFiles/EasyStringTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/LessTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/FibTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/SubTest.dir/DependInfo.cmake"

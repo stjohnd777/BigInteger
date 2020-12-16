@@ -197,7 +197,7 @@ namespace dsj {
          * @param s
          * @return
          */
-        easy_string trim(std::string s) {
+        easy_string trim( ) {
             return StringUtils::trim(*this);
         }
 

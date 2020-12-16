@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debu
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -97,6 +86,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	"/Users/overman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -174,6 +174,21 @@ Eql: tests/CMakeFiles/Eql.dir/rule
 Eql/fast:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
 .PHONY : Eql/fast
+
+# Convenience name for target.
+tests/CMakeFiles/EasyStringTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/EasyStringTest.dir/rule
+.PHONY : tests/CMakeFiles/EasyStringTest.dir/rule
+
+# Convenience name for target.
+EasyStringTest: tests/CMakeFiles/EasyStringTest.dir/rule
+
+.PHONY : EasyStringTest
+
+# fast build rule for target.
+EasyStringTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
+.PHONY : EasyStringTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/LessTest.dir/rule:
@@ -523,6 +538,33 @@ gmp/GmpTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/gmp/GmpTest.cpp.s
 .PHONY : gmp/GmpTest.cpp.s
 
+utils/EasyStringTest.o: utils/EasyStringTest.cpp.o
+
+.PHONY : utils/EasyStringTest.o
+
+# target to build an object file
+utils/EasyStringTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/utils/EasyStringTest.cpp.o
+.PHONY : utils/EasyStringTest.cpp.o
+
+utils/EasyStringTest.i: utils/EasyStringTest.cpp.i
+
+.PHONY : utils/EasyStringTest.i
+
+# target to preprocess a source file
+utils/EasyStringTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/utils/EasyStringTest.cpp.i
+.PHONY : utils/EasyStringTest.cpp.i
+
+utils/EasyStringTest.s: utils/EasyStringTest.cpp.s
+
+.PHONY : utils/EasyStringTest.s
+
+# target to generate assembly for a file
+utils/EasyStringTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/utils/EasyStringTest.cpp.s
+.PHONY : utils/EasyStringTest.cpp.s
+
 utils/MetricTest.o: utils/MetricTest.cpp.o
 
 .PHONY : utils/MetricTest.o
@@ -560,6 +602,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
 	@echo "... DivTest"
+	@echo "... EasyStringTest"
 	@echo "... Eql"
 	@echo "... FibTest"
 	@echo "... GmpTest"
@@ -595,6 +638,9 @@ help:
 	@echo "... gmp/GmpTest.o"
 	@echo "... gmp/GmpTest.i"
 	@echo "... gmp/GmpTest.s"
+	@echo "... utils/EasyStringTest.o"
+	@echo "... utils/EasyStringTest.i"
+	@echo "... utils/EasyStringTest.s"
 	@echo "... utils/MetricTest.o"
 	@echo "... utils/MetricTest.i"
 	@echo "... utils/MetricTest.s"

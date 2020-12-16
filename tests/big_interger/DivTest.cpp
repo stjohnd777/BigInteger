@@ -6,6 +6,9 @@
 
 #include "../catch.hpp"
 #include "../../bigint/BigInteger.h"
+#include "../../utils/TimeMetric.hpp"
+
+using namespace dsj;
 
 #include <string>
 
@@ -211,13 +214,144 @@ TEST_CASE( "BigInteger.operator&", "[3mod2=1]" ) {
 
 }
 
+TEST_CASE("6132", "[isPrime false]"){
 
-TEST_CASE("100000045007", "[candidate]"){
+    BigInteger candidate("6132");
+    BigInteger half = candidate / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            cout << candidate  <<  " is divisible by " << mod << endl;
+            cout << candidate.remainder(mod)  <<  " numerator "  << endl;
+            cout << half  << endl;
+            isPrime = false;
+            break;
+        }
+
+        mod++;
+    }
+    cout << candidate  <<  " : is prime " << isPrime << endl;
+    REQUIRE( isPrime == false);
+}
+
+
+TEST_CASE("6133", "[isPrime true]"){
+
+    BigInteger candidate("6133");
+    BigInteger half = candidate / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            isPrime = false;
+            break;
+        }
+        mod++;
+    }
+
+    cout << candidate  <<  " : is prime " << isPrime << endl;
+    REQUIRE( isPrime == true);
+
+}
+TEST_CASE("6134", "[isPrime false]"){
+
+    BigInteger candidate("6134");
+    BigInteger half = candidate / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+
+    dsj::utils::TimeMetrics::Start("01");
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            isPrime = false;
+            break;
+        }
+        mod++;
+    }
+    dsj::utils::TimeMetrics::Stop("01");
+    cout << candidate  <<  " : is prime " << isPrime <<  " time " <<     dsj::utils::TimeMetrics::Average("01") <<  endl;
+
+    REQUIRE( isPrime == false);
+}
+
+TEST_CASE("6134123217", "[isPrime false]"){
+
+    BigInteger candidate("6134123217");
+    BigInteger half = candidate / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+
+    dsj::utils::TimeMetrics::Start("01");
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            isPrime = false;
+            break;
+        }
+        mod++;
+    }
+    dsj::utils::TimeMetrics::Stop("01");
+    cout << candidate  <<  " : is prime " << isPrime <<  " time " <<     dsj::utils::TimeMetrics::Average("01") <<  endl;
+
+    REQUIRE( isPrime == false);
+}
+
+TEST_CASE("1732642631","[prime true]"){
+    BigInteger candidate("1732642631");
+    BigInteger half = candidate / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+
+    dsj::utils::TimeMetrics::Start("01");
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            isPrime = false;
+            break;
+        }
+        mod++;
+    }
+    dsj::utils::TimeMetrics::Stop("01");
+    cout << candidate  <<  " : is prime " << isPrime <<  " time " <<     dsj::utils::TimeMetrics::Average("01") <<  endl;
+
+    REQUIRE( isPrime == true);
+}
+
+
+TEST_CASE("123217", "[isPrime true]"){
+
+    BigInteger candidate("123217");
+    BigInteger half = candidate / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+
+    dsj::utils::TimeMetrics::Start("01");
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            isPrime = false;
+            break;
+        }
+        mod++;
+    }
+    dsj::utils::TimeMetrics::Stop("01");
+
+    cout << candidate  <<  " : is prime " << isPrime <<  " time " <<     dsj::utils::TimeMetrics::Average("01") <<  endl;
+    REQUIRE( isPrime == true);
+}
+
+TEST_CASE("100,000,045,007", "[candidate]"){
 
     BigInteger candidate("100000045007");
     BigInteger half = candidate / 2;
     BigInteger mod(2);
     bool isPrime = true;
+
+
     while (mod <= half) {
         auto ans = candidate % mod;
         if (ans == 0) {
@@ -233,10 +367,9 @@ TEST_CASE("100000045007", "[candidate]"){
     }
 
 }
-TEST_CASE("isPrime","[try]") {
+TEST_CASE("isPrime","[3-1000]") {
 
-
-    for ( unsigned long i =3; i < 100; i++)
+    for ( unsigned long i =3; i < 1000; i++)
     {
         BigInteger candidate(i);
         BigInteger half = BigInteger(i) / 2;
@@ -259,7 +392,6 @@ TEST_CASE("isPrime","[try]") {
         }
 
     }
-
 }
 
 

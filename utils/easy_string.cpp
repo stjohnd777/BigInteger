@@ -73,7 +73,9 @@ namespace dsj {
             }
             else
             {
-                result.push_back(tmp);
+                if ( !tmp.empty() ) {
+                    result.push_back(tmp);
+                }
                 tmp = "";
             }
         }

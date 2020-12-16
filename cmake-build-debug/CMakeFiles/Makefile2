@@ -120,6 +120,7 @@ bigint/clean: bigint/CMakeFiles/bigint.dir/clean
 tests/all: tests/CMakeFiles/GmpTest.dir/all
 tests/all: tests/CMakeFiles/AddTest.dir/all
 tests/all: tests/CMakeFiles/Eql.dir/all
+tests/all: tests/CMakeFiles/EasyStringTest.dir/all
 tests/all: tests/CMakeFiles/LessTest.dir/all
 tests/all: tests/CMakeFiles/FibTest.dir/all
 tests/all: tests/CMakeFiles/SubTest.dir/all
@@ -139,6 +140,7 @@ tests/preinstall:
 tests/clean: tests/CMakeFiles/GmpTest.dir/clean
 tests/clean: tests/CMakeFiles/AddTest.dir/clean
 tests/clean: tests/CMakeFiles/Eql.dir/clean
+tests/clean: tests/CMakeFiles/EasyStringTest.dir/clean
 tests/clean: tests/CMakeFiles/LessTest.dir/clean
 tests/clean: tests/CMakeFiles/FibTest.dir/clean
 tests/clean: tests/CMakeFiles/SubTest.dir/clean
@@ -171,11 +173,11 @@ utils/clean: utils/CMakeFiles/utils.dir/clean
 # Target rules for target CMakeFiles/Main.dir
 
 # All Build rule for target.
-CMakeFiles/Main.dir/all: bigint/CMakeFiles/bigint.dir/all
 CMakeFiles/Main.dir/all: utils/CMakeFiles/utils.dir/all
+CMakeFiles/Main.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=15,16,17,18,19 "Built target Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=17,18,19,20,21 "Built target Main"
 .PHONY : CMakeFiles/Main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -202,7 +204,7 @@ CMakeFiles/Main.dir/clean:
 utils/CMakeFiles/utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/utils.dir/build.make utils/CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=30,31,32,33,34,35 "Built target utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=32,33,34,35,36,37 "Built target utils"
 .PHONY : utils/CMakeFiles/utils.dir/all
 
 # Build rule for subdir invocation for target.
@@ -229,7 +231,7 @@ utils/CMakeFiles/utils.dir/clean:
 bigint/CMakeFiles/bigint.dir/all: utils/CMakeFiles/utils.dir/all
 	$(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/depend
 	$(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=26,27,28,29 "Built target bigint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=28,29,30,31 "Built target bigint"
 .PHONY : bigint/CMakeFiles/bigint.dir/all
 
 # Build rule for subdir invocation for target.
@@ -253,11 +255,11 @@ bigint/CMakeFiles/bigint.dir/clean:
 # Target rules for target tests/CMakeFiles/GmpTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/GmpTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/GmpTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/GmpTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target GmpTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target GmpTest"
 .PHONY : tests/CMakeFiles/GmpTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -281,8 +283,8 @@ tests/CMakeFiles/GmpTest.dir/clean:
 # Target rules for target tests/CMakeFiles/AddTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/AddTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/AddTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/AddTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target AddTest"
@@ -309,11 +311,11 @@ tests/CMakeFiles/AddTest.dir/clean:
 # Target rules for target tests/CMakeFiles/Eql.dir
 
 # All Build rule for target.
-tests/CMakeFiles/Eql.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/Eql.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/Eql.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target Eql"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target Eql"
 .PHONY : tests/CMakeFiles/Eql.dir/all
 
 # Build rule for subdir invocation for target.
@@ -334,14 +336,41 @@ tests/CMakeFiles/Eql.dir/clean:
 .PHONY : tests/CMakeFiles/Eql.dir/clean
 
 #=============================================================================
+# Target rules for target tests/CMakeFiles/EasyStringTest.dir
+
+# All Build rule for target.
+tests/CMakeFiles/EasyStringTest.dir/all: utils/CMakeFiles/utils.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target EasyStringTest"
+.PHONY : tests/CMakeFiles/EasyStringTest.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/EasyStringTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/EasyStringTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles 0
+.PHONY : tests/CMakeFiles/EasyStringTest.dir/rule
+
+# Convenience name for target.
+EasyStringTest: tests/CMakeFiles/EasyStringTest.dir/rule
+
+.PHONY : EasyStringTest
+
+# clean rule for target.
+tests/CMakeFiles/EasyStringTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/clean
+.PHONY : tests/CMakeFiles/EasyStringTest.dir/clean
+
+#=============================================================================
 # Target rules for target tests/CMakeFiles/LessTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/LessTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/LessTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/LessTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target LessTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target LessTest"
 .PHONY : tests/CMakeFiles/LessTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -365,11 +394,11 @@ tests/CMakeFiles/LessTest.dir/clean:
 # Target rules for target tests/CMakeFiles/FibTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/FibTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/FibTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/FibTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target FibTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target FibTest"
 .PHONY : tests/CMakeFiles/FibTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -393,11 +422,11 @@ tests/CMakeFiles/FibTest.dir/clean:
 # Target rules for target tests/CMakeFiles/SubTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/SubTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/SubTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/SubTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target SubTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=26,27 "Built target SubTest"
 .PHONY : tests/CMakeFiles/SubTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -421,11 +450,11 @@ tests/CMakeFiles/SubTest.dir/clean:
 # Target rules for target tests/CMakeFiles/MultTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/MultTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/MultTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/MultTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target MultTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target MultTest"
 .PHONY : tests/CMakeFiles/MultTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -449,11 +478,11 @@ tests/CMakeFiles/MultTest.dir/clean:
 # Target rules for target tests/CMakeFiles/MetricTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/MetricTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/MetricTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/MetricTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target MetricTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target MetricTest"
 .PHONY : tests/CMakeFiles/MetricTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -477,8 +506,8 @@ tests/CMakeFiles/MetricTest.dir/clean:
 # Target rules for target tests/CMakeFiles/DivTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/DivTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/DivTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/DivTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/DivTest.dir/build.make tests/CMakeFiles/DivTest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target DivTest"
@@ -505,11 +534,11 @@ tests/CMakeFiles/DivTest.dir/clean:
 # Target rules for target tests/CMakeFiles/IncTest.dir
 
 # All Build rule for target.
-tests/CMakeFiles/IncTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 tests/CMakeFiles/IncTest.dir/all: utils/CMakeFiles/utils.dir/all
+tests/CMakeFiles/IncTest.dir/all: bigint/CMakeFiles/bigint.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target IncTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target IncTest"
 .PHONY : tests/CMakeFiles/IncTest.dir/all
 
 # Build rule for subdir invocation for target.

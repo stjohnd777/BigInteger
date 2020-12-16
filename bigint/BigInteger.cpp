@@ -358,31 +358,60 @@ bool BigInteger::operator <= (const long rhs) const {
 };
 
 
-
-
 BigInteger operator*(const long other, const BigInteger& rhs) {
     return ( BigInteger(other) < BigInteger(rhs) );
 }
 
 BigInteger BigInteger::operator*(const BigInteger &other) {
 
-    BigInteger smaller;
-    BigInteger larger;
-    if (*this < other) {
-        smaller = *this;
-        larger = other;
-    } else {
-        smaller = other;
-        larger = *this;
-    }
+//    BigInteger smaller;
+//    BigInteger larger;
+//    if (*this < other) {
+//        smaller = *this;
+//        larger = other;
+//    } else {
+//        smaller = other;
+//        larger = *this;
+//    }
+//    BigInteger topLine = larger;     // a
+//    BigInteger bottomLine = smaller; // b
+//    //               a[0]a[1] .... a[n-1]
+//    // 1233456789    [9,8,7,6,5,4,3,2,1]
+//    //               b[0]b[1] .... b[m-1]
+//    // x      899    [8,9,9]
+//    //------------
 
-    BigInteger counter = smaller;
-    BigInteger ans = larger;
-    while (!(counter == 1)) {
-        ans = ans + larger;
-        counter--;
+    BigInteger topLine = *this;     // a
+    BigInteger bottomLine = other; // b
+    BigInteger sum;
+
+    for(auto indx_b =0 ; indx_b < bottomLine.length();indx_b++){
+
+        unsigned short int carry = 0;
+
+        deque<unsigned short int> digitsLine;
+
+        auto b = bottomLine[indx_b];
+
+        for(auto indx_a =0 ; indx_a < topLine.length();indx_a++){
+
+            auto a = topLine[indx_a];
+            auto m = a * b + carry;
+            auto d = m % base;
+            carry = m / base;
+            digitsLine.push_back(d);
+        }
+        if (carry) {
+            digitsLine.push_back(carry);
+        }
+        // respect the 10's place;v b
+        for (auto z = 0; z < indx_b ;z++){
+            digitsLine.push_front(0);
+        }
+        auto line = BigInteger(digitsLine);
+        sum = sum +line;
     }
-    return ans;
+    return sum;
 }
 
 BigInteger BigInteger::operator*(const long other) {

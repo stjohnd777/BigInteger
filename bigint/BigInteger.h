@@ -177,8 +177,53 @@ public:
 
     void append(unsigned short int c) ;
 
-
     void prePend(unsigned short int c);
+
+    long SumDigits() {
+        long sum = 0;
+        std::for_each(std::begin(digits),std::end(digits),[&](unsigned short int d){
+              sum += d;
+        });
+        return sum;
+    }
+
+    bool isDivisable3(){
+        return SumDigits() % 3 == 0;
+    }
+
+    bool isDivisable5(){
+        return digits[0] == 5 || digits[0] == 5 ;
+    }
+
+    bool isEven(){
+        return digits[0] == 2;
+    }
+
+    bool IsPrime(){
+
+        if ( isEven() ||
+             isDivisable3() ||
+             isDivisable5()) {
+            return false;
+        }
+
+        BigInteger candidate = *this;
+        BigInteger half = *this / 2;
+        BigInteger mod(2);
+        bool isPrime = true;
+
+        while (mod <= half) {
+            auto ans = candidate % mod;
+            if (ans == 0) {
+                isPrime = false;
+                break;
+            }
+            mod++;
+        }
+        return isPrime;
+    }
+
+
 
     long length() ;
 
@@ -213,6 +258,11 @@ public:
         });
     }
 
+    unsigned short int operator[](const long index) {
+        return digits[index];
+    }
 
     std::deque<unsigned short int> digits;
+
+    unsigned short int base = 10;
 };
