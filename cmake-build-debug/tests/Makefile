@@ -131,6 +131,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/EasyStringTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/EasyStringTest.dir/rule
+.PHONY : tests/CMakeFiles/EasyStringTest.dir/rule
+
+# Convenience name for target.
+EasyStringTest: tests/CMakeFiles/EasyStringTest.dir/rule
+
+.PHONY : EasyStringTest
+
+# fast build rule for target.
+EasyStringTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
+.PHONY : EasyStringTest/fast
+
+# Convenience name for target.
+tests/CMakeFiles/MetricTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/MetricTest.dir/rule
+.PHONY : tests/CMakeFiles/MetricTest.dir/rule
+
+# Convenience name for target.
+MetricTest: tests/CMakeFiles/MetricTest.dir/rule
+
+.PHONY : MetricTest
+
+# fast build rule for target.
+MetricTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
+.PHONY : MetricTest/fast
+
+# Convenience name for target.
+tests/CMakeFiles/IsPrimeTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/IsPrimeTest.dir/rule
+.PHONY : tests/CMakeFiles/IsPrimeTest.dir/rule
+
+# Convenience name for target.
+IsPrimeTest: tests/CMakeFiles/IsPrimeTest.dir/rule
+
+.PHONY : IsPrimeTest
+
+# fast build rule for target.
+IsPrimeTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IsPrimeTest.dir/build.make tests/CMakeFiles/IsPrimeTest.dir/build
+.PHONY : IsPrimeTest/fast
+
+# Convenience name for target.
 tests/CMakeFiles/GmpTest.dir/rule:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/GmpTest.dir/rule
 .PHONY : tests/CMakeFiles/GmpTest.dir/rule
@@ -176,21 +221,6 @@ Eql/fast:
 .PHONY : Eql/fast
 
 # Convenience name for target.
-tests/CMakeFiles/EasyStringTest.dir/rule:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/EasyStringTest.dir/rule
-.PHONY : tests/CMakeFiles/EasyStringTest.dir/rule
-
-# Convenience name for target.
-EasyStringTest: tests/CMakeFiles/EasyStringTest.dir/rule
-
-.PHONY : EasyStringTest
-
-# fast build rule for target.
-EasyStringTest/fast:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
-.PHONY : EasyStringTest/fast
-
-# Convenience name for target.
 tests/CMakeFiles/LessTest.dir/rule:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/LessTest.dir/rule
 .PHONY : tests/CMakeFiles/LessTest.dir/rule
@@ -204,6 +234,21 @@ LessTest: tests/CMakeFiles/LessTest.dir/rule
 LessTest/fast:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
 .PHONY : LessTest/fast
+
+# Convenience name for target.
+tests/CMakeFiles/BinaryTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/BinaryTest.dir/rule
+.PHONY : tests/CMakeFiles/BinaryTest.dir/rule
+
+# Convenience name for target.
+BinaryTest: tests/CMakeFiles/BinaryTest.dir/rule
+
+.PHONY : BinaryTest
+
+# fast build rule for target.
+BinaryTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/BinaryTest.dir/build.make tests/CMakeFiles/BinaryTest.dir/build
+.PHONY : BinaryTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/FibTest.dir/rule:
@@ -249,21 +294,6 @@ MultTest: tests/CMakeFiles/MultTest.dir/rule
 MultTest/fast:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
 .PHONY : MultTest/fast
-
-# Convenience name for target.
-tests/CMakeFiles/MetricTest.dir/rule:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/MetricTest.dir/rule
-.PHONY : tests/CMakeFiles/MetricTest.dir/rule
-
-# Convenience name for target.
-MetricTest: tests/CMakeFiles/MetricTest.dir/rule
-
-.PHONY : MetricTest
-
-# fast build rule for target.
-MetricTest/fast:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
-.PHONY : MetricTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/DivTest.dir/rule:
@@ -321,6 +351,33 @@ big_interger/AddTest.s: big_interger/AddTest.cpp.s
 big_interger/AddTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/AddTest.dir/build.make tests/CMakeFiles/AddTest.dir/big_interger/AddTest.cpp.s
 .PHONY : big_interger/AddTest.cpp.s
+
+big_interger/BinaryTest.o: big_interger/BinaryTest.cpp.o
+
+.PHONY : big_interger/BinaryTest.o
+
+# target to build an object file
+big_interger/BinaryTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/BinaryTest.dir/build.make tests/CMakeFiles/BinaryTest.dir/big_interger/BinaryTest.cpp.o
+.PHONY : big_interger/BinaryTest.cpp.o
+
+big_interger/BinaryTest.i: big_interger/BinaryTest.cpp.i
+
+.PHONY : big_interger/BinaryTest.i
+
+# target to preprocess a source file
+big_interger/BinaryTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/BinaryTest.dir/build.make tests/CMakeFiles/BinaryTest.dir/big_interger/BinaryTest.cpp.i
+.PHONY : big_interger/BinaryTest.cpp.i
+
+big_interger/BinaryTest.s: big_interger/BinaryTest.cpp.s
+
+.PHONY : big_interger/BinaryTest.s
+
+# target to generate assembly for a file
+big_interger/BinaryTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/BinaryTest.dir/build.make tests/CMakeFiles/BinaryTest.dir/big_interger/BinaryTest.cpp.s
+.PHONY : big_interger/BinaryTest.cpp.s
 
 big_interger/DivTest.o: big_interger/DivTest.cpp.o
 
@@ -402,6 +459,33 @@ big_interger/IncDecTest.s: big_interger/IncDecTest.cpp.s
 big_interger/IncDecTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IncTest.dir/build.make tests/CMakeFiles/IncTest.dir/big_interger/IncDecTest.cpp.s
 .PHONY : big_interger/IncDecTest.cpp.s
+
+big_interger/IsPrimeTest.o: big_interger/IsPrimeTest.cpp.o
+
+.PHONY : big_interger/IsPrimeTest.o
+
+# target to build an object file
+big_interger/IsPrimeTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IsPrimeTest.dir/build.make tests/CMakeFiles/IsPrimeTest.dir/big_interger/IsPrimeTest.cpp.o
+.PHONY : big_interger/IsPrimeTest.cpp.o
+
+big_interger/IsPrimeTest.i: big_interger/IsPrimeTest.cpp.i
+
+.PHONY : big_interger/IsPrimeTest.i
+
+# target to preprocess a source file
+big_interger/IsPrimeTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IsPrimeTest.dir/build.make tests/CMakeFiles/IsPrimeTest.dir/big_interger/IsPrimeTest.cpp.i
+.PHONY : big_interger/IsPrimeTest.cpp.i
+
+big_interger/IsPrimeTest.s: big_interger/IsPrimeTest.cpp.s
+
+.PHONY : big_interger/IsPrimeTest.s
+
+# target to generate assembly for a file
+big_interger/IsPrimeTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IsPrimeTest.dir/build.make tests/CMakeFiles/IsPrimeTest.dir/big_interger/IsPrimeTest.cpp.s
+.PHONY : big_interger/IsPrimeTest.cpp.s
 
 big_interger/LessThenTest.o: big_interger/LessThenTest.cpp.o
 
@@ -601,12 +685,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
+	@echo "... BinaryTest"
 	@echo "... DivTest"
 	@echo "... EasyStringTest"
 	@echo "... Eql"
 	@echo "... FibTest"
 	@echo "... GmpTest"
 	@echo "... IncTest"
+	@echo "... IsPrimeTest"
 	@echo "... LessTest"
 	@echo "... MetricTest"
 	@echo "... MultTest"
@@ -614,6 +700,9 @@ help:
 	@echo "... big_interger/AddTest.o"
 	@echo "... big_interger/AddTest.i"
 	@echo "... big_interger/AddTest.s"
+	@echo "... big_interger/BinaryTest.o"
+	@echo "... big_interger/BinaryTest.i"
+	@echo "... big_interger/BinaryTest.s"
 	@echo "... big_interger/DivTest.o"
 	@echo "... big_interger/DivTest.i"
 	@echo "... big_interger/DivTest.s"
@@ -623,6 +712,9 @@ help:
 	@echo "... big_interger/IncDecTest.o"
 	@echo "... big_interger/IncDecTest.i"
 	@echo "... big_interger/IncDecTest.s"
+	@echo "... big_interger/IsPrimeTest.o"
+	@echo "... big_interger/IsPrimeTest.i"
+	@echo "... big_interger/IsPrimeTest.s"
 	@echo "... big_interger/LessThenTest.o"
 	@echo "... big_interger/LessThenTest.i"
 	@echo "... big_interger/LessThenTest.s"

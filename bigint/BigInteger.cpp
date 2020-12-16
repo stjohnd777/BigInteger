@@ -26,6 +26,19 @@ using namespace std;
  * overcome to engage in arithmetic of large integers.
  */
 
+bool BigInteger::IsRepresentable() {
+    static BigInteger MAX_REP(LONG_MAX);
+    if (*this < MAX_REP) {
+        return true;
+    }
+    return false;
+}
+
+BigInteger BigInteger::MaxRepresentable() {
+    static BigInteger MAX_REP(LONG_MAX);
+    return MAX_REP;
+}
+
 
 // initialize ot 0
 // default constructor
@@ -364,25 +377,8 @@ BigInteger operator*(const long other, const BigInteger& rhs) {
 
 BigInteger BigInteger::operator*(const BigInteger &other) {
 
-//    BigInteger smaller;
-//    BigInteger larger;
-//    if (*this < other) {
-//        smaller = *this;
-//        larger = other;
-//    } else {
-//        smaller = other;
-//        larger = *this;
-//    }
-//    BigInteger topLine = larger;     // a
-//    BigInteger bottomLine = smaller; // b
-//    //               a[0]a[1] .... a[n-1]
-//    // 1233456789    [9,8,7,6,5,4,3,2,1]
-//    //               b[0]b[1] .... b[m-1]
-//    // x      899    [8,9,9]
-//    //------------
-
     BigInteger topLine = *this;     // a
-    BigInteger bottomLine = other; // b
+    BigInteger bottomLine = other;  // b
     BigInteger sum;
 
     for(auto indx_b =0 ; indx_b < bottomLine.length();indx_b++){
@@ -553,9 +549,62 @@ void BigInteger::prePend(unsigned short int c) {
     digits.push_front(c);
 }
 
+long BigInteger::SumDigits() {
+    long sum = 0;
+    std::for_each(std::begin(digits),std::end(digits),[&](unsigned short int d){
+        sum += d;
+    });
+    return sum;
+}
+
+bool BigInteger::isDivisable3(){
+    return SumDigits() % 3 == 0;
+}
+
+bool BigInteger::isDivisable5(){
+    return digits[0] == 5 || digits[0] == 5 ;
+}
+
+bool BigInteger::isEven(){
+    return digits[0] == 2;
+}
+
+bool BigInteger::IsPrime(){
+
+    if (
+            ( isEven() && len() != 1  ) ||
+            ( isDivisable3() &&  len() != 1 ) ||
+            ( isDivisable5() && len() != 1 )
+         )
+    {
+        return false;
+    }
+
+    BigInteger candidate = *this;
+    BigInteger half = *this / 2;
+    BigInteger mod(2);
+    bool isPrime = true;
+
+    while (mod <= half) {
+        auto ans = candidate % mod;
+        if (ans == 0) {
+            isPrime = false;
+            break;
+        }
+        mod++;
+    }
+    return isPrime;
+}
+
+
 long BigInteger::length() {
     return digits.size();
 }
+
+long BigInteger::len() {
+    return digits.size();
+}
+
 
 BigInteger BigInteger::subStringBigInteger(long offset, long substringLen, bool isLeftToRight ) {
 
@@ -577,6 +626,33 @@ BigInteger BigInteger::subStringBigInteger(long offset, long substringLen, bool 
     }
 
 }
+
+void BigInteger::stripLeadingZeros(){
+
+    bool needsNotStripedLeadingZeros = true;
+
+//        auto it = rbegin(digits);
+//        while(needsNotStripedLeadingZeros){
+//            if ( *it == 0){
+//                it++;
+//                digits.pop_back();
+//                continue;
+//            }
+//            needsNotStripedLeadingZeros = false;
+//        }
+
+    for_each(rbegin(digits), rend(digits), [&](unsigned short int i) {
+        if ( needsNotStripedLeadingZeros && i == 0){
+            digits.pop_back();
+        }else {
+            needsNotStripedLeadingZeros = false;
+        }
+    });
+}
+unsigned short int BigInteger::operator[](const long index) {
+    return digits[index];
+}
+
 
 std::string BigInteger::toBinary(bool pad ) {
 
@@ -621,21 +697,7 @@ ostream &operator<<(ostream &out, const BigInteger &c) {
 }
 
 bool operator==(const BigInteger &lhs, const BigInteger &rhs) {
-
     return lhs.toString() == rhs.toString();
-
-//    bool ret = true;
-//    if (lhs.digits.size() != rhs.digits.size()) {
-//        return false;
-//    }
-//    unsigned long index = 0;
-//    for_each(begin(rhs.digits), end(rhs.digits), [&](unsigned short int r) {
-//        if (r != lhs.digits[index]) {
-//            ret = false;
-//        }
-//        index++;
-//    });
-//    return ret;
 }
 
 bool operator==(const BigInteger &lhs, const string &rhs) {

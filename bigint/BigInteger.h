@@ -25,21 +25,12 @@ public:
      * return true.
      * @return
      */
-    bool IsRepresentable() {
-        static BigInteger MAX_REP(LONG_MAX);
-        if (*this < MAX_REP) {
-            return true;
-        }
-        return false;
-    }
+    bool IsRepresentable() ;
 
     /**
      *    what is the max primitive number on this machine
      */
-    static BigInteger MaxRepresentable() {
-        static BigInteger MAX_REP(LONG_MAX);
-        return MAX_REP;
-    }
+    static BigInteger MaxRepresentable() ;
 
 public:
 
@@ -179,53 +170,19 @@ public:
 
     void prePend(unsigned short int c);
 
-    long SumDigits() {
-        long sum = 0;
-        std::for_each(std::begin(digits),std::end(digits),[&](unsigned short int d){
-              sum += d;
-        });
-        return sum;
-    }
+    long SumDigits() ;
 
-    bool isDivisable3(){
-        return SumDigits() % 3 == 0;
-    }
+    bool isDivisable3();
 
-    bool isDivisable5(){
-        return digits[0] == 5 || digits[0] == 5 ;
-    }
+    bool isDivisable5();
 
-    bool isEven(){
-        return digits[0] == 2;
-    }
+    bool isEven();
 
-    bool IsPrime(){
-
-        if ( isEven() ||
-             isDivisable3() ||
-             isDivisable5()) {
-            return false;
-        }
-
-        BigInteger candidate = *this;
-        BigInteger half = *this / 2;
-        BigInteger mod(2);
-        bool isPrime = true;
-
-        while (mod <= half) {
-            auto ans = candidate % mod;
-            if (ans == 0) {
-                isPrime = false;
-                break;
-            }
-            mod++;
-        }
-        return isPrime;
-    }
-
-
+    bool IsPrime();
 
     long length() ;
+
+    long len() ;
 
     BigInteger subStringBigInteger(long offset, long substringLen, bool isLeftToRight = true) ;
 
@@ -233,34 +190,9 @@ public:
 
     ~BigInteger();
 
+    void stripLeadingZeros();
 
-
-    void stripLeadingZeros(){
-
-        bool needsNotStripedLeadingZeros = true;
-
-//        auto it = rbegin(digits);
-//        while(needsNotStripedLeadingZeros){
-//            if ( *it == 0){
-//                it++;
-//                digits.pop_back();
-//                continue;
-//            }
-//            needsNotStripedLeadingZeros = false;
-//        }
-
-        for_each(rbegin(digits), rend(digits), [&](unsigned short int i) {
-            if ( needsNotStripedLeadingZeros && i == 0){
-                digits.pop_back();
-            }else {
-                needsNotStripedLeadingZeros = false;
-            }
-        });
-    }
-
-    unsigned short int operator[](const long index) {
-        return digits[index];
-    }
+    unsigned short int operator[](const long index);
 
     std::deque<unsigned short int> digits;
 

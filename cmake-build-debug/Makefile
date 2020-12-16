@@ -170,6 +170,45 @@ bigint/fast:
 .PHONY : bigint/fast
 
 #=============================================================================
+# Target rules for targets named EasyStringTest
+
+# Build rule for target.
+EasyStringTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EasyStringTest
+.PHONY : EasyStringTest
+
+# fast build rule for target.
+EasyStringTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
+.PHONY : EasyStringTest/fast
+
+#=============================================================================
+# Target rules for targets named MetricTest
+
+# Build rule for target.
+MetricTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MetricTest
+.PHONY : MetricTest
+
+# fast build rule for target.
+MetricTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
+.PHONY : MetricTest/fast
+
+#=============================================================================
+# Target rules for targets named IsPrimeTest
+
+# Build rule for target.
+IsPrimeTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IsPrimeTest
+.PHONY : IsPrimeTest
+
+# fast build rule for target.
+IsPrimeTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/IsPrimeTest.dir/build.make tests/CMakeFiles/IsPrimeTest.dir/build
+.PHONY : IsPrimeTest/fast
+
+#=============================================================================
 # Target rules for targets named GmpTest
 
 # Build rule for target.
@@ -209,19 +248,6 @@ Eql/fast:
 .PHONY : Eql/fast
 
 #=============================================================================
-# Target rules for targets named EasyStringTest
-
-# Build rule for target.
-EasyStringTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EasyStringTest
-.PHONY : EasyStringTest
-
-# fast build rule for target.
-EasyStringTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/build
-.PHONY : EasyStringTest/fast
-
-#=============================================================================
 # Target rules for targets named LessTest
 
 # Build rule for target.
@@ -233,6 +259,19 @@ LessTest: cmake_check_build_system
 LessTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/LessTest.dir/build.make tests/CMakeFiles/LessTest.dir/build
 .PHONY : LessTest/fast
+
+#=============================================================================
+# Target rules for targets named BinaryTest
+
+# Build rule for target.
+BinaryTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BinaryTest
+.PHONY : BinaryTest
+
+# fast build rule for target.
+BinaryTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/BinaryTest.dir/build.make tests/CMakeFiles/BinaryTest.dir/build
+.PHONY : BinaryTest/fast
 
 #=============================================================================
 # Target rules for targets named FibTest
@@ -272,19 +311,6 @@ MultTest: cmake_check_build_system
 MultTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MultTest.dir/build.make tests/CMakeFiles/MultTest.dir/build
 .PHONY : MultTest/fast
-
-#=============================================================================
-# Target rules for targets named MetricTest
-
-# Build rule for target.
-MetricTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MetricTest
-.PHONY : MetricTest
-
-# fast build rule for target.
-MetricTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/MetricTest.dir/build.make tests/CMakeFiles/MetricTest.dir/build
-.PHONY : MetricTest/fast
 
 #=============================================================================
 # Target rules for targets named DivTest
@@ -429,12 +455,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
+	@echo "... BinaryTest"
 	@echo "... DivTest"
 	@echo "... EasyStringTest"
 	@echo "... Eql"
 	@echo "... FibTest"
 	@echo "... GmpTest"
 	@echo "... IncTest"
+	@echo "... IsPrimeTest"
 	@echo "... LessTest"
 	@echo "... Main"
 	@echo "... MetricTest"

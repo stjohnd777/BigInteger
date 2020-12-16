@@ -19,6 +19,12 @@ target_link_libraries(MultTest PRIVATE bigint)
 add_executable(DivTest catch.hpp big_interger/DivTest.cpp)
 target_link_libraries(DivTest PRIVATE bigint)
 
+add_executable(IsPrimeTest catch.hpp big_interger/IsPrimeTest.cpp)
+target_link_libraries(IsPrimeTest PRIVATE bigint)
+
+add_executable(BinaryTest catch.hpp big_interger/BinaryTest.cpp)
+target_link_libraries(BinaryTest PRIVATE bigint)
+
 add_executable(LessTest catch.hpp big_interger/LessThenTest.cpp)
 target_link_libraries(LessTest PRIVATE bigint)
 
