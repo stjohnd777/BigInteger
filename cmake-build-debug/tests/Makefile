@@ -131,6 +131,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/PrimesTests.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/PrimesTests.dir/rule
+.PHONY : tests/CMakeFiles/PrimesTests.dir/rule
+
+# Convenience name for target.
+PrimesTests: tests/CMakeFiles/PrimesTests.dir/rule
+
+.PHONY : PrimesTests
+
+# fast build rule for target.
+PrimesTests/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/PrimesTests.dir/build.make tests/CMakeFiles/PrimesTests.dir/build
+.PHONY : PrimesTests/fast
+
+# Convenience name for target.
+tests/CMakeFiles/CompareTests.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/CompareTests.dir/rule
+.PHONY : tests/CMakeFiles/CompareTests.dir/rule
+
+# Convenience name for target.
+CompareTests: tests/CMakeFiles/CompareTests.dir/rule
+
+.PHONY : CompareTests
+
+# fast build rule for target.
+CompareTests/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CompareTests.dir/build.make tests/CMakeFiles/CompareTests.dir/build
+.PHONY : CompareTests/fast
+
+# Convenience name for target.
 tests/CMakeFiles/EasyStringTest.dir/rule:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/EasyStringTest.dir/rule
 .PHONY : tests/CMakeFiles/EasyStringTest.dir/rule
@@ -219,6 +249,21 @@ Eql: tests/CMakeFiles/Eql.dir/rule
 Eql/fast:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
 .PHONY : Eql/fast
+
+# Convenience name for target.
+tests/CMakeFiles/EasyVectorTest.dir/rule:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/EasyVectorTest.dir/rule
+.PHONY : tests/CMakeFiles/EasyVectorTest.dir/rule
+
+# Convenience name for target.
+EasyVectorTest: tests/CMakeFiles/EasyVectorTest.dir/rule
+
+.PHONY : EasyVectorTest
+
+# fast build rule for target.
+EasyVectorTest/fast:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyVectorTest.dir/build.make tests/CMakeFiles/EasyVectorTest.dir/build
+.PHONY : EasyVectorTest/fast
 
 # Convenience name for target.
 tests/CMakeFiles/LessTest.dir/rule:
@@ -378,6 +423,33 @@ big_interger/BinaryTest.s: big_interger/BinaryTest.cpp.s
 big_interger/BinaryTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/BinaryTest.dir/build.make tests/CMakeFiles/BinaryTest.dir/big_interger/BinaryTest.cpp.s
 .PHONY : big_interger/BinaryTest.cpp.s
+
+big_interger/CompareTests.o: big_interger/CompareTests.cpp.o
+
+.PHONY : big_interger/CompareTests.o
+
+# target to build an object file
+big_interger/CompareTests.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CompareTests.dir/build.make tests/CMakeFiles/CompareTests.dir/big_interger/CompareTests.cpp.o
+.PHONY : big_interger/CompareTests.cpp.o
+
+big_interger/CompareTests.i: big_interger/CompareTests.cpp.i
+
+.PHONY : big_interger/CompareTests.i
+
+# target to preprocess a source file
+big_interger/CompareTests.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CompareTests.dir/build.make tests/CMakeFiles/CompareTests.dir/big_interger/CompareTests.cpp.i
+.PHONY : big_interger/CompareTests.cpp.i
+
+big_interger/CompareTests.s: big_interger/CompareTests.cpp.s
+
+.PHONY : big_interger/CompareTests.s
+
+# target to generate assembly for a file
+big_interger/CompareTests.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CompareTests.dir/build.make tests/CMakeFiles/CompareTests.dir/big_interger/CompareTests.cpp.s
+.PHONY : big_interger/CompareTests.cpp.s
 
 big_interger/DivTest.o: big_interger/DivTest.cpp.o
 
@@ -568,33 +640,6 @@ big_interger/SubTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/SubTest.dir/build.make tests/CMakeFiles/SubTest.dir/big_interger/SubTest.cpp.s
 .PHONY : big_interger/SubTest.cpp.s
 
-fibbonocci/FibonocciTest.o: fibbonocci/FibonocciTest.cpp.o
-
-.PHONY : fibbonocci/FibonocciTest.o
-
-# target to build an object file
-fibbonocci/FibonocciTest.cpp.o:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o
-.PHONY : fibbonocci/FibonocciTest.cpp.o
-
-fibbonocci/FibonocciTest.i: fibbonocci/FibonocciTest.cpp.i
-
-.PHONY : fibbonocci/FibonocciTest.i
-
-# target to preprocess a source file
-fibbonocci/FibonocciTest.cpp.i:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.i
-.PHONY : fibbonocci/FibonocciTest.cpp.i
-
-fibbonocci/FibonocciTest.s: fibbonocci/FibonocciTest.cpp.s
-
-.PHONY : fibbonocci/FibonocciTest.s
-
-# target to generate assembly for a file
-fibbonocci/FibonocciTest.cpp.s:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.s
-.PHONY : fibbonocci/FibonocciTest.cpp.s
-
 gmp/GmpTest.o: gmp/GmpTest.cpp.o
 
 .PHONY : gmp/GmpTest.o
@@ -622,6 +667,60 @@ gmp/GmpTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/GmpTest.dir/build.make tests/CMakeFiles/GmpTest.dir/gmp/GmpTest.cpp.s
 .PHONY : gmp/GmpTest.cpp.s
 
+math/fibbonocci/FibonocciTest.o: math/fibbonocci/FibonocciTest.cpp.o
+
+.PHONY : math/fibbonocci/FibonocciTest.o
+
+# target to build an object file
+math/fibbonocci/FibonocciTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o
+.PHONY : math/fibbonocci/FibonocciTest.cpp.o
+
+math/fibbonocci/FibonocciTest.i: math/fibbonocci/FibonocciTest.cpp.i
+
+.PHONY : math/fibbonocci/FibonocciTest.i
+
+# target to preprocess a source file
+math/fibbonocci/FibonocciTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.i
+.PHONY : math/fibbonocci/FibonocciTest.cpp.i
+
+math/fibbonocci/FibonocciTest.s: math/fibbonocci/FibonocciTest.cpp.s
+
+.PHONY : math/fibbonocci/FibonocciTest.s
+
+# target to generate assembly for a file
+math/fibbonocci/FibonocciTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/FibTest.dir/build.make tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.s
+.PHONY : math/fibbonocci/FibonocciTest.cpp.s
+
+math/primes/PrimesTest.o: math/primes/PrimesTest.cpp.o
+
+.PHONY : math/primes/PrimesTest.o
+
+# target to build an object file
+math/primes/PrimesTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/PrimesTests.dir/build.make tests/CMakeFiles/PrimesTests.dir/math/primes/PrimesTest.cpp.o
+.PHONY : math/primes/PrimesTest.cpp.o
+
+math/primes/PrimesTest.i: math/primes/PrimesTest.cpp.i
+
+.PHONY : math/primes/PrimesTest.i
+
+# target to preprocess a source file
+math/primes/PrimesTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/PrimesTests.dir/build.make tests/CMakeFiles/PrimesTests.dir/math/primes/PrimesTest.cpp.i
+.PHONY : math/primes/PrimesTest.cpp.i
+
+math/primes/PrimesTest.s: math/primes/PrimesTest.cpp.s
+
+.PHONY : math/primes/PrimesTest.s
+
+# target to generate assembly for a file
+math/primes/PrimesTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/PrimesTests.dir/build.make tests/CMakeFiles/PrimesTests.dir/math/primes/PrimesTest.cpp.s
+.PHONY : math/primes/PrimesTest.cpp.s
+
 utils/EasyStringTest.o: utils/EasyStringTest.cpp.o
 
 .PHONY : utils/EasyStringTest.o
@@ -648,6 +747,33 @@ utils/EasyStringTest.s: utils/EasyStringTest.cpp.s
 utils/EasyStringTest.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyStringTest.dir/build.make tests/CMakeFiles/EasyStringTest.dir/utils/EasyStringTest.cpp.s
 .PHONY : utils/EasyStringTest.cpp.s
+
+utils/EasyVectorTest.o: utils/EasyVectorTest.cpp.o
+
+.PHONY : utils/EasyVectorTest.o
+
+# target to build an object file
+utils/EasyVectorTest.cpp.o:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyVectorTest.dir/build.make tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.o
+.PHONY : utils/EasyVectorTest.cpp.o
+
+utils/EasyVectorTest.i: utils/EasyVectorTest.cpp.i
+
+.PHONY : utils/EasyVectorTest.i
+
+# target to preprocess a source file
+utils/EasyVectorTest.cpp.i:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyVectorTest.dir/build.make tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.i
+.PHONY : utils/EasyVectorTest.cpp.i
+
+utils/EasyVectorTest.s: utils/EasyVectorTest.cpp.s
+
+.PHONY : utils/EasyVectorTest.s
+
+# target to generate assembly for a file
+utils/EasyVectorTest.cpp.s:
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyVectorTest.dir/build.make tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.s
+.PHONY : utils/EasyVectorTest.cpp.s
 
 utils/MetricTest.o: utils/MetricTest.cpp.o
 
@@ -686,8 +812,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
 	@echo "... BinaryTest"
+	@echo "... CompareTests"
 	@echo "... DivTest"
 	@echo "... EasyStringTest"
+	@echo "... EasyVectorTest"
 	@echo "... Eql"
 	@echo "... FibTest"
 	@echo "... GmpTest"
@@ -696,6 +824,7 @@ help:
 	@echo "... LessTest"
 	@echo "... MetricTest"
 	@echo "... MultTest"
+	@echo "... PrimesTests"
 	@echo "... SubTest"
 	@echo "... big_interger/AddTest.o"
 	@echo "... big_interger/AddTest.i"
@@ -703,6 +832,9 @@ help:
 	@echo "... big_interger/BinaryTest.o"
 	@echo "... big_interger/BinaryTest.i"
 	@echo "... big_interger/BinaryTest.s"
+	@echo "... big_interger/CompareTests.o"
+	@echo "... big_interger/CompareTests.i"
+	@echo "... big_interger/CompareTests.s"
 	@echo "... big_interger/DivTest.o"
 	@echo "... big_interger/DivTest.i"
 	@echo "... big_interger/DivTest.s"
@@ -724,15 +856,21 @@ help:
 	@echo "... big_interger/SubTest.o"
 	@echo "... big_interger/SubTest.i"
 	@echo "... big_interger/SubTest.s"
-	@echo "... fibbonocci/FibonocciTest.o"
-	@echo "... fibbonocci/FibonocciTest.i"
-	@echo "... fibbonocci/FibonocciTest.s"
 	@echo "... gmp/GmpTest.o"
 	@echo "... gmp/GmpTest.i"
 	@echo "... gmp/GmpTest.s"
+	@echo "... math/fibbonocci/FibonocciTest.o"
+	@echo "... math/fibbonocci/FibonocciTest.i"
+	@echo "... math/fibbonocci/FibonocciTest.s"
+	@echo "... math/primes/PrimesTest.o"
+	@echo "... math/primes/PrimesTest.i"
+	@echo "... math/primes/PrimesTest.s"
 	@echo "... utils/EasyStringTest.o"
 	@echo "... utils/EasyStringTest.i"
 	@echo "... utils/EasyStringTest.s"
+	@echo "... utils/EasyVectorTest.o"
+	@echo "... utils/EasyVectorTest.i"
+	@echo "... utils/EasyVectorTest.s"
 	@echo "... utils/MetricTest.o"
 	@echo "... utils/MetricTest.i"
 	@echo "... utils/MetricTest.s"

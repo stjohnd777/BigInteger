@@ -199,33 +199,6 @@ GmpBigIntWrapper.cpp.s:
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.s
 .PHONY : GmpBigIntWrapper.cpp.s
 
-fibonocci.o: fibonocci.cpp.o
-
-.PHONY : fibonocci.o
-
-# target to build an object file
-fibonocci.cpp.o:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o
-.PHONY : fibonocci.cpp.o
-
-fibonocci.i: fibonocci.cpp.i
-
-.PHONY : fibonocci.i
-
-# target to preprocess a source file
-fibonocci.cpp.i:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/fibonocci.cpp.i
-.PHONY : fibonocci.cpp.i
-
-fibonocci.s: fibonocci.cpp.s
-
-.PHONY : fibonocci.s
-
-# target to generate assembly for a file
-fibonocci.cpp.s:
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug && $(MAKE) $(MAKESILENT) -f bigint/CMakeFiles/bigint.dir/build.make bigint/CMakeFiles/bigint.dir/fibonocci.cpp.s
-.PHONY : fibonocci.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -241,9 +214,6 @@ help:
 	@echo "... GmpBigIntWrapper.o"
 	@echo "... GmpBigIntWrapper.i"
 	@echo "... GmpBigIntWrapper.s"
-	@echo "... fibonocci.o"
-	@echo "... fibonocci.i"
-	@echo "... fibonocci.s"
 .PHONY : help
 
 

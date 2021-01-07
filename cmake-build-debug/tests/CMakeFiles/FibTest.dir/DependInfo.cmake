@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/FibonocciTest.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o"
+  "/Users/overman/dev/github/utils-bigint-crpto/tests/math/fibbonocci/FibonocciTest.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

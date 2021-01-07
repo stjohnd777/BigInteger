@@ -77,27 +77,27 @@ include tests/CMakeFiles/FibTest.dir/progress.make
 # Include the compile flags for this target's objects.
 include tests/CMakeFiles/FibTest.dir/flags.make
 
-tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o: tests/CMakeFiles/FibTest.dir/flags.make
-tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o: ../tests/fibbonocci/FibonocciTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o"
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/FibonocciTest.cpp
+tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o: tests/CMakeFiles/FibTest.dir/flags.make
+tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o: ../tests/math/fibbonocci/FibonocciTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/tests/math/fibbonocci/FibonocciTest.cpp
 
-tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.i"
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/FibonocciTest.cpp > CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.i
+tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.i"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/tests/math/fibbonocci/FibonocciTest.cpp > CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.i
 
-tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.s"
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/FibonocciTest.cpp -o CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.s
+tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.s"
+	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/tests/math/fibbonocci/FibonocciTest.cpp -o CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.s
 
 # Object files for target FibTest
 FibTest_OBJECTS = \
-"CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o"
+"CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o"
 
 # External object files for target FibTest
 FibTest_EXTERNAL_OBJECTS =
 
-tests/FibTest: tests/CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o
+tests/FibTest: tests/CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o
 tests/FibTest: tests/CMakeFiles/FibTest.dir/build.make
 tests/FibTest: utils/libutils.a
 tests/FibTest: bigint/libbigint.a

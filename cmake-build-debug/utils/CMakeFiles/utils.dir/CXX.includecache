@@ -6,17 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.cpp
-easy_string.hpp
-/Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.hpp
+/Users/overman/dev/github/utils-bigint-crpto/utils/easy_vector.cpp
+easy_vector.h
+/Users/overman/dev/github/utils-bigint-crpto/utils/easy_vector.h
 
-/Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.hpp
+/Users/overman/dev/github/utils-bigint-crpto/utils/easy_vector.h
 iostream
 -
-string
+functional
+-
+array
 -
 vector
 -
-functional
+map
+-
+algorithm
+-
+memory
+-
+random
+-
+chrono
+-
+memory
 -
 

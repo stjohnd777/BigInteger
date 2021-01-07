@@ -35,7 +35,7 @@ add_executable(Eql catch.hpp big_interger/EqualTest.cpp)
 target_link_libraries(Eql PRIVATE bigint)
 
 
-add_executable(FibTest catch.hpp fibbonocci/FibonocciTest.cpp)
+add_executable(FibTest catch.hpp math/fibbonocci/FibonocciTest.cpp)
 target_link_libraries(FibTest PRIVATE utils bigint gmp gmpxx)
 
 add_executable(GmpTest catch.hpp gmp/GmpTest.cpp)
@@ -46,3 +46,16 @@ target_link_libraries(MetricTest PRIVATE utils bigint gmp gmpxx )
 
 add_executable(EasyStringTest catch.hpp utils/EasyStringTest.cpp )
 target_link_libraries(EasyStringTest PRIVATE utils  )
+
+#add_executable(EasyStringTest catch.hpp utils/EasyStringTest.cpp )
+#target_link_libraries(EasyStringTest PRIVATE utils  )
+
+add_executable(CompareTests catch.hpp big_interger/CompareTests.cpp)
+target_link_libraries(CompareTests PRIVATE utils bigint gmp gmpxx)
+
+add_executable(EasyVectorTest catch.hpp utils/EasyVectorTest.cpp)
+target_link_libraries(EasyVectorTest PRIVATE utils bigint gmp gmpxx)
+
+
+add_executable(PrimesTests catch.hpp math/primes/PrimesTest.cpp)
+target_link_libraries(PrimesTests PRIVATE utils bigint gmp mymath gmpxx)

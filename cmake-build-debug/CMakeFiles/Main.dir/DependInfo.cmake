@@ -20,6 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/DependInfo.cmake"
   "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils/CMakeFiles/utils.dir/DependInfo.cmake"
+  "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/CMakeFiles/mymath.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

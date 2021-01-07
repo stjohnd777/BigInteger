@@ -1,4 +1,12 @@
-# BigInteger is a class that allow infinite percission arithmetic on very large Integers.
- 
+# Collection C++ Code
 
-##As an example I computing the largest know Fibbonocii number 
+
+- BigInteger is a class that allow Infinite Precision Arithmetic
+- Fibonacci Number Primes
+- Utilities
+  - extension c++ container for sanity
+    - easy_vector
+      - 
+  - a human usable C++ string
+  - metric utilities
+

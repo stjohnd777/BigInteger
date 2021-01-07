@@ -197,4 +197,23 @@ public:
     std::deque<unsigned short int> digits;
 
     unsigned short int base = 10;
+
+    BigInteger pow2() {
+        BigInteger sum;
+        for(auto i =0 ; i < this->length(); i++){
+            unsigned short int carry = 0;
+            std::deque<unsigned short int> digitsLine;
+            for(auto j = 0 ; j < this ->length(); j++){
+                auto m =  (*this)[j] * (*this)[i] + carry;
+                digitsLine.push_back( m % base);
+                carry =  m / base;
+            }
+            if (carry) digitsLine.push_back(carry);
+            // respect the 10's place;v b
+            for (auto z = 0; z < i ;z++){ digitsLine.push_front(0); }
+            auto line = BigInteger(digitsLine);
+            sum = sum +line;
+        }
+        return sum  ;
+    }
 };

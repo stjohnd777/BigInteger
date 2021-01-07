@@ -170,6 +170,45 @@ bigint/fast:
 .PHONY : bigint/fast
 
 #=============================================================================
+# Target rules for targets named mymath
+
+# Build rule for target.
+mymath: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath
+.PHONY : mymath
+
+# fast build rule for target.
+mymath/fast:
+	$(MAKE) $(MAKESILENT) -f math/CMakeFiles/mymath.dir/build.make math/CMakeFiles/mymath.dir/build
+.PHONY : mymath/fast
+
+#=============================================================================
+# Target rules for targets named PrimesTests
+
+# Build rule for target.
+PrimesTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PrimesTests
+.PHONY : PrimesTests
+
+# fast build rule for target.
+PrimesTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/PrimesTests.dir/build.make tests/CMakeFiles/PrimesTests.dir/build
+.PHONY : PrimesTests/fast
+
+#=============================================================================
+# Target rules for targets named CompareTests
+
+# Build rule for target.
+CompareTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CompareTests
+.PHONY : CompareTests
+
+# fast build rule for target.
+CompareTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/CompareTests.dir/build.make tests/CMakeFiles/CompareTests.dir/build
+.PHONY : CompareTests/fast
+
+#=============================================================================
 # Target rules for targets named EasyStringTest
 
 # Build rule for target.
@@ -246,6 +285,19 @@ Eql: cmake_check_build_system
 Eql/fast:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/Eql.dir/build.make tests/CMakeFiles/Eql.dir/build
 .PHONY : Eql/fast
+
+#=============================================================================
+# Target rules for targets named EasyVectorTest
+
+# Build rule for target.
+EasyVectorTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EasyVectorTest
+.PHONY : EasyVectorTest
+
+# fast build rule for target.
+EasyVectorTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/EasyVectorTest.dir/build.make tests/CMakeFiles/EasyVectorTest.dir/build
+.PHONY : EasyVectorTest/fast
 
 #=============================================================================
 # Target rules for targets named LessTest
@@ -456,8 +508,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AddTest"
 	@echo "... BinaryTest"
+	@echo "... CompareTests"
 	@echo "... DivTest"
 	@echo "... EasyStringTest"
+	@echo "... EasyVectorTest"
 	@echo "... Eql"
 	@echo "... FibTest"
 	@echo "... GmpTest"
@@ -467,8 +521,10 @@ help:
 	@echo "... Main"
 	@echo "... MetricTest"
 	@echo "... MultTest"
+	@echo "... PrimesTests"
 	@echo "... SubTest"
 	@echo "... bigint"
+	@echo "... mymath"
 	@echo "... utils"
 	@echo "... main.o"
 	@echo "... main.i"

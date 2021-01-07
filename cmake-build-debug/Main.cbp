@@ -5,7 +5,7 @@
 		<Option title="Main"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\utils\;CMake Files\bigint\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\utils\;CMake Files\bigint\;CMake Files\math\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug"/>
@@ -161,6 +161,132 @@
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mymath">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/libmymath.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 mymath"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mymath/fast">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/libmymath.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 mymath/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/math/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PrimesTests">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/PrimesTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 PrimesTests"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PrimesTests/fast">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/PrimesTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 PrimesTests/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CompareTests">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CompareTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 CompareTests"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CompareTests/fast">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/CompareTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 CompareTests/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="EasyStringTest">
@@ -410,6 +536,48 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 Eql/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EasyVectorTest">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/EasyVectorTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 EasyVectorTest"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EasyVectorTest/fast">
+				<Option output="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/EasyVectorTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 EasyVectorTest/fast"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
@@ -722,20 +890,31 @@
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/bigint/GmpBigIntWrapper.h">
 			<Option target="bigint"/>
 		</Unit>
-		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.cpp">
-			<Option target="bigint"/>
-		</Unit>
-		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.hpp">
-			<Option target="bigint"/>
-		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/main.cpp">
 			<Option target="Main"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/Math.cpp">
 			<Option target="Main"/>
+			<Option target="mymath"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/Math.h">
 			<Option target="Main"/>
+			<Option target="mymath"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/fibonocci.cpp">
+			<Option target="mymath"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/fibonocci.hpp">
+			<Option target="mymath"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/primes/ListingPrimes.cpp">
+			<Option target="mymath"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/primes/ListingPrimes.h">
+			<Option target="mymath"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/primes/PrimeTable.h">
+			<Option target="mymath"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/mystudy/Node.cpp">
 			<Option target="Main"/>
@@ -751,6 +930,9 @@
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/BinaryTest.cpp">
 			<Option target="BinaryTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/CompareTests.cpp">
+			<Option target="CompareTests"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/big_interger/DivTest.cpp">
 			<Option target="DivTest"/>
@@ -774,12 +956,15 @@
 			<Option target="SubTest"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp">
+			<Option target="PrimesTests"/>
+			<Option target="CompareTests"/>
 			<Option target="EasyStringTest"/>
 			<Option target="MetricTest"/>
 			<Option target="IsPrimeTest"/>
 			<Option target="GmpTest"/>
 			<Option target="AddTest"/>
 			<Option target="Eql"/>
+			<Option target="EasyVectorTest"/>
 			<Option target="LessTest"/>
 			<Option target="BinaryTest"/>
 			<Option target="FibTest"/>
@@ -788,14 +973,20 @@
 			<Option target="DivTest"/>
 			<Option target="IncTest"/>
 		</Unit>
-		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/FibonocciTest.cpp">
-			<Option target="FibTest"/>
-		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/gmp/GmpTest.cpp">
 			<Option target="GmpTest"/>
 		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/math/fibbonocci/FibonocciTest.cpp">
+			<Option target="FibTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/math/primes/PrimesTest.cpp">
+			<Option target="PrimesTests"/>
+		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/utils/EasyStringTest.cpp">
 			<Option target="EasyStringTest"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/utils/EasyVectorTest.cpp">
+			<Option target="EasyVectorTest"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/utils/MetricTest.cpp">
 			<Option target="MetricTest"/>
@@ -844,6 +1035,9 @@
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/bigint/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\bigint\"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\math\"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>

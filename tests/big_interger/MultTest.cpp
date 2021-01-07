@@ -14,6 +14,14 @@ using namespace std;
 
 #include "../../bigint/BigInteger.h"
 
+
+TEST_CASE("pow2", "[25]") {
+    BigInteger a(25);
+    auto c = a.pow2();
+    REQUIRE(c == 625);
+}
+
+
 TEST_CASE("1x2=2", "[1x2=2]") {
 
     BigInteger a(1);

@@ -1,0 +1,36 @@
+what need to be done with an array of sequence container
+add element end
+add element first
+find index with item
+sort
+remove duplicates ... unique
+filter
+map
+forEach
+forEachInReverse
+
+
+
+
+
+
+//    // inheritance
+//    template <class T, class Allocator = std::allocator<T>>
+//    class ArrayList : public std::vector<T,Allocator> {
+//    public:
+//
+//    };
+//	// HashMap HashSet HashTable Linked HashSet LinkedList TreeMap TreeSet Vector
+//
+//	// adaptor
+//    template <class T, class Container = std::vector<T> >
+//    class set : public Container {
+//    public:
+//    };
+//    // composition
+//    template <class T, class Container = std::vector<T> >
+//    class set2 {
+//    protected:
+//        Container c;
+//    public:
+//    };

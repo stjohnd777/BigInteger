@@ -146,6 +146,9 @@ Main: CMakeFiles/Main.dir/math/Math.cpp.o
 Main: CMakeFiles/Main.dir/build.make
 Main: bigint/libbigint.a
 Main: utils/libutils.a
+Main: math/libmymath.a
+Main: bigint/libbigint.a
+Main: utils/libutils.a
 Main: CMakeFiles/Main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)

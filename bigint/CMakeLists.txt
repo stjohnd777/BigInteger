@@ -9,7 +9,6 @@ link_directories(/usr/local/lib)
 add_library(
         bigint
         BigInteger.h BigInteger.cpp
-        fibonocci.hpp fibonocci.cpp
         GmpBigIntWrapper.cpp GmpBigIntWrapper.h)
 
 target_link_libraries(bigint PRIVATE utils gmp gmpxx)

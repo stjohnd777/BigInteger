@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o"
   "/Users/overman/dev/github/utils-bigint-crpto/bigint/GmpBigIntWrapper.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o"
-  "/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.cpp" "/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

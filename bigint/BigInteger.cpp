@@ -390,13 +390,13 @@ BigInteger BigInteger::operator*(const BigInteger &other) {
         auto b = bottomLine[indx_b];
 
         for(auto indx_a =0 ; indx_a < topLine.length();indx_a++){
-
             auto a = topLine[indx_a];
             auto m = a * b + carry;
             auto d = m % base;
             carry = m / base;
             digitsLine.push_back(d);
         }
+
         if (carry) {
             digitsLine.push_back(carry);
         }
@@ -566,7 +566,7 @@ bool BigInteger::isDivisable5(){
 }
 
 bool BigInteger::isEven(){
-    return digits[0] == 2;
+    return digits[0] == 2 ||digits[0] == 4 || digits[0] == 6  ;
 }
 
 bool BigInteger::IsPrime(){

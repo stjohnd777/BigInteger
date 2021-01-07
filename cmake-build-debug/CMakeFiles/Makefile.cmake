@@ -38,6 +38,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
+  "../math/CMakeLists.txt"
   "../tests/CMakeLists.txt"
   "../utils/CMakeLists.txt"
   )
@@ -53,6 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "utils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "bigint/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "math/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -61,12 +63,16 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Main.dir/DependInfo.cmake"
   "utils/CMakeFiles/utils.dir/DependInfo.cmake"
   "bigint/CMakeFiles/bigint.dir/DependInfo.cmake"
+  "math/CMakeFiles/mymath.dir/DependInfo.cmake"
+  "tests/CMakeFiles/PrimesTests.dir/DependInfo.cmake"
+  "tests/CMakeFiles/CompareTests.dir/DependInfo.cmake"
   "tests/CMakeFiles/EasyStringTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/MetricTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/IsPrimeTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/GmpTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/AddTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/Eql.dir/DependInfo.cmake"
+  "tests/CMakeFiles/EasyVectorTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/LessTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/BinaryTest.dir/DependInfo.cmake"
   "tests/CMakeFiles/FibTest.dir/DependInfo.cmake"

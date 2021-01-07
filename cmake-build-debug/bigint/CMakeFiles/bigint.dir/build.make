@@ -90,22 +90,9 @@ bigint/CMakeFiles/bigint.dir/BigInteger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bigint.dir/BigInteger.cpp.s"
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.cpp -o CMakeFiles/bigint.dir/BigInteger.cpp.s
 
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: bigint/CMakeFiles/bigint.dir/flags.make
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: ../bigint/fibonocci.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o"
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bigint.dir/fibonocci.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.cpp
-
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bigint.dir/fibonocci.cpp.i"
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.cpp > CMakeFiles/bigint.dir/fibonocci.cpp.i
-
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bigint.dir/fibonocci.cpp.s"
-	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.cpp -o CMakeFiles/bigint.dir/fibonocci.cpp.s
-
 bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o: bigint/CMakeFiles/bigint.dir/flags.make
 bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o: ../bigint/GmpBigIntWrapper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o"
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o -c /Users/overman/dev/github/utils-bigint-crpto/bigint/GmpBigIntWrapper.cpp
 
 bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.i: cmake_force
@@ -119,18 +106,16 @@ bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.s: cmake_force
 # Object files for target bigint
 bigint_OBJECTS = \
 "CMakeFiles/bigint.dir/BigInteger.cpp.o" \
-"CMakeFiles/bigint.dir/fibonocci.cpp.o" \
 "CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o"
 
 # External object files for target bigint
 bigint_EXTERNAL_OBJECTS =
 
 bigint/libbigint.a: bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o
-bigint/libbigint.a: bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o
 bigint/libbigint.a: bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o
 bigint/libbigint.a: bigint/CMakeFiles/bigint.dir/build.make
 bigint/libbigint.a: bigint/CMakeFiles/bigint.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libbigint.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libbigint.a"
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && $(CMAKE_COMMAND) -P CMakeFiles/bigint.dir/cmake_clean_target.cmake
 	cd /Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/bigint && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bigint.dir/link.txt --verbose=$(VERBOSE)
 

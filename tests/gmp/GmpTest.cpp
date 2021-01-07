@@ -5,7 +5,7 @@
 #define CATCH_CONFIG_MAIN
 
 #include "../catch.hpp"
-#include "../../bigint/fibonocci.hpp"
+#include "../../math/fibonocci/fibonocci.hpp"
 
 #include "gmp.h"
 #include <gmpxx.h>

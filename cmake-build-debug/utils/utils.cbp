@@ -5,7 +5,7 @@
 		<Option title="utils"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\utils\;CMake Files\bigint\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\utils\;CMake Files\bigint\;CMake Files\math\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/overman/dev/github/utils-bigint-crpto/cmake-build-debug/utils"/>
@@ -104,6 +104,9 @@
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/bigint/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\bigint\"/>
+		</Unit>
+		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/math/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\math\"/>
 		</Unit>
 		<Unit filename="/Users/overman/dev/github/utils-bigint-crpto/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>

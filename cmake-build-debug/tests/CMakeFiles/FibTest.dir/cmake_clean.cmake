@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FibTest.dir/fibbonocci/FibonocciTest.cpp.o"
+  "CMakeFiles/FibTest.dir/math/fibbonocci/FibonocciTest.cpp.o"
   "FibTest"
   "FibTest.pdb"
 )

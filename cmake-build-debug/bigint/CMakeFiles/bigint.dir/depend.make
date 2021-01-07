@@ -7,10 +7,3 @@ bigint/CMakeFiles/bigint.dir/BigInteger.cpp.o: ../bigint/BigInteger.h
 bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o: ../bigint/GmpBigIntWrapper.cpp
 bigint/CMakeFiles/bigint.dir/GmpBigIntWrapper.cpp.o: ../bigint/GmpBigIntWrapper.h
 
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: ../bigint/BigInteger.h
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: ../bigint/fibonocci.cpp
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: ../bigint/fibonocci.hpp
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: ../utils/easy_string.hpp
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: /usr/local/include/gmp.h
-bigint/CMakeFiles/bigint.dir/fibonocci.cpp.o: /usr/local/include/gmpxx.h
-

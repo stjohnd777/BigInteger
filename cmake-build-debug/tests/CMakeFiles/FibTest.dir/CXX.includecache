@@ -22,7 +22,7 @@ algorithm
 limits
 -
 
-/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.hpp
+/Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/fibonocci.hpp
 string
 -
 map
@@ -32,14 +32,14 @@ mutex
 fstream
 -
 gmp.h
-/Users/overman/dev/github/utils-bigint-crpto/bigint/gmp.h
+/Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/gmp.h
 gmpxx.h
 -
-BigInteger.h
+../../bigint/BigInteger.h
 /Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
 fibonocci.hpp
-/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.hpp
-../utils/easy_string.hpp
+/Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/fibonocci.hpp
+../../utils/easy_string.hpp
 /Users/overman/dev/github/utils-bigint-crpto/utils/easy_string.hpp
 
 /Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
@@ -639,8 +639,8 @@ algorithm
 -
 ../catch.hpp
 /Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
-../../bigint/fibonocci.hpp
-/Users/overman/dev/github/utils-bigint-crpto/bigint/fibonocci.hpp
+../../math/fibonocci/fibonocci.hpp
+/Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/fibonocci.hpp
 ../../bigint/BigInteger.h
 /Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
 ../../utils/TimeMetric.hpp
