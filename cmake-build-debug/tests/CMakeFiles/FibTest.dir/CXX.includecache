@@ -626,7 +626,7 @@ algorithm
 cassert
 -
 
-/Users/overman/dev/github/utils-bigint-crpto/tests/fibbonocci/FibonocciTest.cpp
+/Users/overman/dev/github/utils-bigint-crpto/tests/math/fibbonocci/FibonocciTest.cpp
 string
 -
 sstream
@@ -637,13 +637,13 @@ vector
 -
 algorithm
 -
-../catch.hpp
+../../catch.hpp
 /Users/overman/dev/github/utils-bigint-crpto/tests/catch.hpp
-../../math/fibonocci/fibonocci.hpp
+../../../math/fibonocci/fibonocci.hpp
 /Users/overman/dev/github/utils-bigint-crpto/math/fibonocci/fibonocci.hpp
-../../bigint/BigInteger.h
+../../../bigint/BigInteger.h
 /Users/overman/dev/github/utils-bigint-crpto/bigint/BigInteger.h
-../../utils/TimeMetric.hpp
+../../../utils/TimeMetric.hpp
 /Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.hpp
 
 /Users/overman/dev/github/utils-bigint-crpto/utils/TimeMetric.hpp

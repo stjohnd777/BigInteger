@@ -10,6 +10,7 @@ utils/CMakeFiles/utils.dir/TimeMetric.cpp.o: ../utils/TimeMetric.hpp
 utils/CMakeFiles/utils.dir/easy_string.cpp.o: ../utils/easy_string.cpp
 utils/CMakeFiles/utils.dir/easy_string.cpp.o: ../utils/easy_string.hpp
 
+utils/CMakeFiles/utils.dir/easy_vector.cpp.o: ../utils/easy_common.h
 utils/CMakeFiles/utils.dir/easy_vector.cpp.o: ../utils/easy_vector.cpp
 utils/CMakeFiles/utils.dir/easy_vector.cpp.o: ../utils/easy_vector.h
 

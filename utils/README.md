@@ -1,6 +1,6 @@
-# Need Sanity on C++ functionality
+# Need Sanity on C++ containers such as vector, extra
 
-# This extension is in response to programming in mor productive languages
+# This extension is in response to programming in more productive languages
 # such as java, javascript, and python.
 
 Methods
@@ -21,3 +21,5 @@ Methods
         cout << i << endl;
     });
 ```
+
+https://stdcxx.apache.org/doc/stdlibug/16-2.html

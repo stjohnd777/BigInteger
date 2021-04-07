@@ -98,6 +98,23 @@ namespace dsj {
         }
 
 
+        double TimeMetrics::TotalTime(string key) {
+
+            double sum = 0;
+
+            if (durations.find(key) != durations.end()) {
+                auto list = durations[key];
+                for_each(begin(list), end(list),
+                         [&](double duration) {
+                             sum += duration;
+                         });
+            } else {
+                throw std::runtime_error("Average Called With No duration list " + key);
+            }
+            return sum;
+        }
+
+
         int TimeMetrics::GetRuns(string key) {
             int runs = 0;
             if (durations.find(key) != durations.end()) {

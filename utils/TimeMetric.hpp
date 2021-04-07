@@ -70,6 +70,13 @@ namespace dsj {
             //static double Average(std::string cat,std::pair<std::string,uint32_t> key);
 
             /**
+             * get total duration in seconds on this split
+             */
+            static double TotalTime(std::string key);
+            //static double Average(std::string cat,std::pair<std::string,uint32_t> key);
+
+
+            /**
              * how many splits on the key
              */
             static int GetRuns(std::string key);

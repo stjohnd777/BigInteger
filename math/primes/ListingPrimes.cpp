@@ -4,6 +4,7 @@
 
 #include "ListingPrimes.h"
 
+#include "../../utils/easy_common.h"
 #include "../../utils/easy_vector.h"
 
 #include <algorithm>
@@ -187,6 +188,7 @@ The Mersennes are also prime for p=31, 61, 89, 107, 127, 521, 607, 1279, 2203, 2
  */
 easy_vector<long> ListingPrimes::SieveForPrimesWithKnowPrimesListToMaximalExtension(const std::vector<unsigned long> & list ) {
 
+    using namespace std;
 
     unsigned long maxP =  list.back();
     unsigned long N = maxP * maxP;

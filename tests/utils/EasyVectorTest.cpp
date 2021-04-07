@@ -160,14 +160,14 @@ TEST_CASE("easy_vector.removeFirstItem","[removeFirstOccurrenceOfItem]"){
     REQUIRE( index ==-1);
 }
 
-TEST_CASE("easy_vector.removeLastOccurrenceOfItem","[removeLastOccurrenceOfItem]"){
-    // TODO: more extensive tesing here
-    easy_vector<int> ev;
-    for ( int i =0 ; i < 10; i++){
-        ev.push_back(i);
-    }
-    auto didRemove = ev.removeLastOccurrenceOfItem(0);
-    REQUIRE ( didRemove == true);
-    int index = ev.indexOf(0);
-    REQUIRE( index ==-1);
-}
+//TEST_CASE("easy_vector.removeLastOccurrenceOfItem","[removeLastOccurrenceOfItem]"){
+//    // TODO: more extensive tesing here
+//    easy_vector<int> ev;
+//    for ( int i =0 ; i < 10; i++){
+//        ev.push_back(i);
+//    }
+//    auto didRemove = ev.removeLastOccurrenceOfItem(0);
+//    REQUIRE ( didRemove == true);
+//    int index = ev.indexOf(0);
+//    REQUIRE( index ==-1);
+//}

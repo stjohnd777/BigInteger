@@ -14,5 +14,6 @@ math/CMakeFiles/mymath.dir/fibonocci/fibonocci.cpp.o: /usr/local/include/gmpxx.h
 math/CMakeFiles/mymath.dir/primes/ListingPrimes.cpp.o: ../math/primes/ListingPrimes.cpp
 math/CMakeFiles/mymath.dir/primes/ListingPrimes.cpp.o: ../math/primes/ListingPrimes.h
 math/CMakeFiles/mymath.dir/primes/ListingPrimes.cpp.o: ../math/primes/PrimeTable.h
+math/CMakeFiles/mymath.dir/primes/ListingPrimes.cpp.o: ../utils/easy_common.h
 math/CMakeFiles/mymath.dir/primes/ListingPrimes.cpp.o: ../utils/easy_vector.h
 

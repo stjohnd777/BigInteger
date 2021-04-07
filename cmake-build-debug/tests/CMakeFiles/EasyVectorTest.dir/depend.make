@@ -3,5 +3,6 @@
 
 tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.o: ../tests/catch.hpp
 tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.o: ../tests/utils/EasyVectorTest.cpp
+tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.o: ../utils/easy_common.h
 tests/CMakeFiles/EasyVectorTest.dir/utils/EasyVectorTest.cpp.o: ../utils/easy_vector.h
 
