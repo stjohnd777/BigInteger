@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libutils.a  CMakeFiles/utils.dir/easy_string.cpp.o CMakeFiles/utils.dir/easy_vector.cpp.o CMakeFiles/utils.dir/Props.cpp.o CMakeFiles/utils.dir/random_string.cpp.o CMakeFiles/utils.dir/TimeMetric.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libutils.a

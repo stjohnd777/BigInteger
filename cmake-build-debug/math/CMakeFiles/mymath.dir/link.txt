@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libmymath.a  CMakeFiles/mymath.dir/Math.cpp.o CMakeFiles/mymath.dir/primes/ListingPrimes.cpp.o CMakeFiles/mymath.dir/fibonocci/fibonocci.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libmymath.a

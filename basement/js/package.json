@@ -1,0 +1,14 @@
+{
+  "name": "prime.js",
+  "version": "1.0.0",
+  "description": "number theory in js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "number-theory": "^1.1.0"
+  }
+}
