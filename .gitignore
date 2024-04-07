@@ -38,4 +38,4 @@
 
 build/
 cmake-build-*/
-#basement/node_mudules
+basement/node_mudules
