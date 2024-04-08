@@ -14,7 +14,7 @@
 using namespace std;
 
 #include "catch.hpp"
-#include "fibonocci.h"
+#include "fibonacci.h"
 #include "BigInteger.h"
 
 string IntToBinaryString(long n, long i) {
@@ -93,11 +93,13 @@ int order11(int binary_word_len){
     return sum;
 }
 
-
+/*
+ * No Fibonacci Number has consecutive bits 11 in binary representation
+ */
 TEST_CASE("PRINT BINARY FIB", "[FIB(0) ... FIB(10)]") {
 
-    for ( long i =0 ; i < 10 ; i++){
-        auto fib = Fibonocci(i);
+    for ( long i =0 ; i < 100 ; i++){
+        auto fib = Fibonacci(i);
         auto binaryString =  IntToBinaryString (64, fib );
         bool has11 = binaryString.find("11") == string::npos ? false : true;
         cout << "(11)=" << has11 << " Fib(" << i << ")=" << fib << " " << binaryString << endl << flush;
@@ -136,21 +138,21 @@ TEST_CASE("|B(N)| |(11)| BINARY WORD SETS", "[BW]") {
         cout << ToString( has11) << endl;
         cout << "|(11)|c= " << no11.size() << endl;
         cout << ToString( no11) << endl;
-        cout << "fibboncci(N+2) = fibboncci("<< binary_string_len << " + 2) = " << Fibonocci(binary_string_len+2) << endl;
+        cout << "fibboncci(N+2) = fibboncci(" << binary_string_len << " + 2) = " << Fibonacci(binary_string_len + 2) << endl;
 
         //cout << "?? fib(" << binary_string_len << ") = " << (words_n.size() - no11.size()) << endl;
     }
 }
 
-//TEST_CASE("Factorials 2000 BigInteger", "[Fibonocci]") {
-//
-//    auto map = InitFibonocciCache("../../data/first_2000_fibbonocci_number.txt",10000);
-//    for (int n = 0; n <= 2000; n++) {
-//        BigInteger fib = Fibonocci<BigInteger>(n);
-//        cout << n << " " << fib << endl;
-//        REQUIRE(map[to_string(n)] == fib.toString());
-//    }
-//}
+TEST_CASE("Factorials 2000 BigInteger", "[Fibonacci]") {
+
+    auto map = InitFibonacciCache("../../data/first_2000_fibbonocci_number.txt", 10000);
+    for (int n = 0; n <= 2000; n++) {
+        BigInteger fib = Fibonacci<BigInteger>(n);
+        cout << n << " " << fib << endl;
+        REQUIRE(map[to_string(n)] == fib.toString());
+    }
+}
 
 //
 //TEST_CASE("Factorials 100 long", "[Fibonocci]") {
@@ -177,40 +179,46 @@ TEST_CASE("CPP GMP Timing", "[C++  Gimp]") {
     for( unsigned long i =1; i<= 2000 ; i++){
         mpz_class mpz;
         mpz = i;
-        auto ans = FibonocciGMP(mpz);
+        auto ans = FibonacciGMP(mpz);
         cout << i << ">" << ans <<endl;
     }
 }
 
 #include "time_metrics.h"
-TEST_CASE( "Metric Test GMP", "[Hello World]") {
+TEST_CASE( "Metric Test GMP", "Fib 100,000 GMP") {
 
     using namespace dsj::utils;
 
     TimeMetrics::Start("Hello");
 
-    for( unsigned long i =1; i< 1000 ; i++){
+    unsigned long  max = 5000;
+    mpz_class ans;
+    for( unsigned long  i =1; i< max ; i++){
         mpz_class mpz;
         mpz = i;
-        auto ans = FibonocciGMP(mpz);
+        ans = FibonacciGMP(mpz);
     }
+    cout << "Fib:" <<  max  << ":" << ans << endl;
 
     TimeMetrics::Stop("Hello");
     cout << TimeMetrics::Average("Hello");
-
 }
 
-TEST_CASE( "Metric BigInteger", "[Hello World]") {
+TEST_CASE( "Metric BigInteger", "Fib 100,000 B") {
 
     using namespace dsj::utils;
-
+    BigInteger ans ;
+    unsigned long long max = 5000;
     TimeMetrics::Start("Hello");
-
-    for( unsigned long i =1; i< 1000 ; i++){
-        auto ans = Fibonocci<BigInteger>(i);
+    for( unsigned long long i =1; i<= max ; i++){
+        ans = Fibonacci<BigInteger>(i);
     }
-
     TimeMetrics::Stop("Hello");
+    cout << "Fib:" <<  max  << ":" << ans << endl;
+    string binFib = ans.toBinary();
+    cout << binFib << endl;
+    bool has11 = binFib.find("11") != string::npos;
+    cout << "has 11:" << has11 << endl;
     cout << TimeMetrics::Average("Hello");
 
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "BigInteger.h"
-#include "fibonocci.h"
+#include "fibonacci.h"
 
 using namespace std;
 
@@ -17,7 +17,7 @@ int main() {
     cout << to_string(llmax) << endl;
 
     for ( int n = 0; n <= 10000 ; n++) {
-        BigInteger fib = Fibonocci<BigInteger>(n);
+        BigInteger fib = Fibonacci<BigInteger>(n);
         cout << "BigInteger " << n << " : " << fib.toString().length() << " : " << fib << endl;
     }
 
@@ -29,7 +29,7 @@ int main() {
 
     try {
         for (unsigned long n = 0; n <= 1000; n++) {
-            long fib = Fibonocci<long>(n);
+            long fib = Fibonacci<long>(n);
             cout << "long " << n << " : " << to_string(fib).length() << " : " << fib << endl;
         }
     }catch (const std::exception& e) {

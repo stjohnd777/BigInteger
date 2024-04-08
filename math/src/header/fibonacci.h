@@ -11,18 +11,18 @@
 #include "gmp.h"
 #include <gmpxx.h>
 #include "BigInteger.h"
-#include "fibonocci.h"
-//#include "easy_string.hpp"
+#include "fibonacci.h"
+#include "easy_string.h"
 
 
 //
 // Created by Daniel St. John on 12/1/20.
 //
 
-std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int limit = 10000  );
+std::map<std::string,std::string>  InitFibonacciCache(const std::string& path , int limit = 10000  );
 
 template <class T>
-T Fibonocci(T number ) {
+T Fibonacci(T number ) {
 
     static std::map<T,T> cache;
 
@@ -37,7 +37,7 @@ T Fibonocci(T number ) {
         cache[ number] = 0;
         return 0;
     }
-    T ans = (number <= 2 ) ? 1 : Fibonocci(number - 1) + Fibonocci(number - 2) ;
+    T ans = (number <= 2 ) ? 1 : Fibonacci(number - 1) + Fibonacci(number - 2) ;
     if ( ans < 0) {
         throw std::runtime_error("overflow");
     }
@@ -52,29 +52,30 @@ T Fibonocci(T number ) {
 }
 
 
-//std::map<std::string,std::string>  InitFibonocciCache(  std::string path , int limit ){
-//
-//    std::map<std::string,std::string> map;
-//    std::fstream dataFile;
-//    dataFile.open(path,std::ios::in);
-//    if (dataFile.is_open()){
-//        std::string line;
-//        int index = 0;
-//        while(std::getline(dataFile, line)){
-//            std::vector<std::string> splits;
-//            dsj::StringUtils::split(splits,line, ' ');
-//            map[splits[0]] = splits[1];
-//            if ( index == limit){
-//                break;
-//            }
-//            index ++;
-//        }
-//        dataFile.close(); //close the file object.
-//    }
-//    return map;
-//}
+std::map<std::string,std::string>  InitFibonacciCache(const std::string& path , int limit ){
 
-mpz_class FibonocciGMP(const mpz_class& number ) {
+    std::map<std::string,std::string> map;
+    std::fstream dataFile;
+    dataFile.open(path,std::ios::in);
+    if (dataFile.is_open()){
+        std::string line;
+        int index = 0;
+        while(std::getline(dataFile, line)){
+            std::vector<std::string> splits;
+
+            dsj::StringUtils::split(splits,line, ' ');
+            map[splits[0]] = splits[1];
+            if ( index == limit){
+                break;
+            }
+            index ++;
+        }
+        dataFile.close(); //close the file object.
+    }
+    return map;
+}
+
+mpz_class FibonacciGMP(const mpz_class& number ) {
 
     static std::map<mpz_class,mpz_class> cache;
 
@@ -95,7 +96,7 @@ mpz_class FibonocciGMP(const mpz_class& number ) {
         return cache[ number];
     }
 
-    mpz_class ans = FibonocciGMP(number - 1) + FibonocciGMP(number - 2) ;
+    mpz_class ans = FibonacciGMP(number - 1) + FibonacciGMP(number - 2) ;
 
     try {
         lock.lock();

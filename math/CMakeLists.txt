@@ -12,7 +12,7 @@ add_library(
         math
         src/header/listing_primes.h
         src/header/known_primes_table.h
-        src/header/fibonocci.h
+        src/header/fibonacci.h
         src/cpp/listing_primes.cpp
 )
 

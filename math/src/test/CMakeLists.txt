@@ -15,7 +15,7 @@ FetchContent_MakeAvailable(Catch2)
 include(CTest)
 enable_testing()
 
-add_executable(FibonocciTest FibonocciTest.cpp)
+add_executable(FibonocciTest FibonacciTest.cpp)
 target_link_libraries(FibonocciTest  PRIVATE math bigint  Catch2::Catch2)
 
 add_executable(PrimesTest PrimesTest.cpp)
