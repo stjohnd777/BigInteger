@@ -4,49 +4,36 @@
 
 #include "listing_primes.h"
 
-#include "easy_common.h"
 #include "easy_vector.h"
 
 #include <algorithm>
+#include <cmath>
+#include <limits>
+#include <stdexcept>
 using namespace dsj;
 using namespace std;
 
 std::vector<long> listing_primes::ListPrimesWithOutPrimes(long N) {
-
-    long NSQ = N * N;
-    easy_vector<long> INTEGERS; // populate 1,2,3,4,...N
-    for ( auto i=0;i<=N;i++){
-        INTEGERS.push_back(i);
-    }
-    // KNOWN_PRIMES.
-    for_each(INTEGERS.begin(), INTEGERS.end(), [&](long n) {
-        if (n ==  0) return;
-        for (long m = 2; m * n <= N; m++) {
-            INTEGERS[m * n] = 0;
+    if (N < 2) return {};
+    std::vector<bool> composite(static_cast<size_t>(N) + 1, false);
+    for (long p = 2; p <= N / p; ++p) {
+        if (composite[p]) continue;
+        for (long multiple = p * p; multiple <= N;) {
+            composite[multiple] = true;
+            if (N - multiple < p) break;
+            multiple += p;
         }
-    });
-    auto primes =  INTEGERS.filter([&](int n) { return n != 0; });
+    }
+    std::vector<long> primes;
+    for (long n = 2; n <= N; ++n) {
+        if (!composite[n]) primes.push_back(n);
+        if (n == N) break;
+    }
     return primes;
 }
 
-#include "known_primes_table.h"
 std::vector<long> listing_primes::SieveForPrimesWithoutKnowPrimesList(long N) {
-
-    unsigned long SQRT = sqrt(N);
-    easy_vector<long> INTEGERS; // populate 1,2,3,4,...N
-    for ( auto i=0;i<=N;i++){
-        INTEGERS.push_back(i);
-    }
-
-    for( auto p: primeTab) {
-        if ( 2* p > N) break;
-        for (long m = 2; m * p <= N; m++) {
-            INTEGERS[m * p] = 0;
-        }
-    }
-
-    auto primes =  INTEGERS.filter([&](int n) { return n != 0; });
-    return primes;
+    return ListPrimesWithOutPrimes(N);
 }
 
 /*
@@ -187,31 +174,40 @@ The Mersennes are also prime for p=31, 61, 89, 107, 127, 521, 607, 1279, 2203, 2
 
  */
 easy_vector<long> listing_primes::SieveForPrimesWithKnowPrimesListToMaximalExtension(const std::vector<unsigned long> & list ) {
+    if (list.empty() || list.front() != 2 || !std::is_sorted(list.begin(), list.end()))
+        throw std::invalid_argument("expected an ordered list of primes starting at 2");
+    const unsigned long max = list.back();
+    if (max > static_cast<unsigned long>(std::numeric_limits<long>::max()) / max)
+        throw std::overflow_error("prime sieve bound is too large");
+    const unsigned long limit = max * max;
+    if (limit >= std::numeric_limits<std::size_t>::max())
+        throw std::overflow_error("prime sieve bound exceeds addressable size");
 
-    using namespace std;
+    std::size_t next = 0;
+    for (unsigned long candidate = 2; candidate <= max; ++candidate) {
+        bool isPrime = true;
+        for (std::size_t i = 0; i < next && list[i] <= candidate / list[i]; ++i) {
+            if (candidate % list[i] == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime && (next == list.size() || list[next++] != candidate))
+            throw std::invalid_argument("prime list must contain every prime through its last element");
+    }
+    if (next != list.size())
+        throw std::invalid_argument("prime list must contain every prime through its last element");
 
-    unsigned long maxP =  list.back();
-    unsigned long N = maxP * maxP;
-    unsigned long SQRT =  maxP;
-
-    easy_vector<long> INTEGERS; // populate maxP ,maxP+1, ...maxP*maxP
-    for ( auto i= 0 ;i <= N ;i++){
-        if ( find(begin(list), end(list), i ) != std::end(list) )  {
-            INTEGERS.push_back(i);
-        }else {
-            INTEGERS.push_back(0);
+    std::vector<bool> composite(limit + 1, false);
+    for (const unsigned long p : list) {
+        for (unsigned long multiple = p * p; multiple <= limit;) {
+            composite[multiple] = true;
+            if (limit - multiple < p) break;
+            multiple += p;
         }
     }
-    INTEGERS[1]=0;
-
-    // Doing extra work here should append list
-    for( auto p: list) {
-        if ( 2* p > N) break;
-        for (long m = 2; m * p <= N; m++) {
-            INTEGERS[m * p] = 0;
-        }
-    }
-
-    auto primes =  INTEGERS.filter([&](int n) { return n != 0; });
+    easy_vector<long> primes;
+    for (unsigned long n = 2; n <= limit; ++n)
+        if (!composite[n]) primes.push_back(static_cast<long>(n));
     return primes;
 }

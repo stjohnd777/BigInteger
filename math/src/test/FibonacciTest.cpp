@@ -1,224 +1,72 @@
-//
-// Created by Daniel St. John on 11/23/20.
-//
-
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-
-#include <string>
-#include <sstream>
-#include <array>
-#include <vector>
-#include <algorithm>
-#include <bitset>
-
-using namespace std;
-
-#include "catch.hpp"
 #include "fibonacci.h"
-#include "BigInteger.h"
 
-string IntToBinaryString(long n, long i) {
+#include <gtest/gtest.h>
+#include <bitset>
+#include <cstdio>
+#include <fstream>
+#include <string>
 
-    string binaryString ;// = bitset<16>(i).to_string();
-    switch (n) {
-        case 1:
-            binaryString = bitset<1>(i).to_string();
-            break;
-        case 2:
-            binaryString = bitset<2>(i).to_string();
-            break;
-        case 3:
-            binaryString = bitset<3>(i).to_string();
-            break;
-        case 4:
-            binaryString = bitset<4>(i).to_string();
-            break;
-        case 5:
-            binaryString = bitset<5>(i).to_string();
-            break;
-        case 6:
-            binaryString = bitset<6>(i).to_string();
-            break;
-        case 7:
-            binaryString = bitset<7>(i).to_string();
-            break;
-        case 8:
-            binaryString = bitset<8>(i).to_string();
-            break;
-        case 9:
-            binaryString = bitset<9>(i).to_string();
-            break;
-        case 10:
-            binaryString = bitset<10>(i).to_string();
-            break;
-        case 11:
-            binaryString = bitset<11>(i).to_string();
-            break;
-        case 12:
-            binaryString = bitset<12>(i).to_string();
-            break;
-        case 13:
-            binaryString = bitset<13>(i).to_string();
-            break;
-        case 14:
-            binaryString = bitset<14>(i).to_string();
-            break;
-        case 15:
-            binaryString = bitset<15>(i).to_string();
-            break;
-        case 16:
-            binaryString = bitset<16>(i).to_string();
-            break;
-    }
-
-    return binaryString;
+TEST(FibonacciTest, IntegralBoundaries) {
+    EXPECT_EQ(Fibonacci(0L), 0);
+    EXPECT_EQ(Fibonacci(1L), 1);
+    EXPECT_EQ(Fibonacci(10L), 55);
+    EXPECT_EQ(Fibonacci(92LL), 7540113804746346429LL);
+    EXPECT_THROW(Fibonacci(93LL), std::overflow_error);
+    EXPECT_THROW(Fibonacci(-1L), std::invalid_argument);
+    EXPECT_THROW(Fibonacci(mpz_class(-1)), std::invalid_argument);
+    EXPECT_THROW(FibonacciGMP(mpz_class(-1)), std::invalid_argument);
 }
 
-string ToString(vector<string>& v){
-
-    stringstream ss;
-    ss << "{";
-    for_each(begin(v),end(v),[&](string s){
-        ss << "(" << s << ") " ;
-    });
-    ss << "}";
-    return ss.str();
-}
-
-int order11(int binary_word_len){
-    int sum = 0;
-    for ( int i=0; i <= binary_word_len- 2 ; i++){
-        sum = pow(2,i) * pow(2,(binary_word_len-2) -i);
-    }
-    return sum;
-}
-
-/*
- * No Fibonacci Number has consecutive bits 11 in binary representation
- */
-TEST_CASE("PRINT BINARY FIB", "[FIB(0) ... FIB(10)]") {
-
-    for ( long i =0 ; i < 100 ; i++){
-        auto fib = Fibonacci(i);
-        auto binaryString =  IntToBinaryString (64, fib );
-        bool has11 = binaryString.find("11") == string::npos ? false : true;
-        cout << "(11)=" << has11 << " Fib(" << i << ")=" << fib << " " << binaryString << endl << flush;
-    }
-}
-
-TEST_CASE("|B(N)| |(11)| BINARY WORD SETS", "[BW]") {
-
-    vector<vector<string>> words_at_length;
-    vector<vector<string>> words_no11;
-    vector<vector<string>> words_11;
-
-    for (int binary_string_len = 2; binary_string_len <= 8; binary_string_len++) {
-
-        vector<string> has11;
-        vector<string> no11;
-        vector<string> words_n;
-
-        for (int i = 0; i < pow(2, binary_string_len); i++) {
-            auto binaryWord = IntToBinaryString(binary_string_len, i);
-            words_n.push_back(binaryWord);
-            if (binaryWord.find("11") == string::npos) {
-                no11.push_back(binaryWord);
-            } else {
-                has11.push_back(binaryWord);
-            }
+TEST(FibonacciTest, BinaryWordsWithoutConsecutiveOnes) {
+    for (int length = 2; length <= 8; ++length) {
+        int count = 0;
+        for (int word = 0; word < (1 << length); ++word) {
+            const auto bits = std::bitset<8>(word).to_string().substr(8 - length);
+            if (bits.find("11") == std::string::npos) ++count;
         }
-        words_no11.push_back(no11);
-        words_at_length.push_back(words_n);
-
-        cout << "**************************** " << endl;
-        cout << "N = " << binary_string_len << endl;
-        cout << ToString( words_n) << endl;
-        cout << "|B(" << binary_string_len << ")| = " << pow(2, binary_string_len) << endl;
-        cout << "|(11)| = " << has11.size() <<   " try : " << order11(binary_string_len) << endl;
-        cout << ToString( has11) << endl;
-        cout << "|(11)|c= " << no11.size() << endl;
-        cout << ToString( no11) << endl;
-        cout << "fibboncci(N+2) = fibboncci(" << binary_string_len << " + 2) = " << Fibonacci(binary_string_len + 2) << endl;
-
-        //cout << "?? fib(" << binary_string_len << ") = " << (words_n.size() - no11.size()) << endl;
+        EXPECT_EQ(count, Fibonacci(length + 2)) << length;
     }
 }
 
-TEST_CASE("Factorials 2000 BigInteger", "[Fibonacci]") {
-
-    auto map = InitFibonacciCache("../../data/first_2000_fibbonocci_number.txt", 10000);
-    for (int n = 0; n <= 2000; n++) {
-        BigInteger fib = Fibonacci<BigInteger>(n);
-        cout << n << " " << fib << endl;
-        REQUIRE(map[to_string(n)] == fib.toString());
+TEST(FibonacciTest, MatchesFirst2000FixtureValues) {
+    const auto values = InitFibonacciCache(FIBONACCI_FIXTURE, 10000);
+    ASSERT_EQ(values.size(), 2001);
+    BigInteger previous(0), current(1);
+    for (int n = 0; n <= 2000; ++n) {
+        ASSERT_EQ(values.at(std::to_string(n)), previous.toString()) << n;
+        if (n == 0 || n == 1 || n == 2 || n == 10 || n == 100 || n == 2000)
+            EXPECT_EQ(Fibonacci<BigInteger>(n).toString(), previous.toString()) << n;
+        const BigInteger next = previous + current;
+        previous = current;
+        current = next;
     }
 }
 
-//
-//TEST_CASE("Factorials 100 long", "[Fibonocci]") {
-//
-//    auto map = InitFibonocciCache("../../data/first_2000_fibbonocci_number.txt",10000);
-//    try {
-//        for (unsigned long n = 0; n <= 2000; n++) {
-//            long fib = Fibonocci<long>(n);
-//            cout << "long " << n << " : " << to_string(fib).length() << " : " << fib << endl;
-//            REQUIRE(map[to_string(n)] == to_string(fib));
-//        }
-//    } catch (const std::exception &e) {
-//        cout << "**************************************************" << endl;
-//        cout << "Error: catch exception" << endl;
-//        cout << e.what() << endl;
-//        cout << "**************************************************" << endl;
-//    }
-//
-//}
-
-
-TEST_CASE("CPP GMP Timing", "[C++  Gimp]") {
-
-    for( unsigned long i =1; i<= 2000 ; i++){
-        mpz_class mpz;
-        mpz = i;
-        auto ans = FibonacciGMP(mpz);
-        cout << i << ">" << ans <<endl;
-    }
+TEST(FibonacciTest, GmpAndBigIntegerAgree) {
+    for (long n : {0, 1, 2, 10, 100, 1000, 5000})
+        EXPECT_EQ(Fibonacci<BigInteger>(n).toString(), FibonacciGMP(mpz_class(n)).get_str()) << n;
 }
 
-#include "time_metrics.h"
-TEST_CASE( "Metric Test GMP", "Fib 100,000 GMP") {
-
-    using namespace dsj::utils;
-
-    TimeMetrics::Start("Hello");
-
-    unsigned long  max = 5000;
-    mpz_class ans;
-    for( unsigned long  i =1; i< max ; i++){
-        mpz_class mpz;
-        mpz = i;
-        ans = FibonacciGMP(mpz);
-    }
-    cout << "Fib:" <<  max  << ":" << ans << endl;
-
-    TimeMetrics::Stop("Hello");
-    cout << TimeMetrics::Average("Hello");
+TEST(FibonacciTest, FixtureErrorsAndLimit) {
+    EXPECT_THROW(InitFibonacciCache("missing-fibonacci-fixture.txt"), std::runtime_error);
+    EXPECT_THROW(InitFibonacciCache(FIBONACCI_FIXTURE, -1), std::invalid_argument);
+    EXPECT_TRUE(InitFibonacciCache(FIBONACCI_FIXTURE, 0).empty());
+    EXPECT_EQ(InitFibonacciCache(FIBONACCI_FIXTURE, 2).size(), 2);
 }
 
-TEST_CASE( "Metric BigInteger", "Fib 100,000 B") {
-
-    using namespace dsj::utils;
-    BigInteger ans ;
-    unsigned long long max = 5000;
-    TimeMetrics::Start("Hello");
-    for( unsigned long long i =1; i<= max ; i++){
-        ans = Fibonacci<BigInteger>(i);
+TEST(FibonacciTest, MalformedAndDuplicateFixtureEntriesAreRejected) {
+    const std::string path = std::string(MATH_TEST_DIR) + "/fibonacci-invalid-fixture.txt";
+    struct RemoveFile {
+        std::string path;
+        ~RemoveFile() { std::remove(path.c_str()); }
+    } cleanup{path};
+    for (const std::string text : {"0 0\n0 1\n", "0 bad\n", "0 0 extra\n"}) {
+        {
+            std::ofstream file(path);
+            ASSERT_TRUE(file);
+            file << text;
+            ASSERT_TRUE(file);
+        }
+        EXPECT_THROW(InitFibonacciCache(path), std::runtime_error) << text;
     }
-    TimeMetrics::Stop("Hello");
-    cout << "Fib:" <<  max  << ":" << ans << endl;
-    string binFib = ans.toBinary();
-    cout << binFib << endl;
-    bool has11 = binFib.find("11") != string::npos;
-    cout << "has 11:" << has11 << endl;
-    cout << TimeMetrics::Average("Hello");
-
 }

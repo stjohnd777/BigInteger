@@ -3,23 +3,18 @@ project(math)
 
 set(CMAKE_CXX_STANDARD 20)
 
-include_directories( src/header)
-include_directories(../cpputils/src/header)
-include_directories(../bigint/src/header)
-
-
 add_library(
         math
-        src/header/listing_primes.h
-        src/header/known_primes_table.h
-        src/header/fibonacci.h
         src/cpp/listing_primes.cpp
 )
 
-target_link_libraries(math PRIVATE dsj_utils bigint gmp gmpxx )
+target_include_directories(math PUBLIC src/header/fibonacch src/header/primes)
+target_include_directories(math SYSTEM PUBLIC ${GMP_INCLUDE_DIR})
+target_link_libraries(math PUBLIC project_utils bigint ${GMPXX_LIBRARY} ${GMP_LIBRARY})
 
 add_executable(math_main src/main/math_main.cpp)
-target_link_libraries(math_main dsj_utils bigint gmp gmpxx)
+target_link_libraries(math_main PRIVATE math)
 
-add_subdirectory(src/test)
-
+if(BUILD_TESTING)
+    add_subdirectory(src/test)
+endif()

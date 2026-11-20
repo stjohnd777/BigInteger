@@ -1,25 +1,16 @@
-project(tests)
+add_executable(math_tests FibonacciTest.cpp GmpTest.cpp PrimesTest.cpp PrimeTableLinkTest.cpp)
+target_include_directories(math_tests SYSTEM BEFORE PRIVATE
+        $<TARGET_PROPERTY:GTest::gtest,INTERFACE_INCLUDE_DIRECTORIES>)
+target_link_libraries(math_tests PRIVATE math GTest::gtest_main)
+set_target_properties(math_tests PROPERTIES BUILD_RPATH "$<TARGET_FILE_DIR:GTest::gtest>")
+target_compile_definitions(math_tests PRIVATE
+        FIBONACCI_FIXTURE="${CMAKE_SOURCE_DIR}/data/first_2000_ fibonacci_number.txt"
+        MATH_TEST_DIR="${CMAKE_CURRENT_BINARY_DIR}")
+gtest_discover_tests(math_tests)
 
-include_directories(../header)
-
-# Add Catch2
-include(FetchContent)
-FetchContent_Declare(
-        Catch2
-        GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-        GIT_TAG        v3.5.3  # Use the version you prefer
-)
-FetchContent_MakeAvailable(Catch2)
-
-# Enable CTest (optional but recommended)
-include(CTest)
-enable_testing()
-
-add_executable(FibonocciTest FibonacciTest.cpp)
-target_link_libraries(FibonocciTest  PRIVATE math bigint  Catch2::Catch2)
-
-add_executable(PrimesTest PrimesTest.cpp)
-target_link_libraries(PrimesTest  PRIVATE math bigint  Catch2::Catch2)
-
-
-
+add_test(NAME math_cli_fibonacci COMMAND math_main fibonacci 100)
+set_tests_properties(math_cli_fibonacci PROPERTIES PASS_REGULAR_EXPRESSION "354224848179261915075")
+add_test(NAME math_cli_primes COMMAND math_main primes 10)
+set_tests_properties(math_cli_primes PROPERTIES PASS_REGULAR_EXPRESSION "2[\n\r]+3[\n\r]+5[\n\r]+7")
+add_test(NAME math_cli_invalid COMMAND math_main fibonacci -1)
+set_tests_properties(math_cli_invalid PROPERTIES WILL_FAIL TRUE)

@@ -1,43 +1,37 @@
-#include <iostream>
-
-#include "BigInteger.h"
 #include "fibonacci.h"
+#include "listing_primes.h"
 
-using namespace std;
+#include <charconv>
+#include <iostream>
+#include <stdexcept>
+#include <string_view>
 
-int main() {
+namespace {
+long parseNonNegative(std::string_view input) {
+    long value = 0;
+    const auto [end, error] = std::from_chars(input.data(), input.data() + input.size(), value);
+    if (error != std::errc{} || end != input.data() + input.size() || value < 0)
+        throw std::invalid_argument("expected a non-negative integer within the range of long");
+    return value;
+}
+}
 
-    cout << LONG_MAX << endl;
-    int max_long_len = to_string(LONG_MAX).length() ;
-
-    BigInteger lmax = BigInteger(LONG_MAX);
-    cout << to_string(lmax) << endl;
-
-    BigInteger llmax = BigInteger(LONG_LONG_MAX);
-    cout << to_string(llmax) << endl;
-
-    for ( int n = 0; n <= 10000 ; n++) {
-        BigInteger fib = Fibonacci<BigInteger>(n);
-        cout << "BigInteger " << n << " : " << fib.toString().length() << " : " << fib << endl;
+int main(int argc, char **argv) {
+    if (argc != 3 || (std::string_view(argv[1]) != "fibonacci" && std::string_view(argv[1]) != "primes")) {
+        std::cerr << "Usage: math_main fibonacci INDEX | primes LIMIT\n";
+        return 2;
     }
-
-    cout << endl;
-    cout << "**************************************************" << endl;
-    cout << "Try data type long " << endl;
-    cout << "**************************************************" << endl;
-    cout << endl;
 
     try {
-        for (unsigned long n = 0; n <= 1000; n++) {
-            long fib = Fibonacci<long>(n);
-            cout << "long " << n << " : " << to_string(fib).length() << " : " << fib << endl;
+        const long value = parseNonNegative(argv[2]);
+        if (std::string_view(argv[1]) == "fibonacci") {
+            std::cout << Fibonacci<BigInteger>(BigInteger(value)) << '\n';
+        } else {
+            for (const long prime : listing_primes::ListPrimesWithOutPrimes(value))
+                std::cout << prime << '\n';
         }
-    }catch (const std::exception& e) {
-        cout << "**************************************************" << endl;
-        cout << "Error: catch exception" << endl;
-        cout << e.what() << endl;
-        cout << "**************************************************" << endl;
+    } catch (const std::exception &error) {
+        std::cerr << "math_main: " << error.what() << '\n';
+        return 1;
     }
-
-    return 0;
 }

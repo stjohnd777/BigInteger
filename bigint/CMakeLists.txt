@@ -3,23 +3,26 @@ project(libBigInteger)
 
 set(CMAKE_CXX_STANDARD 20)
 
-include_directories(src/header)
-
 add_library(
         bigint
-        src/header/BigInteger.h
-        src/cpp/BigInteger.cpp
-        GmpBigIntWrapper.h
-        GmpBigIntWrapper.cpp
+        header/BigInteger.h
+        cpp/BigInteger.cpp
 )
 
-target_link_libraries(bigint PRIVATE dsj_utils gmp gmpxx)
+target_include_directories(bigint PUBLIC header)
 
-add_executable(main_bigint src/main/main.cpp)
-target_link_libraries(main_bigint PRIVATE dsj_utils bigint  )
+add_executable(main_bigint main/main.cpp)
+target_link_libraries(main_bigint PRIVATE bigint)
 
-add_executable(encode_bigint src/main/decode_encode_main.cpp)
+add_executable(encode_bigint main/decode_encode_main.cpp main/packed_decimal.cpp)
 target_link_libraries(encode_bigint PRIVATE bigint  )
 
-add_subdirectory(src/test)
+option(BIGINTEGER_BUILD_BENCHMARKS "Build the BigInteger benchmark executable" OFF)
+if(BIGINTEGER_BUILD_BENCHMARKS)
+    add_executable(bigint_benchmark benchmark/benchmark.cpp)
+    target_link_libraries(bigint_benchmark PRIVATE bigint)
+endif()
 
+if(BUILD_TESTING)
+    add_subdirectory(test)
+endif()

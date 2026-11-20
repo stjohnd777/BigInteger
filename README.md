@@ -1,12 +1,72 @@
+# BigInteger
 
+An educational arbitrary-precision, non-negative integer implementation using
+schoolbook decimal arithmetic.
 
+## Build and test
 
-# BigInteger : infinite permission arithmetic
+The project requires a C++20 compiler, CMake 3.20 or newer, GMP (including
+`gmpxx`), Google Test, and the sources in `submodules/cpputils`. On macOS,
+`brew install cmake gmp googletest` installs the external dependencies.
 
-Base on Donald Knuth School Boy Method
+```sh
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build
+ctest --test-dir build --output-on-failure
+```
 
+If CMake selects the wrong Google Test installation, set `GTest_DIR` to the
+directory containing `GTestConfig.cmake`. `-DBUILD_TESTING=OFF` omits tests
+and their Google Test dependency. The bundled `cpputils` project's own tests
+are separate from this project's Google Test suite.
 
-- # POC computed the largest know Fibonacci number
+## Behavior
+
+`BigInteger` stores non-negative values. Subtraction below zero saturates at
+zero; division and remainder by zero throw `std::domain_error`. Decimal
+strings accept digits, commas, and whitespace by default; strict mode accepts
+digits only. Invalid input throws `std::invalid_argument`, and conversion to
+`long` throws `std::out_of_range` if it does not fit. Digits are normalized
+and the storage is private; use the decimal-digit accessors instead of
+accessing the former public `digits` field.
+
+`IsPrime()` uses trial division and is intended for small inputs, not
+production-scale primality testing. `toBinary(true)` groups bits from the
+left in blocks of eight; it does not add leading zero padding.
+
+## Performance baseline
+
+The optional benchmark reports elapsed time and, on Unix-like systems, peak
+process RSS. It does not isolate allocations, so compare fresh processes on
+the same machine and build. For `memory`, it also reports the theoretical
+retained digit payload, excluding deque and allocator overhead.
+
+```sh
+cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBIGINTEGER_BUILD_BENCHMARKS=ON
+cmake --build build-release --target bigint_benchmark
+./build-release/bigint/bigint_benchmark memory 100000 100
+./build-release/bigint/bigint_benchmark add 10000 100
+./build-release/bigint/bigint_benchmark multiply 500 5
+./build-release/bigint/bigint_benchmark divide 500 5
+./build-release/bigint/bigint_benchmark fibonacci 5000 1
+./build-release/bigint/bigint_benchmark prime 123217 10
+```
+
+Size is the operand digit count for arithmetic and memory, the index for
+Fibonacci, and the candidate for primality. The last argument is repetitions
+or, for `memory`, the number of retained copies. Division uses a divisor of
+roughly half the requested digits.
+
+One release-build sample on macOS arm64 measured 10,000,000 bytes of retained
+digit payload and 12,566,528 bytes peak RSS for the memory command. The same
+run measured 0.0069 seconds for addition, 0.0198 for multiplication, 0.00048
+for division, 0.0191 for Fibonacci, and 0.0271 for primality. These are
+single-run baselines, not comparative benchmarks.
+
+## Example: Fibonacci(5000)
+
+For Fibonacci and prime-sieve command-line examples and API details, see
+[`math/README.md`](math/README.md).
 
 Fib:5000
 
