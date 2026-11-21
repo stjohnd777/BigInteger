@@ -41,3 +41,18 @@ private:
 
     void normalize();
 };
+
+template <std::same_as<BigInteger> I>
+BigRational operator*(const BigRational &lhs, const I &rhs) {
+    return lhs * BigRational(rhs, BigInteger(1));
+}
+
+template <std::same_as<BigInteger> I>
+BigRational operator*(const I &lhs, const BigRational &rhs) {
+    return rhs * lhs;
+}
+
+template <std::integral I>
+BigRational operator/(I lhs, const BigRational &rhs) {
+    return BigRational(lhs, 1) / rhs;
+}

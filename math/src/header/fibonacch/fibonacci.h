@@ -26,7 +26,7 @@ std::map<std::string,std::string>  InitFibonacciCache(const std::string& path , 
 // F(0) = 0 and F(1) = 1. Fixed-width integral results throw on overflow.
 template <class T>
 T Fibonacci(T number ) {
-    if constexpr (std::is_signed_v<T> || std::is_same_v<T, mpz_class> || std::is_same_v<T, BigInteger>) {
+    if constexpr (std::is_signed_v<T> || std::is_same_v<T, BigInteger>) {
         if (number < 0) throw std::invalid_argument("negative Fibonacci index");
     }
     const auto calculate = [](const auto &count) -> T {
@@ -52,6 +52,16 @@ T Fibonacci(T number ) {
 }
 
 
+// Use GMP's dedicated algorithm when the caller chooses mpz_class.
+template <>
+inline mpz_class Fibonacci<mpz_class>(mpz_class number) {
+    if (number < 0) throw std::invalid_argument("negative Fibonacci index");
+    if (!number.fits_ulong_p()) throw std::out_of_range("Fibonacci index too large for GMP");
+    mpz_class result;
+    mpz_fib_ui(result.get_mpz_t(), number.get_ui());
+    return result;
+}
+
 inline std::map<std::string,std::string>  InitFibonacciCache(const std::string& path , int limit ){
 
     if (limit < 0) throw std::invalid_argument("Fibonacci fixture limit must be non-negative");
@@ -74,12 +84,4 @@ inline std::map<std::string,std::string>  InitFibonacciCache(const std::string& 
     }
     if (dataFile.bad()) throw std::runtime_error("error reading Fibonacci data: " + path);
     return map;
-}
-
-inline mpz_class FibonacciGMP(const mpz_class& number ) {
-    if (number < 0) throw std::invalid_argument("negative Fibonacci index");
-    if (!number.fits_ulong_p()) throw std::out_of_range("Fibonacci index too large for GMP");
-    mpz_class result;
-    mpz_fib_ui(result.get_mpz_t(), number.get_ui());
-    return result;
 }

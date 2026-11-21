@@ -10,5 +10,5 @@ From the repository root:
 ```sh
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --target hello_world_bigrational
-./build/bigint/hello_world_bigrational
+./build/exact_arithmetic/hello_world_bigrational
 ```

@@ -4,6 +4,7 @@
 #include <bitset>
 #include <cstdio>
 #include <fstream>
+#include <limits>
 #include <string>
 
 TEST(FibonacciTest, IntegralBoundaries) {
@@ -15,11 +16,18 @@ TEST(FibonacciTest, IntegralBoundaries) {
     EXPECT_EQ(Fibonacci(0U), 0U);
     EXPECT_EQ(Fibonacci(47U), 2971215073U);
     EXPECT_THROW(Fibonacci(48U), std::overflow_error);
-    EXPECT_EQ(Fibonacci(mpz_class(100)), FibonacciGMP(mpz_class(100)));
     EXPECT_THROW(Fibonacci(-1L), std::invalid_argument);
     EXPECT_THROW(Fibonacci(BigInteger(-1)), std::invalid_argument);
+}
+
+TEST(FibonacciTest, GmpIndexAndResultBoundaries) {
+    const mpz_class expected("354224848179261915075");
+    EXPECT_EQ(Fibonacci(mpz_class(100)), expected);
+    EXPECT_EQ(Fibonacci<mpz_class>(100), expected);
     EXPECT_THROW(Fibonacci(mpz_class(-1)), std::invalid_argument);
-    EXPECT_THROW(FibonacciGMP(mpz_class(-1)), std::invalid_argument);
+    mpz_class tooLarge(std::numeric_limits<unsigned long>::max());
+    ++tooLarge;
+    EXPECT_THROW(Fibonacci(tooLarge), std::out_of_range);
 }
 
 TEST(FibonacciTest, BinaryWordsWithoutConsecutiveOnes) {
@@ -49,7 +57,7 @@ TEST(FibonacciTest, MatchesFirst2000FixtureValues) {
 
 TEST(FibonacciTest, GmpAndBigIntegerAgree) {
     for (long n : {0, 1, 2, 10, 100, 1000, 5000})
-        EXPECT_EQ(Fibonacci<BigInteger>(n).toString(), FibonacciGMP(mpz_class(n)).get_str()) << n;
+        EXPECT_EQ(Fibonacci<BigInteger>(n).toString(), Fibonacci(mpz_class(n)).get_str()) << n;
 }
 
 TEST(FibonacciTest, FixtureErrorsAndLimit) {

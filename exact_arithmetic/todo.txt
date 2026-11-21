@@ -1,0 +1,7 @@
+> overloaded assignement operator = for string and long
+
+> "BigInteger::operator/(long)", referenced from:
+> "BigInteger::operator/(string)", referenced from:
+
+> toBinary and formatting
+> toString and formatting

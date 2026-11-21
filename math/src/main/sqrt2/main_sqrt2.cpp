@@ -9,6 +9,22 @@
 #include <system_error>
 
 namespace {
+
+    std::string rt2 = "1.41421356237309504880168872420969807856967187537694";
+
+    BigRational newtons_method_sqrt2(std::size_t precision = 50){
+        BigRational x(1.5f, precision);
+        BigRational prev = x;
+        while (true) {
+            x = BigRational(1,2) * ( x + 2 / x);
+            if ( x.toDecimal(precision) == prev.toDecimal(precision)) {
+                break;
+            }
+            prev = x;
+        }
+        return x;
+    }
+
 std::string sqrt2Decimal(std::size_t places) {
     const BigRational two(2, 1);
     BigRational upper(3, 2);
@@ -19,6 +35,8 @@ std::string sqrt2Decimal(std::size_t places) {
         // The bounds certify the digits when they truncate to the same value.
         if (lower.toDecimal(places) == digits) return digits;
         upper = (upper + lower) / two;
+
+
     }
 }
 }

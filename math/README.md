@@ -19,10 +19,15 @@ ctest --test-dir build --output-on-failure -R '^(FibonacciTest|GmpTest|PrimesTes
 
 ## Library
 
-`Fibonacci<T>(n)` computes the nth Fibonacci number iteratively. It rejects
-negative signed inputs and throws `std::overflow_error` if a built-in integral
-result cannot fit. `FibonacciGMP` uses GMP and rejects negative or
-non-`unsigned long` indices. `InitFibonacciCache` reads at most `limit` rows
+`Fibonacci<T>(n)` computes the nth Fibonacci number. For built-in integers and
+`BigInteger` it uses iterative addition. It rejects negative indices and throws
+`std::overflow_error` if a built-in integral result cannot fit.
+
+Call `Fibonacci(mpz_class(100))` or `Fibonacci<mpz_class>(100)` to use GMP's
+dedicated `mpz_fib_ui` routine. The result is an `mpz_class`. The GMP path
+throws `std::out_of_range` if a nonnegative index exceeds `unsigned long`.
+
+`InitFibonacciCache` reads at most `limit` rows
 of decimal index/value pairs and reports missing, malformed, or duplicate data.
 
 Both `listing_primes::ListPrimesWithOutPrimes` and

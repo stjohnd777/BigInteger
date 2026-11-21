@@ -37,7 +37,7 @@ TEST(GmpTestLegacy, Case2_CSU_C_function) {
 TEST(GmpTestLegacy, Case3_CPP_GMP) {
     mpz_class previous = 0, current = 1;
     for (unsigned long i = 0; i < 1000; ++i) {
-        EXPECT_EQ(FibonacciGMP(mpz_class(i)), previous) << i;
+        EXPECT_EQ(Fibonacci(mpz_class(i)), previous) << i;
         mpz_class next = previous + current;
         previous = current;
         current = next;

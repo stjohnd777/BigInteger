@@ -63,12 +63,12 @@ retained digit payload, excluding deque and allocator overhead.
 ```sh
 cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBIGINTEGER_BUILD_BENCHMARKS=ON
 cmake --build build-release --target bigint_benchmark
-./build-release/bigint/bigint_benchmark memory 100000 100
-./build-release/bigint/bigint_benchmark add 10000 100
-./build-release/bigint/bigint_benchmark multiply 500 5
-./build-release/bigint/bigint_benchmark divide 500 5
-./build-release/bigint/bigint_benchmark fibonacci 5000 1
-./build-release/bigint/bigint_benchmark prime 123217 10
+./build-release/exact_arithmetic/bigint_benchmark memory 100000 100
+./build-release/exact_arithmetic/bigint_benchmark add 10000 100
+./build-release/exact_arithmetic/bigint_benchmark multiply 500 5
+./build-release/exact_arithmetic/bigint_benchmark divide 500 5
+./build-release/exact_arithmetic/bigint_benchmark fibonacci 5000 1
+./build-release/exact_arithmetic/bigint_benchmark prime 123217 10
 ```
 
 Size is the operand digit count for arithmetic and memory, the index for

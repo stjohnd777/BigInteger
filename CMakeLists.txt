@@ -13,11 +13,10 @@ if(BUILD_TESTING)
     find_package(GTest CONFIG REQUIRED)
     include(GoogleTest)
 endif()
-add_subdirectory(bigint)
+add_subdirectory(exact_arithmetic)
 add_subdirectory(math)
 
-add_executable(top_main main.cpp)
-target_link_libraries(top_main bigint math)
+
 
 
 
