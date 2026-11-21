@@ -12,7 +12,12 @@ TEST(FibonacciTest, IntegralBoundaries) {
     EXPECT_EQ(Fibonacci(10L), 55);
     EXPECT_EQ(Fibonacci(92LL), 7540113804746346429LL);
     EXPECT_THROW(Fibonacci(93LL), std::overflow_error);
+    EXPECT_EQ(Fibonacci(0U), 0U);
+    EXPECT_EQ(Fibonacci(47U), 2971215073U);
+    EXPECT_THROW(Fibonacci(48U), std::overflow_error);
+    EXPECT_EQ(Fibonacci(mpz_class(100)), FibonacciGMP(mpz_class(100)));
     EXPECT_THROW(Fibonacci(-1L), std::invalid_argument);
+    EXPECT_THROW(Fibonacci(BigInteger(-1)), std::invalid_argument);
     EXPECT_THROW(Fibonacci(mpz_class(-1)), std::invalid_argument);
     EXPECT_THROW(FibonacciGMP(mpz_class(-1)), std::invalid_argument);
 }

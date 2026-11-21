@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
                   << " elapsed_seconds=" << elapsed << " result_digits=" << decimal.size()
                   << " result_tail=" << decimal.substr(decimal.size() > 16 ? decimal.size() - 16 : 0) << '\n';
         if (workload == "memory")
-            std::cout << "retained_digit_payload_bytes=" << size * repetitions
+            std::cout << "retained_digit_payload_bytes=" << (size / 2 + size % 2) * repetitions
                       << " (excludes container overhead)\n";
 #if defined(__unix__) || defined(__APPLE__)
         struct rusage usage {};

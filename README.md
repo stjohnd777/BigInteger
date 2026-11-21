@@ -1,12 +1,12 @@
 # BigInteger
 
-An educational arbitrary-precision, non-negative integer implementation using
-schoolbook decimal arithmetic.
+An educational arbitrary-precision, signed integer implementation using
+schoolbook arithmetic with base-100 storage.
 
 ## Build and test
 
 The project requires a C++20 compiler, CMake 3.20 or newer, GMP (including
-`gmpxx`), Google Test, and the sources in `submodules/cpputils`. On macOS,
+`gmpxx`), and Google Test for the test suite. On macOS,
 `brew install cmake gmp googletest` installs the external dependencies.
 
 ```sh
@@ -17,18 +17,37 @@ ctest --test-dir build --output-on-failure
 
 If CMake selects the wrong Google Test installation, set `GTest_DIR` to the
 directory containing `GTestConfig.cmake`. `-DBUILD_TESTING=OFF` omits tests
-and their Google Test dependency. The bundled `cpputils` project's own tests
-are separate from this project's Google Test suite.
+and their Google Test dependency.
 
 ## Behavior
 
-`BigInteger` stores non-negative values. Subtraction below zero saturates at
-zero; division and remainder by zero throw `std::domain_error`. Decimal
-strings accept digits, commas, and whitespace by default; strict mode accepts
-digits only. Invalid input throws `std::invalid_argument`, and conversion to
+`BigInteger` stores signed values; subtraction can produce a negative result.
+Division truncates toward zero, and the remainder has the dividend's sign.
+Division and remainder by zero throw `std::domain_error`. Decimal strings
+accept an optional leading sign, digits, commas, and whitespace by default;
+strict mode accepts an optional sign followed by digits only. Invalid input
+throws `std::invalid_argument`, and conversion to
 `long` throws `std::out_of_range` if it does not fit. Digits are normalized
 and the storage is private; use the decimal-digit accessors instead of
-accessing the former public `digits` field.
+accessing the former public `digits` field. Internally each byte stores a
+value from 0 to 99, least-significant group first. The digit constructors,
+indexing, lengths, and substring operations still use individual decimal
+digits, not base-100 groups. Digit operations work on the magnitude, excluding
+the sign. `toBinary()` represents negative values with a leading minus sign.
+
+`BigRational` represents a signed fraction constructed from a numerator and
+nonzero denominator. It reduces fractions and keeps the denominator positive.
+Stream output prints the exact reduced fraction, for example `13/4` or `2/1`.
+Addition, subtraction, multiplication and division return reduced values;
+division by a zero rational throws `std::domain_error`. `toDecimal(precision)`
+prints exactly that many digits after the decimal point, truncating toward
+zero (and retaining a minus sign for negative fractions even if the displayed
+digits are all zero).
+Floating-point constructors truncate the exact binary `float` or `double`
+value toward zero to the requested number of decimal places. They reject NaN
+and infinities with `std::invalid_argument`; truncation to zero loses the sign.
+Binary floating-point values may differ from the decimal literals used to
+write them (for example, `0.1f` is slightly greater than one tenth).
 
 `IsPrime()` uses trial division and is intended for small inputs, not
 production-scale primality testing. `toBinary(true)` groups bits from the
@@ -57,11 +76,13 @@ Fibonacci, and the candidate for primality. The last argument is repetitions
 or, for `memory`, the number of retained copies. Division uses a divisor of
 roughly half the requested digits.
 
-One release-build sample on macOS arm64 measured 10,000,000 bytes of retained
-digit payload and 12,566,528 bytes peak RSS for the memory command. The same
-run measured 0.0069 seconds for addition, 0.0198 for multiplication, 0.00048
-for division, 0.0191 for Fibonacci, and 0.0271 for primality. These are
-single-run baselines, not comparative benchmarks.
+One release-build sample on macOS arm64 with base 100 measured 5,000,000
+bytes of retained digit payload and 7,421,952 bytes peak RSS for the memory
+command. The same sample measured 0.0011 seconds for addition, 0.00071 for
+multiplication, 0.000068 for division, 0.0063 for Fibonacci, and 0.0041 for
+primality. An earlier sample using one byte per decimal digit reported
+10,000,000 bytes of payload and 12,566,528 bytes peak RSS. These are
+single-run measurements, not statistically rigorous comparisons.
 
 ## Example: Fibonacci(5000)
 

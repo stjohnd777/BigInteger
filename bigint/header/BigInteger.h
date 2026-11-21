@@ -8,14 +8,14 @@
 #include <sstream>
 #include <vector>
 #include <deque>
+#include <utility>
 
 
 
 
 /**
- * This class is an exercise to understand concept we must
- * overcome to engage in arithmetic of large integers. we are
- * base ten
+ * An educational signed integer using schoolbook arithmetic.
+ * Public digit APIs use decimal digits; storage uses base 100.
  */
 class BigInteger {
 
@@ -54,7 +54,8 @@ public:
      *
      * @param number
      * Non-strict input permits commas and whitespace; strict input permits
-     * decimal digits only. Invalid or empty input throws std::invalid_argument.
+     * an optional leading sign and decimal digits only. Invalid or empty input
+     * throws std::invalid_argument.
      */
     BigInteger(std::string number, bool strict = false);
 
@@ -67,11 +68,11 @@ public:
 
     BigInteger(std::deque<uint8_t> digits);
 
-    // copy constructor
-    BigInteger(const BigInteger &rhs);
-
-    // assignment operator
-    BigInteger &operator=(const BigInteger &rhs);
+    BigInteger(const BigInteger &rhs) = default;
+    BigInteger &operator=(const BigInteger &rhs) = default;
+    // Moved-from objects remain valid, normalized BigIntegers.
+    BigInteger(BigInteger &&rhs);
+    BigInteger &operator=(BigInteger &&rhs) noexcept;
 
     //BigInteger& operator=(const std::string& rhs ) ;
 
@@ -86,6 +87,7 @@ public:
 
     // sub
     BigInteger operator-(const BigInteger &other) const;
+    BigInteger operator-() const;
     BigInteger operator-(const std::string other) const;
     BigInteger operator-(const long other) const;
     BigInteger operator--(int i);
@@ -167,8 +169,10 @@ public:
 
     uint8_t digitAtFromLeft(long i) const;
 
+    // Add a decimal digit at the most significant end; replace zero.
     void append(uint8_t c) ;
 
+    // Add a decimal digit at the least significant end.
     void prePend(uint8_t c);
 
     long SumDigits() const;
@@ -198,6 +202,11 @@ public:
     BigInteger pow2() const { return *this * *this; }
 
 private:
+    // Little-endian base-100 limbs; zero is represented by one zero limb.
     std::deque<uint8_t> digits;
-    static constexpr uint8_t base = 10;
+    bool negative_ = false;
+    static constexpr unsigned base = 100;
+    int compareMagnitude(const BigInteger &other) const;
+    BigInteger subtractMagnitude(const BigInteger &other) const;
+    std::pair<BigInteger, BigInteger> divmod(const BigInteger &other) const;
 };

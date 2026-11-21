@@ -10,6 +10,7 @@
 #include <sstream>
 #include <stdexcept>
 #include <type_traits>
+#include <utility>
 
 #include "gmp.h"
 #include <gmpxx.h>
@@ -25,22 +26,29 @@ std::map<std::string,std::string>  InitFibonacciCache(const std::string& path , 
 // F(0) = 0 and F(1) = 1. Fixed-width integral results throw on overflow.
 template <class T>
 T Fibonacci(T number ) {
-    if constexpr (std::is_signed_v<T> || std::is_same_v<T, mpz_class>) {
+    if constexpr (std::is_signed_v<T> || std::is_same_v<T, mpz_class> || std::is_same_v<T, BigInteger>) {
         if (number < 0) throw std::invalid_argument("negative Fibonacci index");
     }
-    T previous = 0;
-    T current = 1;
-    for (T i = 0; i < number; ++i) {
-        if (i + T(1) == number) return current;
-        if constexpr (std::is_integral_v<T>) {
-            if (previous > std::numeric_limits<T>::max() - current)
-                throw std::overflow_error("Fibonacci result does not fit");
+    const auto calculate = [](const auto &count) -> T {
+        using Index = std::decay_t<decltype(count)>;
+        T previous = 0;
+        T current = 1;
+        for (Index i = 0; i < count; ++i) {
+            if (i + Index(1) == count) return current;
+            if constexpr (std::is_integral_v<T>) {
+                if (previous > std::numeric_limits<T>::max() - current)
+                    throw std::overflow_error("Fibonacci result does not fit");
+            }
+            T next = previous + current;
+            previous = std::move(current);
+            current = std::move(next);
         }
-        T next = previous + current;
-        previous = current;
-        current = next;
+        return previous;
+    };
+    if constexpr (std::is_same_v<T, BigInteger>) {
+        if (number.IsRepresentable()) return calculate(number.toLongIfPossible());
     }
-    return previous;
+    return calculate(number);
 }
 
 

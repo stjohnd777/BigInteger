@@ -14,11 +14,11 @@ using namespace std;
 
 
 
-TEST(SubTestLegacy, Case1_negative_should_be_0) {
+TEST(SubTestLegacy, Case1_negative_result) {
     BigInteger a(1000);
     BigInteger b(2000);
     auto c = a - b;
-    ASSERT_TRUE( c ==0 );
+    ASSERT_TRUE( c == -1000 );
 }
 
 
@@ -123,5 +123,4 @@ TEST(SubTestLegacy, Case8_100_99_1) {
         cout << _c << " - " <<  b << " = " << c << endl;
     }
 }
-
 

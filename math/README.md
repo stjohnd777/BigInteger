@@ -1,21 +1,21 @@
 # Math examples
 
 The math library provides Fibonacci numbers and prime sieves alongside the
-`BigInteger` implementation. Build and test the project as described in the
-[root README](../README.md).
+`BigInteger` implementation.
 
-## Command-line examples
+## Command-line programs
+
+- [`main_fib`](src/main/fibonocci/README.md) computes a Fibonacci number.
+- [`main_prime`](src/main/primes/README.md) lists primes up to a limit.
+- [`main_sqrt2`](src/main/sqrt2/README.md) certifies decimal digits of √2.
+
+For dependencies and the complete test suite, see the [root README](../README.md).
+To build and run the math tests from a configured build directory:
 
 ```sh
-./build/math/math_main fibonacci 100
-./build/math/math_main primes 30
+cmake --build build --target main_fib main_prime math_tests
+ctest --test-dir build --output-on-failure -R '^(FibonacciTest|GmpTest|PrimesTest|math_cli_)'
 ```
-
-`fibonacci` prints the requested Fibonacci number, with F(0) = 0 and F(1) = 1.
-`primes` prints all primes up to and including the limit, one per line. Both
-arguments must be non-negative integers representable as `long`. Large inputs
-can require substantial computation and memory; the prime sieve stores flags
-through the limit and returns all the primes.
 
 ## Library
 

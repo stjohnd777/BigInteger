@@ -5,7 +5,6 @@
 #pragma once
 
 #include <vector>
-#include "easy_vector.h"
 
 class listing_primes {
 
@@ -17,7 +16,7 @@ public:
 
     // list must contain every prime through its last element, starting at 2.
     // Returns all primes through list.back() squared, including the seed.
-    static dsj::easy_vector<long>
+    static std::vector<long>
     SieveForPrimesWithKnowPrimesListToMaximalExtension(
             const std::vector<unsigned long> & list);
 };

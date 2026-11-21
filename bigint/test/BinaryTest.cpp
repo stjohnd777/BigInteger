@@ -5,11 +5,7 @@
 
 #include <gtest/gtest.h>
 #include "BigInteger.h"
-#include "time_metrics.h"
 
-
-using namespace dsj;
-using namespace dsj::utils;
 
 #include <string>
 #include <bitset>

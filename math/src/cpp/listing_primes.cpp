@@ -4,13 +4,10 @@
 
 #include "listing_primes.h"
 
-#include "easy_vector.h"
-
 #include <algorithm>
 #include <cmath>
 #include <limits>
 #include <stdexcept>
-using namespace dsj;
 using namespace std;
 
 std::vector<long> listing_primes::ListPrimesWithOutPrimes(long N) {
@@ -173,7 +170,7 @@ The Mersennes are also prime for p=31, 61, 89, 107, 127, 521, 607, 1279, 2203, 2
 20	2756839 - 1	227832	SG	Feb 1992	Mersenne 32
 
  */
-easy_vector<long> listing_primes::SieveForPrimesWithKnowPrimesListToMaximalExtension(const std::vector<unsigned long> & list ) {
+std::vector<long> listing_primes::SieveForPrimesWithKnowPrimesListToMaximalExtension(const std::vector<unsigned long> & list ) {
     if (list.empty() || list.front() != 2 || !std::is_sorted(list.begin(), list.end()))
         throw std::invalid_argument("expected an ordered list of primes starting at 2");
     const unsigned long max = list.back();
@@ -206,7 +203,7 @@ easy_vector<long> listing_primes::SieveForPrimesWithKnowPrimesListToMaximalExten
             multiple += p;
         }
     }
-    easy_vector<long> primes;
+    std::vector<long> primes;
     for (unsigned long n = 2; n <= limit; ++n)
         if (!composite[n]) primes.push_back(static_cast<long>(n));
     return primes;

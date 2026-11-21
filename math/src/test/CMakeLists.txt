@@ -8,9 +8,11 @@ target_compile_definitions(math_tests PRIVATE
         MATH_TEST_DIR="${CMAKE_CURRENT_BINARY_DIR}")
 gtest_discover_tests(math_tests)
 
-add_test(NAME math_cli_fibonacci COMMAND math_main fibonacci 100)
-set_tests_properties(math_cli_fibonacci PROPERTIES PASS_REGULAR_EXPRESSION "354224848179261915075")
-add_test(NAME math_cli_primes COMMAND math_main primes 10)
-set_tests_properties(math_cli_primes PROPERTIES PASS_REGULAR_EXPRESSION "2[\n\r]+3[\n\r]+5[\n\r]+7")
-add_test(NAME math_cli_invalid COMMAND math_main fibonacci -1)
-set_tests_properties(math_cli_invalid PROPERTIES WILL_FAIL TRUE)
+foreach(program IN ITEMS fib prime)
+    foreach(case IN ITEMS result zero help missing extra negative invalid overflow)
+        add_test(NAME math_cli_${program}_${case}
+            COMMAND ${CMAKE_COMMAND} -DEXECUTABLE=$<TARGET_FILE:main_${program}>
+                    -DPROGRAM=${program} -DCASE=${case}
+                    -P ${CMAKE_CURRENT_SOURCE_DIR}/MathCliTest.cmake)
+    endforeach()
+endforeach()
